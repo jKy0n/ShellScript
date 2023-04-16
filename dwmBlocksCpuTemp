@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#
+    sensors | \
+        awk '/Tctl:/ { print $2 }' | \
+        sed -e 's/^.//' -e 's/....$//' | \
+        awk '{sub("$", "ºC", $1)}; 1'
