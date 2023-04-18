@@ -11,4 +11,4 @@ sudo apt-get upgrade -y &&
 sudo apt-get autoclean &&
 sudo apt-get autoremove &&
 sleep 30 &&
-sudo cpupower frequency-set -g schedutil ;
+sudo cpupower frequency-set -g ondemand ;
