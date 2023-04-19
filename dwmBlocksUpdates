@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+    emerge -pvuND @world | \
+        awk '/Total:/ {print $2}' | \
+            awk '{sub("$", " Pkgs", $1)}; 1'
