@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+#
+#
+#
+   top -bn1 | \
+       grep "average:" | \
+           awk '{print $(NF-2)}' | \
+               sed 's/.$//'
+#
+#
+#    uptime | \ 
+#        awk '{print $(NF-2)}' | \
+#            sed 's/.$//'
