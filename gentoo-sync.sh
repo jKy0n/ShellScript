@@ -3,4 +3,4 @@
 #
 #
 #
-emerge-webrsync && emerge --sync
+emerge-webrsync && emerge --sync && emaint --auto sync

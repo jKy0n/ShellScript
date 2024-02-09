@@ -3,6 +3,7 @@
 #
 #
 # doas cpupower frequency-set -g performance &&
+sh /home/jkyon/ShellScript/startAwesomeWM.sh
 # sleep 3s ;
 #nice -n 5 vscode &
 #nice -n 18 kdeconnect-app &

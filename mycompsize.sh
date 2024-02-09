@@ -1,44 +1,46 @@
+#!/usr/bin/env bash
+#
 echo "" &&
 echo "	-----	Desktop 	-----	" &&
-sudo compsize /home/jkyon/Desktop &&
+doas compsize /home/jkyon/Desktop &&
 echo "" &&
 echo "	-----	Documents 	-----	" &&
-sudo compsize /home/jkyon/Documents &&
+doas compsize /home/jkyon/Documents &&
 echo "" &&
 echo "	-----	Downloads 	-----	" &&
-sudo compsize /home/jkyon/Downloads &&
+doas compsize /home/jkyon/Downloads &&
 echo "" &&
 echo "	-----	Drawing 	-----	" &&
-sudo compsize /home/jkyon/Drawing &&
+doas compsize /home/jkyon/Drawing &&
 echo "" &&
 echo "	-----	books 	-----	" &&
-sudo compsize /home/jkyon/e-books &&
+doas compsize /home/jkyon/e-books &&
 echo "" &&
 echo "	-----	Games 	-----	" &&
-sudo compsize /home/jkyon/Games &&
+doas compsize /home/jkyon/Games &&
 echo "" &&
 echo "	-----	HackintoshShits 	-----	" &&
-sudo compsize /home/jkyon/HackintoshShits &&
+doas compsize /home/jkyon/HackintoshShits &&
 echo "" &&
 echo "	-----	ISOs 	-----	" &&
-sudo compsize /home/jkyon/ISOs &&
+doas compsize /home/jkyon/ISOs &&
 echo "" &&
 echo "	-----	Music 	-----	" &&
-sudo compsize /home/jkyon/Music &&
+doas compsize /home/jkyon/Music &&
 echo "" &&
 echo "	-----	Pictures 	-----	" &&
-sudo compsize /home/jkyon/Pictures &&
+doas compsize /home/jkyon/Pictures &&
 echo "" &&
 echo "	-----	RapozaTwitch 	-----	" &&
-sudo compsize /home/jkyon/RapozaTwitch &&
+doas compsize /home/jkyon/RapozaTwitch &&
 echo "" &&
 #echo "	-----	ScriptShell 	-----	" &&
-#sudo compsize /home/jkyon/ScriptShell &&
+#doas compsize /home/jkyon/ScriptShell &&
 echo "" &&
 echo "	-----	ToOrganize 	-----	" &&
-sudo compsize /home/jkyon/ToOrganize &&
+doas compsize /home/jkyon/ToOrganize &&
 echo "" &&
 echo "	-----	Videos 	-----	" &&
-sudo compsize /home/jkyon/Videos &&
+doas compsize /home/jkyon/Videos &&
 echo "" && echo "" &&
 echo ""
