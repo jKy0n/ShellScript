@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 #
     top -bn1 | \
-        grep "Cpu(s)" | \
-        sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | \
-        sed 's/..$//' | \
-        awk '{print 100 - $1"%"}'
+        awk '/Cpu\(s\)/ {printf "%2.0f%%\n", 100 - $8}'

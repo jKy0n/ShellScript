@@ -1,0 +1,23 @@
+#!/bin/sh
+feh --auto-zoom --scale-down "$@" &
+sleep 0.2  # Espera a janela abrir
+wmctrl -r feh -e 0,2140,100,1400,1000  # Move a janela para a posição (100,100)
+#
+#
+#
+#!/bin/sh
+# feh --auto-zoom --scale-down "$@" &
+# sleep 0.5  # Espera a janela abrir
+
+# # Obtém as dimensões da janela
+# read wx wy ww wh < <(wmctrl -lG | grep feh | sed 's/^   ]* * [^ ]* //;s/ [^0-9 ].*//;')
+
+# # Define a posição do monitor central (ajuste conforme necessário)
+# monitor_start=1280
+# monitor_end=2160
+
+# # Calcula a posição central no monitor central
+# cx=$(($monitor_start + ($monitor_end-$monitor_start)/2-$ww/2))
+
+# # Move a janela para a posição central
+# wmctrl -r feh -e 0,$cx,$cy,-1,-1

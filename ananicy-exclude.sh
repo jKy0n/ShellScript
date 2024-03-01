@@ -8,4 +8,4 @@ echo '{
   "sched": "other",
   "sched_param": 0,
   "cgroup": "none"
-}' | doas tee /etc/ananicy.d/$1.rules
+}' | sudo tee /etc/ananicy.d/$1.rules

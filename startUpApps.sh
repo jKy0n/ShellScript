@@ -5,12 +5,12 @@
 # doas cpupower frequency-set -g performance &&
 # sleep 3s ;
 nice -n 5 vscode &
-nice -n 18 kdeconnect-app &
+#nice -n 18 kdeconnect-app &
 #sleep 5s ;
 #nice -n 10 ~/.joplin/Joplin.AppImage &
 nice -n 16 pavucontrol &
 nice -n 5 spotify &
-discord &
+#discord &
 sleep 2s ;
 firefox &
 #nice -n 16 thunderbird &
