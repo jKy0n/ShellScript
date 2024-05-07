@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 #
-    emerge -pvuND @world | \
-        awk '/Total:/ {print $2}' | \
-        awk '{sub("$", " Pkgs", $1)}; 1'
+    updates=$(emerge -pvuND @world | \
+        awk '/Total:/ {print $2}')
+
+    if [ "$updates" -gt 0 ]; then
+        echo "  $updates Pkgs  | "
+    elif [ "$updates" == 0 ]; then
+        echo ""
+    fi

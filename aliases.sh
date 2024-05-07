@@ -28,14 +28,15 @@ alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
 #
 # E
-alias ealias='nano --linenumbers /home/jkyon/ShellScript/aliases.sh && zreset'
-alias ebash='nano --linenumbers /home/jkyon/.bashrc'
-alias efstab='sudo nano --linenumbers /etc/fstab'
-alias emake='sudo nano --linenumbers /etc/portage/make.conf'
-alias emskpkg='sudo nano --linenumbers /etc/portage/package.accept_keywords'
+alias ealias='vim /home/jkyon/ShellScript/aliases.sh && zreset'
+alias ebash='vim /home/jkyon/.bashrc'
+alias efstab='sudo vim /etc/fstab'
+alias emake='sudo vim /etc/portage/make.conf'
+alias emskpkg='sudo vim /etc/portage/package.accept_keywords'
 alias enter-ArchBox='distrobox-enter --root ArchBox'
-alias eStartUp='nano --linenumbers /home/jkyon/ShellScript/startUpApps.sh'
-alias ezsh='nano --linenumbers /home/jkyon/.zshrc'
+alias eStartUp='vim /home/jkyon/ShellScript/startUpApps.sh'
+alias evim='vim /home/jkyon/.vimrc'
+alias ezsh='vim /home/jkyon/.zshrc'
 #
 # F
 alias ffetch='fastfetch'
@@ -49,7 +50,7 @@ alias htop='nice -n 19 htop'
 #
 # L
 alias ls='ls --color'
-alias lsl='ls -laZ --color'
+alias lsl='ls -la --color'
 #
 # M
 alias mv='mv -v'
@@ -64,7 +65,7 @@ alias reboot='loginctl reboot'
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
-alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / &&  distrobox-enter --root ArchBox'
+alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && distrobox-enter --root ArchBox'
 alias startUpApps='sh /home/jkyon/ShellScript/startUpApps.sh'
 alias syncPortage='sudo emerge-webrsync && sudo emerge --sync && sudo emaint --auto sync'
 alias unmskpkg='sh /home/jkyon/ShellScript/gentoo-unmaskPackage.sh'
@@ -80,7 +81,11 @@ alias vfstab='bat /etc/fstab'
 alias vmake='bat /etc/portage/make.conf'
 alias vStartUp='bat /home/jkyon/ShellScript/startUpApps.sh'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
+alias vvim='bat /home/jkyon/.vimrc'
 alias vzsh='bat /home/jkyon/.zshrc'
+#
+# W
+alias watch19='sh /home/jkyon/ShellScript/watch19.sh'
 #
 # Z
 alias zreset='source /home/jkyon/.zshrc && sleep 1 && reset'

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #
+nice -n 19 \
     top -bn1 | \
+        sed -e 's/.$//' | \
         awk '/Cpu\(s\)/ {printf "%2.0f%%\n", 100 - $8}'

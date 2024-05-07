@@ -13,7 +13,7 @@ nice -n 5 spotify &
 #discord &
 sleep 2s ;
 firefox &
-#nice -n 16 thunderbird &
+nice -n 16 thunderbird &
 google-chrome-stable &
 #sleep 2m ;
 # doas cpupower frequency-set -g ondemand ;
