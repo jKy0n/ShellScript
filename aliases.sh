@@ -1,18 +1,5 @@
 # Alias
 #
-#   Exemplo de como usar um comando coringa entre sudo e doas
-#     Não recomendado pelas boas práticas com aliases
-#
-#export AUTH_CMD=$(command -v sudo || command -v doas)
-#
-# set-performance() {
-#     $AUTH_CMD cpupower frequency-set -g performance
-# }
-#
-# set-ondemand() {
-#     $AUTH_CMD cpupower frequency-set -g ondemand
-# }
-#
 #
 #alias tmux='tmux new-session source-file /home/jkyon/.dotfiles/.config/tmux.conf'
 #alias tmux='tmux'
@@ -28,15 +15,16 @@ alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
 #
 # E
-alias ealias='vim /home/jkyon/ShellScript/aliases.sh && zreset'
-alias ebash='vim /home/jkyon/.bashrc'
-alias efstab='sudo vim /etc/fstab'
-alias emake='sudo vim /etc/portage/make.conf'
-alias emskpkg='sudo vim /etc/portage/package.accept_keywords'
+alias ealias='nvim /home/jkyon/ShellScript/aliases.sh && zreset'
+alias ebash='nvim /home/jkyon/.bashrc'
+alias efstab='sudo nvim -u ~jkyon/.vimrc /etc/fstab'
+alias emake='sudo nvim -u ~jkyon/.vimrc /etc/portage/make.conf'
+alias emskpkg='sudo nvim -u ~jkyon/.vimrc /etc/portage/package.accept_keywords'
 alias enter-ArchBox='distrobox-enter --root ArchBox'
-alias eStartUp='vim /home/jkyon/ShellScript/startUpApps.sh'
-alias evim='vim /home/jkyon/.vimrc'
-alias ezsh='vim /home/jkyon/.zshrc'
+alias eStartUp='nvim /home/jkyon/ShellScript/startUpApps.sh'
+alias eToInstallList='nvim /home/jkyon/ShellScript/gentoo-toInstall.txt'
+alias evim='nvim /home/jkyon/.vimrc'
+alias ezsh='nvim /home/jkyon/.zshrc'
 #
 # F
 alias ffetch='fastfetch'
@@ -65,14 +53,18 @@ alias reboot='loginctl reboot'
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
-alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && distrobox-enter --root ArchBox'
+alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox'
 alias startUpApps='sh /home/jkyon/ShellScript/startUpApps.sh'
 alias syncPortage='sudo emerge-webrsync && sudo emerge --sync && sudo emaint --auto sync'
 alias unmskpkg='sh /home/jkyon/ShellScript/gentoo-unmaskPackage.sh'
 #
+# T
+alias toInstallList='sh /home/jkyon/ShellScript/toInstallList.sh'
+#
 # U
 alias updatePortage='emerge -pvuND @world'
 alias upgradePortage='sudo emerge -avuND @world'
+alias upgradeAndInstallPortage='sh /home/jkyon/ShellScript/gentoo-upgradeAndInstall.sh'
 #
 # V
 alias valiases='bat /home/jkyon/ShellScript/aliases.sh'
@@ -80,6 +72,7 @@ alias vbash='bat /home/jkyon/.bashrc'
 alias vfstab='bat /etc/fstab'
 alias vmake='bat /etc/portage/make.conf'
 alias vStartUp='bat /home/jkyon/ShellScript/startUpApps.sh'
+alias vToInstallList='bat /home/jkyon/ShellScript/gentoo-toInstall.txt'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
 alias vvim='bat /home/jkyon/.vimrc'
 alias vzsh='bat /home/jkyon/.zshrc'
