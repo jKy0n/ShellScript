@@ -1,11 +1,11 @@
 # Alias
 #
 #
-#alias tmux='tmux new-session source-file /home/jkyon/.dotfiles/.config/tmux.conf'
+#alias tmux='tmux new-session source-file ~/.dotfiles/.config/tmux.conf'
 #alias tmux='tmux'
 #
 # A
-alias breset='source /home/jkyon/.bashrc && sleep 1 && reset'
+alias breset='source ~/.bashrc && sleep 1 && reset'
 alias btop='nice -n 19 btop'
 #
 # C
@@ -15,16 +15,16 @@ alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
 #
 # E
-alias ealias='nvim /home/jkyon/ShellScript/aliases.sh && zreset'
-alias ebash='nvim /home/jkyon/.bashrc'
+alias ealias='nvim ~/ShellScript/aliases.sh && zreset'
+alias ebash='nvim ~/.bashrc'
 alias efstab='sudo nvim -u ~jkyon/.vimrc /etc/fstab'
 alias emake='sudo nvim -u ~jkyon/.vimrc /etc/portage/make.conf'
 alias emskpkg='sudo nvim -u ~jkyon/.vimrc /etc/portage/package.accept_keywords'
 alias enter-ArchBox='distrobox-enter --root ArchBox'
-alias eStartUp='nvim /home/jkyon/ShellScript/startUpApps.sh'
-alias eToInstallList='nvim /home/jkyon/ShellScript/gentoo-toInstall.txt'
-alias evim='nvim /home/jkyon/.vimrc'
-alias ezsh='nvim /home/jkyon/.zshrc'
+alias eStartUp='nvim ~/ShellScript/startUpApps.sh'
+alias eToInstallList='nvim ~/ShellScript/gentoo-toInstall.txt'
+alias evim='nvim ~/.vimrc'
+alias ezsh='nvim ~/.zshrc'
 #
 # F
 alias ffetch='fastfetch'
@@ -33,7 +33,7 @@ alias ffetch='fastfetch'
 alias grep='grep --colour=auto'
 #
 # H
-alias helptty='sudo fbset -xres 3440 -yres 1440 && sh /home/jkyon/ShellScript/tmux-quickstart.sh'
+alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/tmux-quickstart.sh'
 alias htop='nice -n 19 htop'
 #
 # L
@@ -54,31 +54,31 @@ alias reboot='loginctl reboot'
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
 alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox'
-alias startUpApps='sh /home/jkyon/ShellScript/startUpApps.sh'
+alias startUpApps='sh ~/ShellScript/startUpApps.sh'
 alias syncPortage='sudo emerge-webrsync && sudo emerge --sync && sudo emaint --auto sync'
-alias unmskpkg='sh /home/jkyon/ShellScript/gentoo-unmaskPackage.sh'
+alias unmskpkg='sh ~/ShellScript/gentoo-unmaskPackage.sh'
 #
 # T
-alias toInstallList='sh /home/jkyon/ShellScript/toInstallList.sh'
+alias toInstallList='sh ~/ShellScript/toInstallList.sh'
 #
 # U
 alias updatePortage='emerge -pvuND @world'
 alias upgradePortage='sudo emerge -avuND @world'
-alias upgradeAndInstallPortage='sh /home/jkyon/ShellScript/gentoo-upgradeAndInstall.sh'
+alias upgradeAndInstallPortage='sh ~/ShellScript/gentoo-upgradeAndInstall.sh'
 #
 # V
-alias valiases='bat /home/jkyon/ShellScript/aliases.sh'
-alias vbash='bat /home/jkyon/.bashrc'
+alias valiases='bat ~/ShellScript/aliases.sh'
+alias vbash='bat ~/.bashrc'
 alias vfstab='bat /etc/fstab'
 alias vmake='bat /etc/portage/make.conf'
-alias vStartUp='bat /home/jkyon/ShellScript/startUpApps.sh'
-alias vToInstallList='bat /home/jkyon/ShellScript/gentoo-toInstall.txt'
+alias vStartUp='bat ~/ShellScript/startUpApps.sh'
+alias vToInstallList='bat ~/ShellScript/gentoo-toInstall.txt'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
-alias vvim='bat /home/jkyon/.vimrc'
-alias vzsh='bat /home/jkyon/.zshrc'
+alias vvim='bat ~/.vimrc'
+alias vzsh='bat ~/.zshrc'
 #
 # W
-alias watch19='sh /home/jkyon/ShellScript/watch19.sh'
+alias watch19='sh ~/ShellScript/watch19.sh'
 #
 # Z
-alias zreset='source /home/jkyon/.zshrc && sleep 1 && reset'
+alias zreset='source ~/.zshrc && sleep 1 && reset'
