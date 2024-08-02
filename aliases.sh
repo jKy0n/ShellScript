@@ -1,11 +1,7 @@
-# Alias
-#
-#
-#alias tmux='tmux new-session source-file ~/.dotfiles/.config/tmux.conf'
-#alias tmux='tmux'
+# Alias by jKyon =)
 #
 # A
-alias breset='source ~/.bashrc && sleep 1 && reset'
+alias bashReset='source ~/.bashrc && sleep 1 && reset'
 alias btop='nice -n 19 btop'
 #
 # C
@@ -23,6 +19,7 @@ alias emskpkg='sudo -e ~/.vimrc /etc/portage/package.accept_keywords'
 alias enter-ArchBox='distrobox-enter --root ArchBox'
 alias eStartUp='nvim ~/ShellScript/startUpApps.sh'
 alias eToInstallList='nvim ~/ShellScript/gentoo-toInstall.txt'
+alias etmux='nvim ~/.dotfiles/.config/tmux/tmux.conf'
 alias evim='nvim ~/.vimrc'
 alias ezsh='nvim ~/.zshrc'
 #
@@ -37,8 +34,8 @@ alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/tmux-quickst
 alias htop='nice -n 19 htop'
 #
 # L
-alias ls='ls --color'
-alias lsl='ls -la --color'
+alias ls='lsd'
+alias lsl='lsd -la'
 #
 # M
 alias mv='mv -v'
@@ -49,6 +46,7 @@ alias nano='nano --linenumbers'
 # R
 alias radeontop='nice -n 19 radeontop --color --transparency'
 alias reboot='loginctl reboot'
+alias rm='rm -vi'
 #
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
@@ -73,6 +71,7 @@ alias vfstab='bat /etc/fstab'
 alias vmake='bat /etc/portage/make.conf'
 alias vStartUp='bat ~/ShellScript/startUpApps.sh'
 alias vToInstallList='bat ~/ShellScript/gentoo-toInstall.txt'
+alias vtmux='bat ~/.dotfiles/.config/tmux/tmux.conf'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
 alias vvim='bat ~/.vimrc'
 alias vzsh='bat ~/.zshrc'
@@ -80,5 +79,7 @@ alias vzsh='bat ~/.zshrc'
 # W
 alias watch19='sh ~/ShellScript/watch19.sh'
 #
+alias wacomSetStylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
+#
 # Z
-alias zreset='source ~/.zshrc && sleep 1 && reset'
+alias zshReset='source ~/.zshrc && sleep 1 && reset'
