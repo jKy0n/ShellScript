@@ -1,5 +1,6 @@
 # Alias by jKyon =)
 #
+#
 # A
 alias bashReset='source ~/.bashrc && sleep 1 && reset'
 alias btop='nice -n 19 btop'
@@ -12,7 +13,10 @@ alias cupsStop='sudo rc-service cupsd stop'
 #
 # E
 alias ealias='nvim ~/ShellScript/aliases.sh && zreset'
+alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
+alias eawesomeWM='nvim ~/.config/awesome/rc.lua'
 alias ebash='nvim ~/.bashrc'
+alias edistccHost='nvim ~/.distcc/hosts'
 alias efstab='sudo -e ~/.vimrc /etc/fstab'
 alias emake='sudo -e ~/.vimrc /etc/portage/make.conf'
 alias emskpkg='sudo -e ~/.vimrc /etc/portage/package.accept_keywords'
@@ -66,7 +70,10 @@ alias upgradeAndInstallPortage='sh ~/ShellScript/gentoo-upgradeAndInstall.sh'
 #
 # V
 alias valiases='bat ~/ShellScript/aliases.sh'
+alias valacritty='bat ~/.config/alacritty/alacritty.toml'
+alias vawesomeWM='bat ~/.config/awesome/rc.lua'
 alias vbash='bat ~/.bashrc'
+alias vdistccHost='bat ~/.distcc/hosts'
 alias vfstab='bat /etc/fstab'
 alias vmake='bat /etc/portage/make.conf'
 alias vStartUp='bat ~/ShellScript/startUpApps.sh'
