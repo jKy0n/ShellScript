@@ -9,9 +9,10 @@ ICON="/usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg"
 LOG_FILE="/home/jkyon/.logs/GentooUpdateRoutine.log"
 #
 #
-mirrorselect --all --rsync --md5=md5 --output | \
-    awk 'BEGIN {print "GENTOO_MIRRORS=\""} NF {printf "%s ", $3} END {print "\""}' | \
-    tee /etc/portage/mirrors.list
+mirrorselect --server=5 --md5=md5 --output | tee /etc/portage/mirrors.list
+# mirrorselect --all --rsync --md5=md5 --output | \
+#     awk 'BEGIN {print "GENTOO_MIRRORS=\""} NF {printf "%s ", $3} END {print "\""}' | \
+#     tee /etc/portage/mirrors.list
 #
 if [ $? -ne 0 ]; then
         echo "$(date +'[%Y-%m-%d - %H:%Mh]') - Error ao tentar atualizar lista de mirrors" >> $LOG_FILE

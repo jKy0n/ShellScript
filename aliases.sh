@@ -1,15 +1,19 @@
-# Alias by jKyon =)
+# Aliases by jKyon =)
 #
 #
 # A
 alias bashReset='source ~/.bashrc && sleep 1 && reset'
 alias btop='nice -n 19 btop'
 #
+# B
+#
 # C
 alias clr='clear'
 alias cp='cp  -v'
 alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
+#
+# D
 #
 # E
 alias ealias='nvim ~/ShellScript/aliases.sh && zreset'
@@ -37,6 +41,12 @@ alias grep='grep --colour=auto'
 alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/tmux-quickstart.sh'
 alias htop='nice -n 19 htop'
 #
+# I
+#
+# J
+#
+# K
+#
 # L
 alias ls='lsd'
 alias lsl='lsd -la'
@@ -47,10 +57,17 @@ alias mv='mv -v'
 # N
 alias nano='nano --linenumbers'
 #
+# O
+#
+# P
+alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
+#
+# Q
+#
 # R
 alias radeontop='nice -n 19 radeontop --color --transparency'
 alias reboot='loginctl reboot'
-alias rm='rm -vi'
+alias rm='rm -vI'
 #
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
@@ -85,8 +102,11 @@ alias vzsh='bat ~/.zshrc'
 #
 # W
 alias watch19='sh ~/ShellScript/watch19.sh'
-#
 alias wacomSetStylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
+#
+# X
+#
+# Y
 #
 # Z
 alias zshReset='source ~/.zshrc && sleep 1 && reset'
