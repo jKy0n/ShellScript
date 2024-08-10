@@ -6,7 +6,7 @@
 #
 #
 ICON="/usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg"
-LOG_FILE="/home/jkyon/.logs/GentooUpdateRoutine.log"
+LOG_FILE="/home/jkyon/.logs/portageSync-dailyRoutine.log"
 #
 #
   emerge --sync
@@ -14,7 +14,7 @@ LOG_FILE="/home/jkyon/.logs/GentooUpdateRoutine.log"
           echo "$(date +'[%Y-%m-%d - %H:%Mh]' - Error ao tentar sincrozar repositorios)" >> $LOG_FILE
           sudo -u jkyon notify-send -u critical -i $ICON "Portage" "Failed to sync repository"
       else
-          sudo -u jkyon notify-send -u normal -i $ICON "Portage" "Gentoo is updated"
+          sudo -u jkyon notify-send -u normal -i $ICON "Portage" "Gentoo is sync"
       fi
 #
 #

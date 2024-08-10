@@ -6,7 +6,7 @@
 #
 #
 ICON="/usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg"
-LOG_FILE="/home/jkyon/.logs/GentooUpdateRoutine.log"
+LOG_FILE="/home/jkyon/.logs/PortageUpdateMirrors-dailyRoutine.log"
 #
 #
 mirrorselect --server=5 --md5=md5 --output | tee /etc/portage/mirrors.list
