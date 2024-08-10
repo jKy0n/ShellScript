@@ -67,7 +67,7 @@ alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
 # R
 alias radeontop='nice -n 19 radeontop --color --transparency'
 alias reboot='loginctl reboot'
-alias rm='rm -vI'
+alias rm='rm -vi'
 #
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
