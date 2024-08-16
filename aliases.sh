@@ -67,12 +67,13 @@ alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
 # R
 alias radeontop='nice -n 19 radeontop --color --transparency'
 alias reboot='loginctl reboot'
-alias rm='rm -vi'
+#alias rm='rm -vi'
 #
 # S
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
-alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox'
+#alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox' # for OpenRC
+alias start-ArchBox='distrobox-enter --root ArchBox' # for systemd 
 alias startUpApps='sh ~/ShellScript/startUpApps.sh'
 alias syncPortage='sudo emerge-webrsync && sudo emerge --sync && sudo emaint --auto sync'
 alias unmskpkg='sh ~/ShellScript/gentoo-unmaskPackage.sh'
