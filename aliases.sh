@@ -16,7 +16,7 @@ alias cupsStop='sudo rc-service cupsd stop'
 # D
 #
 # E
-alias ealias='nvim ~/ShellScript/aliases.sh && zreset'
+alias ealias='nvim ~/ShellScript/aliases.sh && zshReset'
 alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
 alias eawesomeWM='nvim ~/.config/awesome/rc.lua'
 alias ebash='nvim ~/.bashrc'
@@ -61,6 +61,7 @@ alias nano='nano --linenumbers'
 #
 # P
 alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
+alias pipewireRestart='sh ~/ShellScript/pipewire-restart.sh'
 #
 # Q
 #
@@ -70,6 +71,7 @@ alias reboot='loginctl reboot'
 #alias rm='rm -vi'
 #
 # S
+alias satisfactory-server='sh ~/ShellScript/satisfactory-server-update.sh'
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
 #alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox' # for OpenRC

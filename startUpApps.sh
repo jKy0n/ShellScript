@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 #
 #
 #
@@ -16,8 +16,11 @@ nice -n 5 spotify &
 # pulseeffects &
 discord &
 # sleep 2s ;
-firefox &
 nice -n 16 thunderbird &
+firefox &
 google-chrome-stable &
 # sleep 2m ;
 # sudo cpupower frequency-set -g ondemand ;
+
+
+# ColorScheme=CatppuccinMacchiatoMauve
