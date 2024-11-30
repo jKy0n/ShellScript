@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /usr/bin/env bash
 
 # Função para obter a carga da bateria
 get_battery_percentage() {

@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 #
-sensors | awk '/Package id 0:/ { print $4 }' | sed -e 's/^.//' -e 's/....$//' | awk '{sub("$", "°C", $1)}; 1'
+nice -n 19 \
+    sensors | \
+        awk '/Package id 0:/ { gsub(/[^0-9.]/, "", $4); print $4 "°C" }'

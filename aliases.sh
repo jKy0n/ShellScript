@@ -52,6 +52,7 @@ alias ls='lsd'
 alias lsl='lsd -la'
 #
 # M
+alias meAvise='sh ~/ShellScript/avisoNoTerminal.sh'
 alias mv='mv -v'
 #
 # N
