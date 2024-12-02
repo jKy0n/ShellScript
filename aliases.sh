@@ -9,6 +9,7 @@ alias btop='nice -n 19 btop'
 #
 # C
 alias clr='clear'
+alias copy-to-clipboard='sh ~/ShellScript/xclip-output-to-clipboard.sh'
 alias cp='cp  -v'
 alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
