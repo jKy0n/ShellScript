@@ -9,6 +9,7 @@ alias btop='nice -n 19 btop'
 #
 # C
 alias clr='clear'
+alias copy-to-clipboard='sh ~/ShellScript/xclip-output-to-clipboard.sh'
 alias cp='cp  -v'
 alias cupsStart='sudo rc-service cupsd start'
 alias cupsStop='sudo rc-service cupsd stop'
@@ -52,6 +53,7 @@ alias ls='lsd'
 alias lsl='lsd -la'
 #
 # M
+alias meAvise='sh ~/ShellScript/avisoNoTerminal.sh'
 alias mv='mv -v'
 #
 # N
