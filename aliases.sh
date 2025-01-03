@@ -76,6 +76,7 @@ alias reboot='loginctl reboot'
 alias satisfactory-server='sh ~/ShellScript/satisfactory-server-update.sh'
 alias set-ondemand='sudo cpupower frequency-set -g ondemand'
 alias set-performance='sudo cpupower frequency-set -g performance'
+alias showSensors='nice --adjustment=19 watch --color --interval 1 sensors'
 #alias start-ArchBox='sudo rc-service docker start && sudo mount --make-rshared / && sleep 1 && distrobox-enter --root ArchBox' # for OpenRC
 alias start-ArchBox='distrobox-enter --root ArchBox' # for systemd 
 alias startUpApps='sh ~/ShellScript/startUpApps.sh'
