@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Define o limite de memória em KB (500MB = 500 * 1024)
-LIMIT=$((500 * 1024))
+# Define o limite de memória em KB (800MB = 800 * 1024)
+LIMIT=$((800 * 1024))
 
 # Obtém o uso de memória do picom (em KB)
 MEMORY_USAGE=$(ps -C picom -o rss=)

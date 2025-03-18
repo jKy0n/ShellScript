@@ -11,8 +11,8 @@ alias btop='nice -n 19 btop'
 alias clr='clear'
 alias copy-to-clipboard='sh ~/ShellScript/xclip-output-to-clipboard.sh'
 alias cp='cp  -v'
-alias cupsStart='sudo rc-service cupsd start'
-alias cupsStop='sudo rc-service cupsd stop'
+alias cupsStart='sudo systemctl start cups.service'
+alias cupsStop='sudo systemctl stop cups.service'
 #
 # D
 #
@@ -49,6 +49,7 @@ alias htop='nice -n 19 htop'
 # K
 #
 # L
+alias lsblk-mine='lsblk -o NAME,SIZE,FSTYPE,LABEL,MOUNTPOINT'
 alias ls='lsd'
 alias lsl='lsd -la'
 #
@@ -60,6 +61,7 @@ alias mv='mv -v'
 alias nano='nano --linenumbers'
 #
 # O
+alias deepShell='sh ~/ShellScript/deepShell.sh'
 #
 # P
 alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
@@ -81,7 +83,6 @@ alias showSensors='nice --adjustment=19 watch --color --interval 1 sensors'
 alias start-ArchBox='distrobox-enter --root ArchBox' # for systemd 
 alias startUpApps='sh ~/ShellScript/startUpApps.sh'
 alias syncPortage='sudo emerge-webrsync && sudo emerge --sync && sudo emaint --auto sync'
-alias unmskpkg='sh ~/ShellScript/gentoo-unmaskPackage.sh'
 #
 # T
 alias toInstallList='sh ~/ShellScript/toInstallList.sh'
@@ -90,6 +91,7 @@ alias toInstallList='sh ~/ShellScript/toInstallList.sh'
 alias updatePortage='emerge -pvuND @world'
 alias upgradePortage='sudo emerge -avuND @world'
 alias upgradeAndInstallPortage='sh ~/ShellScript/gentoo-upgradeAndInstall.sh'
+alias unmskpkg='sh ~/ShellScript/gentoo-unmaskPackage.sh'
 #
 # V
 alias valiases='bat ~/ShellScript/aliases.sh'
@@ -107,8 +109,9 @@ alias vvim='bat ~/.vimrc'
 alias vzsh='bat ~/.zshrc'
 #
 # W
-alias watch19='sh ~/ShellScript/watch19.sh'
 alias wacomSetStylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
+alias watch19='sh ~/ShellScript/watch19.sh'
+alias watchGenlop='nice --adjustment=19 watch --color --interval 1 genlop -ci'
 #
 # X
 #
