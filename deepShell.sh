@@ -27,13 +27,13 @@ esac
 # Executa o Ollama com a formatação escolhida
 case $FORMAT in
     "glow")
-        ollama run deepseek-r1 "$PROMPT" | glow
+        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT" | glow
         ;;
     "bat")
-        ollama run deepseek-r1 "$PROMPT" | bat --language md
+        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT" | bat --language md
         ;;
     "none")
-        ollama run deepseek-r1 "$PROMPT"
+        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT"
         ;;
     *)
         echo "Opção inválida!"
