@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # deepChat: Script para interagir com o Ollama e formatar a saída
 
 # Verifica se o prompt foi fornecido
@@ -27,13 +27,13 @@ esac
 # Executa o Ollama com a formatação escolhida
 case $FORMAT in
     "glow")
-        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT" | glow
+        ollama run deepseek-r1 "$PROMPT" | glow
         ;;
     "bat")
-        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT" | bat --language md
+        ollama run deepseek-r1 "$PROMPT" | bat --language md
         ;;
     "none")
-        ollama run mixtral:8x7b-instruct-v0.1-q5_K_M "$PROMPT"
+        ollama run deepseek-r1 "$PROMPT"
         ;;
     *)
         echo "Opção inválida!"
