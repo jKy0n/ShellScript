@@ -1,0 +1,12 @@
+[Unit]
+Description=GPT4All with Resource Limits
+
+[Service]
+ExecStart=flatpak run io.gpt4all.gpt4all
+MemoryMax=54G
+CPUQuota=2800%
+CPUWeight=100
+IOWeight=100
+
+[Install]
+WantedBy=default.target
