@@ -1,12 +1,15 @@
 [Unit]
-Description=GPT4All with Resource Limits
+Description=GPT4All - Modelo de Linguagem (Serviço de Usuário)
+After=network.target
 
 [Service]
+Type=simple
 ExecStart=flatpak run io.gpt4all.gpt4all
 MemoryMax=54G
 CPUQuota=2800%
-CPUWeight=100
-IOWeight=100
+OOMScoreAdjust=1000
+ManagedOOMMemoryPressure=kill
+ManagedOOMMemoryPressureLimit=50%
 
 [Install]
 WantedBy=default.target
