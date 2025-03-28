@@ -1,0 +1,16 @@
+[Unit]
+Description=Backup incremental com BorgBackup (usuário)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/home/jkyon/ShellScript/borg_backup-hourlyRoutine.sh
+Nice=19
+IOSchedulingClass=idle
+Type=oneshot
+StandardOutput=append:/home/jkyon/.logs/borgBackup/borgBackup-systemd.log
+StandardError=append:/home/jkyon/.logs/borgBackup/borgBackup-systemd.log
+
+[Install]
+WantedBy=default.target
+

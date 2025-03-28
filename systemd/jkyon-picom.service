@@ -1,0 +1,13 @@
+[Unit]
+Description=Compositor de Janelas Picom
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/picom --config /home/jkyon/.config/picom/picom.conf --log-file /home/jkyon/.logs/picom/picom.log --backend glx
+ExecStop=/usr/bin/pkill picom
+Restart=always
+RestartSec=3
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+# ~/.config/systemd/user/backintime-backup-job.timer
+[Unit]
+Description=Start a backintime snapshot every hour
+
+[Timer]
+OnCalendar=hourly
+AccuracySec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

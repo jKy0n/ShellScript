@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart PipeWire and WirePlumber
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --user restart pipewire pipewire-pulse wireplumber

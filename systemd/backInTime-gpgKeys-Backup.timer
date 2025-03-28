@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer para Backup das Chaves GPG
+
+[Timer]
+OnCalendar=*-*-* 04:15:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

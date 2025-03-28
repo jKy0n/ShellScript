@@ -1,0 +1,5 @@
+[Unit]
+Description=Backup das Chaves GPG
+
+[Service]
+ExecStart=/bin/bash ~/ShellScript/backInTime-gpgKeys-backup.sh

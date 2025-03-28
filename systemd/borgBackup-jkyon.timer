@@ -1,0 +1,11 @@
+[Unit]
+Description=Agendamento de backup incremental com BorgBackup (usuário)
+Requires=borgBackup-jkyon.service
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=5min
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart PipeWire weekly
+
+[Timer]
+OnActiveSec=7d
+Persistent=true
+
+[Install]
+WantedBy=timers.target

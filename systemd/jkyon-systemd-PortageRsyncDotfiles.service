@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup do diretório /etc para /home/jkyon/.theseusMachine-core
+
+[Service]
+Type=oneshot
+ExecStart=/home/jkyon/ShellScript/systemd-PortageRsyncDotfiles.sh
+
+[Install]
+WantedBy=default.target
