@@ -10,7 +10,7 @@
 #     startapps                                                 # execute
 #
 
-HOSTNAME=$(hostname)  # Ou use $(uname -n) - Detecta qual máquina estou usando.
+HOSTNAME=$(uname -n)  # Use $(uname -n | hostname) - Detecta qual máquina estou usando.
 
 case $HOSTNAME in
     # Start apps on TheseusMachine
