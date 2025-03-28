@@ -1,21 +1,34 @@
 #!/usr/bin/env bash
+
 #
+#   Use instructions:
 #
+#     mkdir -p ~/.local/bin                                     # Create a local repositorie
+#     ln -s ~/ShellScript/startUpApps.sh ~/.local/bin/startapps # Create SymLink
+#     export PATH="$HOME/.local/bin:$PATH"                      # Put path on zsh (or bash)
+#     source ~/.zshrc                                           # Uptade shell
+#     startapps                                                 # execute
 #
-# sudo cpupower frequency-set -g performance &&
-# sleep 3s ;
-vscode &
-kdeconnectd &
-nice -n 18 kdeconnect-app &
-sleep 5s ;
-nice -n 5 obsidian &
-nice -n 15 pavucontrol &
-nice -n 5 spotify &
-~/gitApps/Rambox-*-linux-x64.AppImage &
-nice -n 5 discord &
-sleep 2s ;
-nice -n 16 thunderbird &
-firefox &
-google-chrome-stable &
-# sleep 2m ;
-# sudo cpupower frequency-set -g ondemand ;
+
+HOSTNAME=$(hostname)  # Ou use $(uname -n) - Detecta qual máquina estou usando.
+
+case $HOSTNAME in
+    # Start apps on TheseusMachine
+    "TheseusMachine")
+        "$HOME/ShellScript/startUpApps-TheseusMachine.sh"
+        ;;
+    # Start apps on CrisNote
+    "CrisNote")
+        "$HOME/ShellScript/startUpApps-CrisNote.sh"
+        ;;
+    # Start apps on Viamar-PC
+    "Viamar-PC")
+        "$HOME/ShellScript/startUpApps-Viamar-PC.sh"
+        ;;
+    *)
+        echo "Erro: Hostname '$HOSTNAME' não reconhecido" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
