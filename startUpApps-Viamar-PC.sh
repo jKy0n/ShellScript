@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Inicia apps com prioridades adaptadas ao uso na TheseusMachine
+# Inicia apps com prioridades adaptadas ao uso no Viamar-PC
 
 # Função para iniciar com tratamento de erro
 start_app() {
