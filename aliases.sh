@@ -64,6 +64,7 @@ alias nano='nano --linenumbers'
 alias deepShell='sh ~/ShellScript/deepShell.sh'
 #
 # P
+alias pay-respects='_PR_LAST_COMMAND="$(history | tail -n 2 | head -n 1)" /home/jkyon/.local/bin/pay-respects'
 alias PicomRestart='sh ~/ShellScript/picom-restartRoutine.sh'
 alias pipewireRestart='sh ~/ShellScript/pipewire-restart.sh'
 #
