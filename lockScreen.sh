@@ -2,19 +2,20 @@
 
 
 # =============================================
-# Tempos em Segundos
+# Tempos em Segundos (Ajuste para LOCK imediato)
 # =============================================
-SCREEN_OFF=3540   # 59 minutos = 3540 segundos (tela apaga)
-LOCK_DELAY=60    # +1 minuto = 60 segundos (trava)
+SCREEN_OFF=3540   # 59m → Tela desliga
+LOCK_DELAY=0       # 0s → Trava Imediatamente após o screensaver
 
 # =============================================
-# Configuração do X Server
+# Configura DPMS e Screensaver
 # =============================================
-xset s $SCREEN_OFF
-xset dpms 0 0 $SCREEN_OFF
-xset s blank
+xset s $SCREEN_OFF          # Screensaver inicia após 59m
+xset s blank                # Tela preta ao invés de "X"
+xset dpms $SCREEN_OFF $SCREEN_OFF $SCREEN_OFF  # standby | suspend | off
+xset +dpms                  # Habilita DPMS (crítico!)
 
 # =============================================
-# Inicia light-locker com delay de 60s após screensaver
+# Inicia light-locker com LOCK imediato após screensaver
 # =============================================
 light-locker --lock-after-screensaver=$LOCK_DELAY &
