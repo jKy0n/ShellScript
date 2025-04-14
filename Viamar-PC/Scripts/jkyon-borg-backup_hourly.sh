@@ -17,6 +17,6 @@ borg create -v --stats                       \
     --one-file-system
 
 # 2. Prune/expurgo de backups antigos (mantém últimos 24h de hora em hora, últimos 7 dias de diário, etc.)
-borg prune -v "$REPO" --prefix "$HOST-" --show-rc    \
+borg prune -v "$REPO" --glob-archives "$HOST-" --show-rc    \
     --keep-hourly=24   --keep-daily=7   --keep-weekly=4
 
