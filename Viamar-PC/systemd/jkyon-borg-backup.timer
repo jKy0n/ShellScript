@@ -1,0 +1,10 @@
+[Unit]
+Description=Agendador horário do backup Borg
+
+[Timer]
+OnCalendar=*:0/1:00
+AccuracySec=1min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
