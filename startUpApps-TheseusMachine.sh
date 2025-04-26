@@ -29,7 +29,7 @@ start_app "pavucontrol" 15           # Mixer de áudio
 # --- Produtividade ---
 start_app "code" 5 2                 # VS Code com prioridade média
 start_app "obsidian" 5 3             
-start_app "/home/jkyon/gitApps/appImages/Rambox-*-linux-x64.AppImage" 5 5  # Use caminho absoluto!
+start_app "/home/jkyon/gitApps/appImages/Rambox-2.4.1-linux-x64.AppImage" 5 5  # Use caminho absoluto!
 
 # --- Comunicação ---
 start_app "discord" 5 7              # Discord após 7s
