@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 #
 nice -n 19 \
     top -bn1 | \

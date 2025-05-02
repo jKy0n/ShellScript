@@ -29,24 +29,25 @@ is_charging() {
   charging=$(is_charging)
 
   # Verifica a carga da bateria e define a cor
-  # if [ "$battery_level" -lt 33 ]; then
-  #   color="\033[31m"  # Vermelho
-  # elif [ "$battery_level" -lt 50 ]; then
-  #   color="\033[33m"  # Amarelo
-  # else
-  #   color="\033[0m"  # Normal
-  # fi
+  if [ "$battery_level" -lt 33 ]; then
+    color="\033[31m"  # Vermelho
+  elif [ "$battery_level" -lt 50 ]; then
+    color="\033[33m"  # Amarelo
+  else
+    color="\033[0m"  # Normal
+  fi
 
   # Verifica se está carregando e adiciona o símbolo do raio
   if [ "$charging" -gt 0 ]; then  # Verifica se há ocorrência de "Charging"
-    charging_symbol=" ⚡  "
+    # charging_symbol=" ⚡  "
+    charging_symbol=" 🟢"
   else
     charging_symbol=""
   fi
 
   # Exibe a informação formatada
 #  echo -ne " ${color} $charging_symbol $battery_level \033[0m "
-  echo -e "$battery_level% $charging_symbol"
+  echo -ne "${color} $battery_level%$charging_symbol \033[0m"
 # sleep 5
 # done
 
