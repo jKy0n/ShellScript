@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # =============================================
 # Tempos em Segundos
 # =============================================
@@ -19,10 +18,11 @@
 # Inicia light-locker com delay de 10s após screensaver
 # =============================================
 # light-locker --lock-after-screensaver=60 &
-
 # =============================================
 
+
 # NOTE: Versão 2.0
+# ============================================
 
 set -euo pipefail
 
