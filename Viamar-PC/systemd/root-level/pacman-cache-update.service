@@ -1,0 +1,6 @@
+[Unit]
+Description=Atualiza o banco de dados do pacman/paru
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/paru -Sy --noconfirm --needed --refresh
