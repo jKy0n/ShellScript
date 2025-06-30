@@ -17,10 +17,10 @@ Thats is my scripts collection.
 </details>
 <details>
 <summary>CrisNote: A ArchLinux Laptop</summary>
-- **battery-widget.sh**  
-  Script for StatusBar indicate Battery %
-- **CPU-freq-monitor.sh**  
-  Script for StatusBar indicate CPU usage %
-- **CPU-temp-monitor.sh**  
-  Script for StatusBar indicate CPU temperature in ªC
+    **battery-widget.sh** <br>
+    Script for StatusBar indicate Battery % <br>
+    **CPU-freq-monitor.sh**   <br>
+    Script for StatusBar indicate CPU usage % <br>
+    **CPU-temp-monitor.sh**   <br>
+    Script for StatusBar indicate CPU temperature in ªC
 </details>
