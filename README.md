@@ -9,7 +9,13 @@ Thats is my scripts collection.
 
 <details>
     <summary>AI-Scripts</summary>
-        AI-Shell-SystemInformation.sh: Script to make AI better response system info
+        <ul>
+        <li>AI-Shell-SystemInformation.sh: Script to make AI better response system info</li>
+        <li>deepShell.sh: Script to interact with Ollama and format the output</li>
+        <li>ollama-pretty.sh: makes AI output more pretty (ex. using glow) </li>
+        <li>ollama-read-meta.sh: Allow AI to read metadata and bring more details</li>
+        <li>ollama-read.sh: Allow AI to read some data and bring more details</li>
+        </ul>
 </details>
 <details>
     <summary>BtrFS-Script</summary>
