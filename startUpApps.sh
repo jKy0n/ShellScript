@@ -15,15 +15,15 @@ HOSTNAME=$(uname -n)  # Use $(uname -n | hostname) - Detecta qual máquina estou
 case $HOSTNAME in
     # Start apps on TheseusMachine
     "TheseusMachine")
-        "$HOME/ShellScript/startUpApps-TheseusMachine.sh"
+        "$HOME/ShellScript/TheseusMachine/startUpApps-TheseusMachine.sh"
         ;;
     # Start apps on CrisNote
     "CrisNote")
-        "$HOME/ShellScript/startUpApps-CrisNote.sh"
+        "$HOME/ShellScript/CrisNote/startUpApps-CrisNote.sh"
         ;;
     # Start apps on Viamar-PC
     "Viamar-PC")
-        "$HOME/ShellScript/startUpApps-Viamar-PC.sh"
+        "$HOME/ShellScript/Viamar-PC/startUpApps-Viamar-PC.sh"
         ;;
     *)
         echo "Erro: Hostname '$HOSTNAME' não reconhecido" >&2
