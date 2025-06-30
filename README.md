@@ -19,25 +19,35 @@ Thats is my scripts collection.
 </details>
 <details>
     <summary>BtrFS-Script</summary>
-        Filesystem-show-script.sh: For better view filesystem at all
+        <ul>
+        <li>btrfs-slow-balance-home.sh: (do NOT use) Worst way to balance a volume</li>
+        <li>btrfs-slow-balance-timeshift.sh: (do NOT use) Worst way to balance a volume</li>
+        <li>btrfs-slow-balance.sh: (do NOT use) Worst way to balance a volume</li>
+        <li>Filesystem-show-script.sh: For better view filesystem at all</li>
+        </ul>
 </details>
 <details>
 <summary>CrisNote: A ArchLinux Laptop</summary>
-<ul>
+    <ul>
     <details>
-        <summary>battery-widget.sh</summary>
+        <summary>StatusBar-Script</summary>
         <ul>
-            <li>Script for StatusBar indicate Battery %</li>
-        </details>
+            <li>battery-widget.sh:</li>
+            <li>CPU-freq-monitor.sh:</li>
+            <li>CPU-temp-monitor.sh:</li>
+            <li>CPU-usage-monitor.sh:</li>
+            <li>RAM-usage-monitor.sh:</li>
+        </ul>
+    </details>
     <details>
-        <summary>CPU-freq-monitor.sh</summary>
+        <summary>StatusBar-Script.old</summary>
         <ul>
-            <li>Script for StatusBar indicate CPU usage %</li>
-        </details>
-    <details>
-        <summary>CPU-temp-monitor.sh</summary>
-        <ul>
-            <li>Script for StatusBar indicate CPU temperature in ªC</li>
-        </details>
-</ul>
+            <li>crisNoteBatteryLevel:</li>
+            <li>crisNoteCpuTemp:</li>
+            <li>CrisNoteCPUtemp.sh:</li>
+            <li>CrisNotoBatteryCapacity.sh:</li>
+        </ul>
+    </details>
+        <li>startUpApps-CrisNote: List of app to start with</li>
+    </ul>
 </details>
