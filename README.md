@@ -18,23 +18,20 @@ Thats is my scripts collection.
 <details>
 <summary>CrisNote: A ArchLinux Laptop</summary>
 <ul>
-    <li><details>
+    <details>
         <summary>battery-widget.sh</summary>
         <ul>
             <li>Script for StatusBar indicate Battery %</li>
-        </ul>
-    </details></li>
-    <li><details>
+        </details>
+    <details>
         <summary>CPU-freq-monitor.sh</summary>
         <ul>
             <li>Script for StatusBar indicate CPU usage %</li>
-        </ul>
-    </details></li>
-    <li><details>
+        </details>
+    <details>
         <summary>CPU-temp-monitor.sh</summary>
         <ul>
             <li>Script for StatusBar indicate CPU temperature in ªC</li>
-        </ul>
-    </details></li>
+        </details>
 </ul>
 </details>
