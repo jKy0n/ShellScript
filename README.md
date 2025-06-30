@@ -16,11 +16,25 @@ Thats is my scripts collection.
         Filesystem-show-script.sh: For better view filesystem at all
 </details>
 <details>
-    <summary>CrisNote: A ArchLinux Laptop</summary>
-        ### battery-widget.sh <br>
-        Script for StatusBar indicate Battery % <br>
-        ### CPU-freq-monitor.sh <br>
-        Script for StatusBar indicate CPU usage % <br>
-        ### CPU-temp-monitor.sh <br>
-        Script for StatusBar indicate CPU temperature in ªC
+<summary>CrisNote: A ArchLinux Laptop</summary>
+<ul>
+    <li><details>
+        <summary>battery-widget.sh</summary>
+        <ul>
+            <li>Script for StatusBar indicate Battery %</li>
+        </ul>
+    </details></li>
+    <li><details>
+        <summary>CPU-freq-monitor.sh</summary>
+        <ul>
+            <li>Script for StatusBar indicate CPU usage %</li>
+        </ul>
+    </details></li>
+    <li><details>
+        <summary>CPU-temp-monitor.sh</summary>
+        <ul>
+            <li>Script for StatusBar indicate CPU temperature in ªC</li>
+        </ul>
+    </details></li>
+</ul>
 </details>
