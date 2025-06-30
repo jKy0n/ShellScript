@@ -1,6 +1,6 @@
 
 
-
+local awful = require("awful")
 
 
 awful.spawn.with_display("alacritty", 2, "-e btop")
