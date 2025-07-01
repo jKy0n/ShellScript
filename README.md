@@ -1,11 +1,11 @@
 # 🐚 ShellScript 📜
 
-Thats is my scripts collection.
+Thats is my scripts collection. (Description below 👇)
 
 ![Scripts preview](https://github.com/jKy0n/ShellScript/blob/main/.media/screenshot-2025-06-30.png)
 
 
-## Scripts List 
+## Scripts List
 
 <details>
     <summary>AI-Scripts</summary>
