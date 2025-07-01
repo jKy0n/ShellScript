@@ -103,15 +103,15 @@ Thats is my scripts collection.
             <details>
                 <summary>backInTime-gpgKeys-Backup.service:</summary>
                         
-                        ```systemd
-                        # ~/.config/systemd/user/backintime-backup-job.service
-                            [Unit]
-                            Description=Run backintime snapshot generation
-                            
-                            [Service]
-                            Type=oneshot
-                            ExecStart=/usr/bin/nice -n19 /usr/bin/ionice -c2 -n7 /usr/bin/backintime backup-job
-                        ```
+```systemd
+# ~/.config/systemd/user/backintime-backup-job.service
+    [Unit]
+    Description=Run backintime snapshot generation
+    
+    [Service]
+    Type=oneshot
+    ExecStart=/usr/bin/nice -n19 /usr/bin/ionice -c2 -n7 /usr/bin/backintime backup-job
+```
 \
             </details>
             <li>backInTime-gpgKeys-Backup.timer: </li>
