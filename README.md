@@ -107,17 +107,17 @@ Thats is my scripts collection.
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.service"> borgBackup-jkyon.service</a>: systemd service for Borg backup job. (my actual backup service)</li>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.timer"> borgBackup-jkyon.timer</a>: systemd timer for Borg backup job. (my actual backup service)</li>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/gpt4all.service"> gpt4all.service</a>: Just a service to limit GPT4all resources using systemd.</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.service"> jkyon-picom-memoryUsageMonitor.service</a>: Service to monitoring memory usage of picom (compositor).</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.timer"> jkyon-picom-memoryUsageMonitor.timer</a>: Timer from monitoring memory usage of picom (compositor).</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom.service"> jkyon-picom.service</a>: Service to restart picom (compositor) service.</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-PortageRsyncDotfiles.service"> jkyon-systemd-PortageRsyncDotfiles.service</a>: Service to do rsync from /etc to ~/.theseusMachine-core </li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-PortageRsyncDotfiles.timer"> jkyon-systemd-PortageRsyncDotfiles.timer</a>: Timer to do rsync from /etc to ~/.theseusMachine-core</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-notify-test.service"> jkyon-systemd-notify-test.service</a>: Just a service to test libnotify (notifications).</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-notify-test.timer"> jkyon-systemd-notify-test.timer</a>: Just a service (timer) to test libnotify (notifications).</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/lockScreen.service"> lockScreen.service</a>: A service to call <a ref ="https://github.com/jKy0n/ShellScript/blob/main/lockScreen.sh"> lockScreen.sh</a>. </li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-reset.service"> pipewire-reset.service</a>: Service to restart pipewire after hours to avoid odd noises.</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-reset.timer"> pipewire-reset.timer</a>: Service (timer) to restart pipewire after hours to avoid odd noises.</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-session-manager.service"> pipewire-session-manager.service</a>: Service to start pipewire and wireplumber with user/system.</li>
-            <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/polkit-gnome-authentication-agent.service"> polkit-gnome-authentication-agent.service</a>: Service to start Gnome Polkit with user or system. </li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.service"> jkyon-picom-memoryUsageMonitor.service</a>: Service to monitoring memory usage of picom (compositor).</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.timer"> jkyon-picom-memoryUsageMonitor.timer</a>: Timer from monitoring memory usage of picom (compositor).</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom.service"> jkyon-picom.service</a>: Service to restart picom (compositor) service.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-PortageRsyncDotfiles.service"> jkyon-systemd-PortageRsyncDotfiles.service</a>: Service to do rsync from /etc to ~/.theseusMachine-core </li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-PortageRsyncDotfiles.timer"> jkyon-systemd-PortageRsyncDotfiles.timer</a>: Timer to do rsync from /etc to ~/.theseusMachine-core</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-notify-test.service"> jkyon-systemd-notify-test.service</a>: Just a service to test libnotify (notifications).</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-systemd-notify-test.timer"> jkyon-systemd-notify-test.timer</a>: Just a service (timer) to test libnotify (notifications).</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/lockScreen.service"> lockScreen.service</a>: A service to call <a href ="https://github.com/jKy0n/ShellScript/blob/main/lockScreen.sh"> lockScreen.sh</a>. </li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-reset.service"> pipewire-reset.service</a>: Service to restart pipewire after hours to avoid odd noises.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-reset.timer"> pipewire-reset.timer</a>: Service (timer) to restart pipewire after hours to avoid odd noises.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/pipewire-session-manager.service"> pipewire-session-manager.service</a>: Service to start pipewire and wireplumber with user/system.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/polkit-gnome-authentication-agent.service"> polkit-gnome-authentication-agent.service</a>: Service to start Gnome Polkit with user or system. </li>
         </ul>
 </details>
