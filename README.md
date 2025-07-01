@@ -48,7 +48,7 @@ Thats is my scripts collection. (Description below 👇)
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/CrisNotoBatteryCapacity.sh">CrisNotoBatteryCapacity.sh</a>: StatusBar script to extract battery level</li>
                     </ul>
             </details>
-                <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/startUpApps-CrisNote.sh">startUpApps-CrisNote</a>: List of app to start with</li>
+                <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/startUpApps-CrisNote.sh">startUpApps-CrisNote</a>: Script to autostart apps on CrisNote.</li>
         </ul>
 </details>
 <details>
@@ -138,5 +138,57 @@ Thats is my scripts collection. (Description below 👇)
             </details>
                 <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/startUpApps-TheseusMachine.sh"> startUpApps-TheseusMachine.sh</a>: Script to autostart apps on TheseusMachine. </li>
                 <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/tmux-quickstart.sh"> tmux-quickstart.sh</a>: Script to start tmux with panels pre-config . </li>
+        </ul>
+</details>
+<details>
+    <summary>Tools</summary>
+        <ul>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/OpenSeeFace.sh">OpenSeeFace.sh</a>: OpenSeeFace automation script.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/ananicy-exclude.sh">ananicy-exclude.sh</a>: Script to quick add exclude program on Ananicy.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/avisoNoTerminal.sh">avisoNoTerminal.sh</a>: This script alert when a command finished</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/gentoo-unmaskPackage.sh">gentoo-unmaskPackage.sh</a>: Quick add a package on Portage umaskpackes list </li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/ls-font-char.sh">ls-font-char.sh</a>: List system fonts available.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/picom-restartRoutine.sh">picom-restartRoutine.sh</a>: Script to restart Picom when memory limit (defined) overflows.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/pipewire-restart.sh">pipewire-restart.sh</a>: Script to restart Pipewire and Wireplumber to avoid odd noises</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/watch19.sh">watch19.sh</a>: Script to monitoring (watch) with low impact and diferences highlighted.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Tools/xclip-output-to-clipboard.sh">xclip-output-to-clipboard.sh</a>: Super handy script made to copy output from a command, good for log analysis with AI. </li>
+        </ul>
+</details>
+<details>
+    <summary>Viamar-PC</summary>
+        <ul>
+            <details>
+                <summary>Scripts</summary>
+                    <ul>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/Scripts/fastfetch-align-box.py">fastfetch-align-box.py</a>: (DON'T WORK) Script to generate a fastfetch config with textbox.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/Scripts/jkyon-borg-backup_hourly.sh">jkyon-borg-backup_hourly.sh</a>: Script to do a backup hourly with Borg.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/Scripts/screen-lock.sh">screen-lock.sh</a>: (DON'T WORK PROPERLY) script use light-locker to lock session on screensaver.</li>
+                    </ul>
+            </details>
+            <details>
+                <summary>StatusBar-Scripts</summary>
+                    <ul>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/StatusBar-Scripts/CPU-freq-monitor.sh">CPU-freq-monitor.sh</a>: Better way to extract CPU frequency in GHz to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/StatusBar-Scripts/CPU-temp-monitor.sh">CPU-temp-monitor.sh</a>: Better way to extract CPU temperature in ºC to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/StatusBar-Scripts/CPU-usage-monitor.sh">CPU-usage-monitor.sh</a>: Better way to extract CPU usage in % to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/StatusBar-Scripts/RAM-usage-monitor.sh">RAM-usage-monitor.sh</a>: Better way to extract RAM usage in % to statusBar.</li>
+                    </ul>
+            </details>
+            <details>
+                <summary>systemd</summary>
+                    <ul>
+                        <details>
+                            <summary>root-level</summary>
+                                <ul>
+                                    <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/systemd/root-level/pacman-cache-update.service">pacman-cache-update.service</a>: Service to update pacman/paru cache, work with: <a href="https://github.com/jKy0n/Viamar-dotfiles/blob/master/.config/awesome/jkyon-widgets/paru_update_checker.lua">paru_update_checker.lua</a>, a awesomeWM widget.</li>
+                                    <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/systemd/root-level/pacman-cache-update.timer">pacman-cache-update.timer</a>: Timer to update pacman/paru cache, work with: <a href="https://github.com/jKy0n/Viamar-dotfiles/blob/master/.config/awesome/jkyon-widgets/paru_update_checker.lua">paru_update_checker.lua</a>, a awesomeWM widget..</li>
+                                </ul>
+                        </details>
+                            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/systemd/gpt4all.service">gpt4all.service</a>: Just a systemd service to limit resources for GPT4All.</li>
+                            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/systemd/jkyon-borg-backup.service">jkyon-borg-backup.service</a>: systemd service for Borg backup job. (my actual backup service)</li>
+                            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/systemd/jkyon-borg-backup.timer">jkyon-borg-backup.timer</a>: systemd timer for Borg backup job. (my actual backup service)</li>
+                    </ul>
+            </details>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/startUpApps-Viamar-PC.sh">startUpApps-Viamar-PC.sh</a>: Script to autostart apps on Viamar-PC.</li>
         </ul>
 </details>
