@@ -100,8 +100,8 @@ Thats is my scripts collection.
 <details>
     <summary>systemd</summary>
         <ul>
-            <li>[backInTime-gpgKeys-Backup.service](https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.service): systemd service to encript GPG keys before backup</li>
-            <li>[backInTime-gpgKeys-Backup.timer](https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.timer): systemd timer to encript GPG keys before backup</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.service">backInTime-gpgKeys-Backup.service</a>: systemd service to encrypt GPG keys before backup</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.timer">backInTime-gpgKeys-Backup.timer</a>: systemd timer to encrypt GPG keys before backup</li>
             <li>backintime-backup-job.service: </li>
             <li>backintime-backup-job.timer: </li>
             <li>borgBackup-jkyon.service: </li>
