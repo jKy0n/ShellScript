@@ -54,9 +54,9 @@ Thats is my scripts collection.
 <details>
     <summary>fastfetch-scripts</summary>
         <ul>
-            <li>fastfetch-btrfs+bees-version.sh: Extract btrfs and bees version at same time</li>
-            <li>fastfetch-MoBo-info.sh: Extract only MoBo info necessary</li>
-            <li>fastfetch-zsh+tmux-version.sh: Extract zsh and tmux version at same time</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/fastfetch-scripts/fastfetch-MoBo-info.sh">fastfetch-MoBo-info.sh</a>: Extract only MoBo info necessary</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/fastfetch-scripts/fastfetch-btrfs%2Bbees-version.sh">fastfetch-btrfs+bees-version.sh</a>: Extract btrfs and bees version at same time</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/fastfetch-scripts/fastfetch-zsh%2Btmux-version.sh">fastfetch-zsh+tmux-version.sh</a>: Extract zsh and tmux version at same time</li>
         </ul>
 </details>
 <details>
@@ -122,7 +122,7 @@ Thats is my scripts collection.
         </ul>
 </details>
 <details>
-    <summary>TheseusMachine</summary>
+    <summary>TheseusMachine: my beloved PC</summary>
         <ul>
             <details>
                 <summary>StatusBar-Scripts</summary>
@@ -133,7 +133,7 @@ Thats is my scripts collection.
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-freq-monitor.sh">GPU-freq-monitor.sh</a>: Better way to extract GPU frequency in MHz to statusBar.</li>
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-temp-monitor.sh">GPU-temp-monitor.sh</a>: Better way to extract GPU temperature in ºC to statusBar.</li>
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-usage-monitor.sh">GPU-usage-monitor.sh</a>: Better way to extract GPU usage in % to statusBar.</li>
-                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/PSU-temp-monitor.sh">PSU-temp-monitor.sh</a>: Script to extract PSU VRM temperature in ªC to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/PSU-temp-monitor.sh">PSU-temp-monitor.sh</a>: Script to extract PSU VRM temperature in ºC to statusBar.</li>
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/RAM-usage-monitor.sh">RAM-usage-monitor.sh</a>: Better way to extract RAM usage in % to statusBar.</li>
                     </ul>
             </details>
