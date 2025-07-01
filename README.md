@@ -100,13 +100,13 @@ Thats is my scripts collection.
 <details>
     <summary>systemd</summary>
         <ul>
-            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.service">backInTime-gpgKeys-Backup.service</a>: systemd service to encrypt GPG keys before backup</li>
-            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.timer">backInTime-gpgKeys-Backup.timer</a>: systemd timer to encrypt GPG keys before backup</li>
-            <li>backintime-backup-job.service: </li>
-            <li>backintime-backup-job.timer: </li>
-            <li>borgBackup-jkyon.service: </li>
-            <li>borgBackup-jkyon.timer: </li>
-            <li>gpt4all.service: </li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.service">backInTime-gpgKeys-Backup.service</a>: systemd service to encrypt GPG keys before backup.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backInTime-gpgKeys-Backup.timer">backInTime-gpgKeys-Backup.timer</a>: systemd timer to encrypt GPG keys before backup.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backintime-backup-job.service"> backintime-backup-job.service</a>: systemd service for BackInTime backup job.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backintime-backup-job.timer"> backintime-backup-job.timer</a>: systemd timer for BackInTime backup job.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.service"> borgBackup-jkyon.service</a>: systemd service for Borg backup job. (my actual backup service)</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.timer"> borgBackup-jkyon.timer</a>: systemd timer for Borg backup job. (my actual backup service)</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/gpt4all.service">gpt4all.service</a>: Just a service to limit GPT4all resources using systemd</li>
             <li>jkyon-picom-memoryUsageMonitor.service: </li>
             <li>jkyon-picom-memoryUsageMonitor.timer: </li>
             <li>jkyon-picom.service: </li>
