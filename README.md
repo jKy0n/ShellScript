@@ -192,3 +192,21 @@ Thats is my scripts collection. (Description below 👇)
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/Viamar-PC/startUpApps-Viamar-PC.sh">startUpApps-Viamar-PC.sh</a>: Script to autostart apps on Viamar-PC.</li>
         </ul>
 </details>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/PortageDailyAutomation.sh">PortageDailyAutomation.sh</a>:Daily portage automation, show packages to update with <a href="https://github.com/jKy0n/TheseusMachine-dotfiles/blob/main/.config/awesome/jkyon-widgets/portage_update_checker.lua">portage_update_checker.lua</a>.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/PortageRsyncDotfiles.sh">PortageRsyncDotfiles.sh</a>: OLD script to automate .dotfiles.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/PortageSync.sh">PortageSync.sh</a>: OLD script to automate Portage synchronization.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/PortageUpdateMirrors.sh">PortageUpdateMirrors.sh</a>: Automation for MirrorSelect Portage.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/aliases.sh">aliases.sh</a>: My collection of aliases to use with zsh.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/awesome-startUp.lua">awesome-startUp.lua</a>: (NOT WORKING) Attempting to create a startUp Script for AwesomeWM</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/borg_backup-hourlyRoutine.sh">borg_backup-hourlyRoutine.sh</a>: Automation for Borg backup, work with systemd or Cron.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/gentoo-sync.sh">gentoo-sync.sh</a>:NEW script to automate Portage synchronization.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/lockScreen.sh">lockScreen.sh</a>: Activate light-locker to lock screen.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/satisfactory-server-update.sh">satisfactory-server-update.sh</a>: Automation to update and start Satisfactory game server.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/shellScript-header.sh">shellScript-header.sh</a>: Just a header for Shell Script.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/startUpApps.sh">startUpApps.sh</a>: Script to detect and autostart apps on a PC.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-PortageRsyncDotfiles.sh">systemd-PortageRsyncDotfiles.sh</a>: New script automate /etc .dotfiles.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-mirrorselect-update.sh">systemd-mirrorselect-update.sh</a> Script to refresh MirrorSelect.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-notify-PortageSync-finish.sh">systemd-notify-PortageSync-finish.sh</a>: Script to libnotify when finish a sync automation.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-notify-PortageSync-start.sh">systemd-notify-PortageSync-start.sh</a>: Script to libnotify when start a sync automation.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-picom-memoryMonitor.sh">systemd-picom-memoryMonitor.sh</a>: Script to monitor RAM usage and restart picom when defined overflow.</li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/theseusMachine-core-etc-sync.sh">theseusMachine-core-etc-sync.sh</a> Script to rsync full /etc to ~/.TheseusMachine-core </li>
