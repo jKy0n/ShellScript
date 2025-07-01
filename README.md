@@ -48,7 +48,7 @@ Thats is my scripts collection. (Description below 👇)
                         <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/CrisNotoBatteryCapacity.sh">CrisNotoBatteryCapacity.sh</a>: StatusBar script to extract battery level</li>
                     </ul>
             </details>
-                <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/startUpApps-CrisNote.sh">startUpApps-CrisNote</a>: List of app to start with</li>
+                <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/startUpApps-CrisNote.sh">startUpApps-CrisNote</a>: List of app to start with</li>
         </ul>
 </details>
 <details>
@@ -60,19 +60,19 @@ Thats is my scripts collection. (Description below 👇)
         </ul>
 </details>
 <details>
-    <summary>Old-unused</summary>
+    <summary>Old-unused-Script</summary>
         <ul>
-            <li>awesome-notify-test.sh: Just a test for awesomeWM notifications</li>
-            <li>backInTime-gpgKeys-backup.sh: Automation for encryptation GPG keys</li>
-            <li>feh_custom: Script to fix feh (app) window size</li>
-            <li>gentoo-addUSEpackage.sh: (won't work) Script to add package and flags to portage use packages</li>
-            <li>gentoo-update.sh: Fast way to update portage - substitute by better systemd automation</li>
-            <li>jkyon-scrub.sh: scrub all my disks at same time, or close to this</li>
-            <li>kdeConnect-refresh.sh: script to refesh KDEconnect - not needed anymore</li>
-            <li>mycompsize.sh: Script to emule compsize app, but worse</li>
-            <li>myfetch.sh: When I used neofech and not have (don't know how) storage support</li>
-            <li>notification-test.sh: Just a script to test libnnotify</li>
-            <li>snapShotsPreview.sh: Script to view btrfs snapshots disk usage </li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/awesome-notify-test.sh">awesome-notify-test.sh</a>: Just a test for awesomeWM notifications.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/backInTime-gpgKeys-backup.sh">backInTime-gpgKeys-backup.sh</a>: Automation for encryptation GPG keys.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/feh_custom">feh_custom</a>: Script to fix feh (app) window size.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/gentoo-addUSEpackage.sh">gentoo-addUSEpackage.sh</a>: (won't work) Script to add package and flags to portage use packages.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/gentoo-update.sh">gentoo-update.sh</a>: Fast way to update portage - substitute by better systemd automation.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/jkyon-scrub.sh">jkyon-scrub.sh</a>: scrub all my disks at same time, or close to this.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/kdeConnect-refresh.sh">kdeConnect-refresh.sh</a>: script to refesh KDEconnect - not needed anymore.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/mycompsize.sh">mycompsize.sh</a>: Script to emule compsize app, but worse.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/myfetch.sh">myfetch.sh</a>: When I used neofech and not have (don't know how) storage support.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/notification-test.sh">notification-test.sh</a>: Just a script to test libnnotify.</li>
+            <li><a href= "https://github.com/jKy0n/ShellScript/blob/main/Old-unused-Scripts/snapShotsPreview.sh">snapShotsPreview.sh</a>: Script to view btrfs snapshots disk usage.</li>
         </ul>
 </details>
 <details>
