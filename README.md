@@ -97,3 +97,40 @@ Thats is my scripts collection.
             <li>memoryUsage-widget.sh: Another way to extract RAM usage in GB to statusBar</li>
         </ul>
 </details>
+<details>
+    <summary>systemd</summary>
+        <ul>
+            <details>
+                <summary>backInTime-gpgKeys-Backup.service:</summary>
+                        
+                        ```systemd
+                        # ~/.config/systemd/user/backintime-backup-job.service
+                            [Unit]
+                            Description=Run backintime snapshot generation
+                            
+                            [Service]
+                            Type=oneshot
+                            ExecStart=/usr/bin/nice -n19 /usr/bin/ionice -c2 -n7 /usr/bin/backintime backup-job
+                        ```
+\
+            </details>
+            <li>backInTime-gpgKeys-Backup.timer: </li>
+            <li>backintime-backup-job.service: </li>
+            <li>backintime-backup-job.timer: </li>
+            <li>borgBackup-jkyon.service: </li>
+            <li>borgBackup-jkyon.timer: </li>
+            <li>gpt4all.service: </li>
+            <li>jkyon-picom-memoryUsageMonitor.service: </li>
+            <li>jkyon-picom-memoryUsageMonitor.timer: </li>
+            <li>jkyon-picom.service: </li>
+            <li>jkyon-systemd-PortageRsyncDotfiles.service: </li>
+            <li>jkyon-systemd-PortageRsyncDotfiles.timer: </li>
+            <li>jkyon-systemd-notify-test.service: </li>
+            <li>jkyon-systemd-notify-test.timer: </li>
+            <li>lockScreen.service: </li>
+            <li>pipewire-reset.service: </li>
+            <li>pipewire-reset.timer: </li>
+            <li>pipewire-session-manager.service: </li>
+            <li>polkit-gnome-authentication-agent.service: </li>
+        </ul>
+</details>
