@@ -114,8 +114,27 @@ Thats is my scripts collection.
 ```
 \
             </details>
-            <li>backInTime-gpgKeys-Backup.timer: </li>
-            <li>backintime-backup-job.service: </li>
+            <details>
+                <summary>backInTime-gpgKeys-Backup.timer:</summary>
+```systemd
+# ~/.config/systemd/user/backintime-backup-job.timer
+[Unit]
+Description=Start a backintime snapshot every hour
+
+[Timer]
+OnCalendar=hourly
+AccuracySec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+ ```
+ \           
+            </details>
+            <details>
+                <summary>backintime-backup-job.service: </summary>
+                Veja o código completo [aqui](https://github.com/jKy0n/ShellScript/blob/main/systemd/backintime-backup-job.service)
+            </details>
             <li>backintime-backup-job.timer: </li>
             <li>borgBackup-jkyon.service: </li>
             <li>borgBackup-jkyon.timer: </li>
