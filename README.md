@@ -10,20 +10,20 @@ Thats is my scripts collection. (Description below 👇)
 <details>
     <summary>AI-Scripts</summary>
         <ul>
-            <li>AI-Shell-SystemInformation.sh: Script to make AI better response system info</li>
-            <li>deepShell.sh: Script to interact with Ollama and format the output</li>
-            <li>ollama-pretty.sh: makes AI output more pretty (ex. using glow) </li>
-            <li>ollama-read-meta.sh: Allow AI to read metadata and bring more details</li>
-            <li>ollama-read.sh: Allow AI to read some data and bring more details</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/AI-Shell-SystemInformation.sh">AI-Shell-SystemInformation.sh</a>: Script to make AI better response system info.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/deepShell.sh">deepShell.sh</a>: Script to interact with Ollama and format the output.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/ollama-pretty.sh">ollama-pretty.sh</a>: makes AI output more pretty. (ex. using glow)</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/ollama-read-meta.sh">ollama-read-meta.sh</a>: Allow AI to read metadata and bring more details.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/ollama-read.sh">ollama-read.sh</a>: Allow AI to read some data and bring more details.</li>
         </ul>
 </details>
 <details>
     <summary>BtrFS-Script</summary>
         <ul>
-            <li>btrfs-slow-balance-home.sh: (do NOT use) Worst way to balance a volume</li>
-            <li>btrfs-slow-balance-timeshift.sh: (do NOT use) Worst way to balance a volume</li>
-            <li>btrfs-slow-balance.sh: (do NOT use) Worst way to balance a volume</li>
-            <li>Filesystem-show-script.sh: For better view filesystem at all</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/btrfs-scripts/btrfs-slow-balance-home.sh">btrfs-slow-balance-home.sh</a>: (do NOT use) Worst way to balance a volume.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/btrfs-scripts/btrfs-slow-balance-timeshift.sh">btrfs-slow-balance-timeshift.sh</a>: (do NOT use) Worst way to balance a volume.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/btrfs-scripts/btrfs-slow-balance.sh">btrfs-slow-balance.sh</a>: (do NOT use) Worst way to balance a volume.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/btrfs-scripts/filesystem-show-script.sh">Filesystem-show-script.sh</a>: For better view filesystem at all.</li>
         </ul>
 </details>
 <details>
@@ -32,23 +32,23 @@ Thats is my scripts collection. (Description below 👇)
             <details>
                 <summary>StatusBar-Script</summary>
                     <ul>
-                        <li>battery-widget.sh: StatusBar script to extract battery level</li>
-                        <li>CPU-freq-monitor.sh: StatusBar script to extract CPU frequency in GHz</li>
-                        <li>CPU-temp-monitor.sh: StatusBar script to extract CPU temperature in ºC</li>
-                        <li>CPU-usage-monitor.sh: StatusBar script to extract CPU usage in %</li>
-                        <li>RAM-usage-monitor.sh: StatusBar script to extract RAM usage in %</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts/battery-widget.sh">battery-widget.sh</a>: StatusBar script to extract battery level</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts/CPU-freq-monitor.sh">CPU-freq-monitor.sh</a>: StatusBar script to extract CPU frequency in GHz</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts/CPU-temp-monitor.sh">CPU-temp-monitor.sh</a>: StatusBar script to extract CPU temperature in ºC</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts/CPU-usage-monitor.sh">CPU-usage-monitor.sh</a>: StatusBar script to extract CPU usage in %</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts/RAM-usage-monitor.sh">RAM-usage-monitor.sh</a>: StatusBar script to extract RAM usage in %</li>
                     </ul>
             </details>
             <details>
                 <summary>StatusBar-Script.old</summary>
                     <ul>
-                        <li>crisNoteBatteryLevel: StatusBar script to extract battery level</li>
-                        <li>crisNoteCpuTemp: (old) StatusBar script to extract CPU temperature in ºC</li>
-                        <li>CrisNoteCPUtemp.sh: StatusBar script to extract CPU temperature in ºC</li>
-                        <li>CrisNotoBatteryCapacity.sh: StatusBar script to extract battery level</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/crisNoteBatteryLevel">crisNoteBatteryLevel</a>: StatusBar script to extract battery level</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/crisNoteCpuTemp">crisNoteCpuTemp</a>: (old) StatusBar script to extract CPU temperature in ºC</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/CrisNoteCPUtemp.sh">CrisNoteCPUtemp.sh</a>: StatusBar script to extract CPU temperature in ºC</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/StatusBar-Scripts.old/CrisNotoBatteryCapacity.sh">CrisNotoBatteryCapacity.sh</a>: StatusBar script to extract battery level</li>
                     </ul>
             </details>
-                <li>startUpApps-CrisNote: List of app to start with</li>
+                <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/CrisNote/startUpApps-CrisNote.sh">startUpApps-CrisNote</a>: List of app to start with</li>
         </ul>
 </details>
 <details>
