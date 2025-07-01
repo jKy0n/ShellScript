@@ -106,7 +106,7 @@ Thats is my scripts collection.
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/backintime-backup-job.timer"> backintime-backup-job.timer</a>: systemd timer for BackInTime backup job.</li>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.service"> borgBackup-jkyon.service</a>: systemd service for Borg backup job. (my actual backup service)</li>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/borgBackup-jkyon.timer"> borgBackup-jkyon.timer</a>: systemd timer for Borg backup job. (my actual backup service)</li>
-            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/gpt4all.service">gpt4all.service</a>: Just a service to limit GPT4all resources using systemd</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/gpt4all.service"> gpt4all.service</a>: Just a service to limit GPT4all resources using systemd.</li>
             <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.service"> jkyon-picom-memoryUsageMonitor.service</a>: Service to monitoring memory usage of picom (compositor).</li>
             <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom-memoryUsageMonitor.timer"> jkyon-picom-memoryUsageMonitor.timer</a>: Timer from monitoring memory usage of picom (compositor).</li>
             <li><a ref="https://github.com/jKy0n/ShellScript/blob/main/systemd/jkyon-picom.service"> jkyon-picom.service</a>: Service to restart picom (compositor) service.</li>
