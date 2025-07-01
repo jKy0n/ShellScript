@@ -78,23 +78,22 @@ Thats is my scripts collection. (Description below 👇)
 <details>
     <summary>StatusBar-Script.old</summary>
         <ul>
-            <li>awesomeWidget-CPU-freq-monitor.sh: Extract CPU frequency in MHz to statusBar</li>
-            <li>awesomeWidget-gpu0freq.sh: Extract GPU0 frequency in MHz to statusBar</li>
-            <li>awesomeWidget-gpu0temp.sh: Extract GPU0 temperature in ºC to statusBar</li>
-            <li>awesomeWidget-gpu0usage-fast.sh: Fast way to extract GPU0 usage in % to statusBar</li>
-            <li>awesomeWidget-gpu0usage-fast.sh: Extract GPU0 usage in % to statusBar</li>
-            <li>awesomeWidget-gpu1freq.sh: Extract GPU1 frequency in MHz to statusBar</li>
-            <li>awesomeWidget-gpu1temp.sh: Extract GPU1 temperature in ºC to statusBar</li>
-            <li>awesomeWidget-PSU-monitor.sh: Extract PSU power in W to statusBar< /li>
-            <li>awesomeWidget-PSU-temp-monitor.sh: Extract PSU VRM temperature in ºC to statusBar</li>
-            <li>awesomeWidget-trackingAwesomeMemoryUse: Extract amount of awesomeWM memory in GB to statusBar</li>
-            <li>dwmBlocksCpuTemp: Extract CPU temperature in ºC to statusBar</li>
-            <li>dwmBlocksCpuUsage: Extract CPU usage in % to statusBar</li>
-            <li>dwmBlocksMemUsage: Extract RAM usage in % to statusBar</li>
-            <li>dwmBlocksNice: Extract Nice number to statusBar</li>
-            <li>dwmBlocksUpdates: Extract numeber of portage packages to update to statusBar</li>
-            <li>dwmBlocksVolumeAudio: Extract Volume level from pactl to statusBar</li>
-            <li>memoryUsage-widget.sh: Another way to extract RAM usage in GB to statusBar</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-CPU-freq-monitor.sh">awesomeWidget-CPU-freq-monitor.sh</a>: Extract CPU frequency in MHz to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-gpu0freq.sh">awesomeWidget-gpu0freq.sh</a>: Extract GPU0 frequency in MHz to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-gpu0temp.sh">awesomeWidget-gpu0temp.sh</a>: Extract GPU0 temperature in ºC to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-gpu0usage-fast.sh">awesomeWidget-gpu0usage-fast.sh</a>: Fast way to extract GPU0 usage in % to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-gpu1freq.sh">awesomeWidget-gpu1freq.sh</a>: Extract GPU1 frequency in MHz to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-gpu1temp.sh">awesomeWidget-gpu1temp.sh</a>: Extract GPU1 temperature in ºC to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-PSU-monitor.sh">awesomeWidget-PSU-monitor.sh</a>: Extract PSU power in W to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-PSU-temp-monitor.sh">awesomeWidget-PSU-temp-monitor.sh</a>: Extract PSU VRM temperature in ºC to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/awesomeWidget-trackingAwesomeMemoryUse.sh">awesomeWidget-trackingAwesomeMemoryUse</a>: Extract amount of awesomeWM memory in GB to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksCpuTemp">dwmBlocksCpuTemp</a>: Extract CPU temperature in ºC to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksCpuUsage">dwmBlocksCpuUsage</a>: Extract CPU usage in % to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksMemUsage">dwmBlocksMemUsage</a>: Extract RAM usage in % to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksNice">dwmBlocksNice</a>: Extract Nice number to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksUpdates">dwmBlocksUpdates</a>: Extract numeber of portage packages to update to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/dwmBlocksVolumeAudio">dwmBlocksVolumeAudio</a>: Extract Volume level from pactl to statusBar.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/StatusBar-Scripts.old/memoryUsage-widget.sh">memoryUsage-widget.sh</a>: Another way to extract RAM usage in GB to statusBar.</li>
         </ul>
 </details>
 <details>
