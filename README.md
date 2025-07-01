@@ -121,3 +121,23 @@ Thats is my scripts collection.
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd/polkit-gnome-authentication-agent.service"> polkit-gnome-authentication-agent.service</a>: Service to start Gnome Polkit with user or system. </li>
         </ul>
 </details>
+<details>
+    <summary>TheseusMachine</summary>
+        <ul>
+            <details>
+                <summary>StatusBar-Scripts</summary>
+                    <ul>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/CPU-freq-monitor.sh">CPU-freq-monitor.sh</a>: Better way to extract CPU frequency in GHz to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/CPU-temp-monitor.sh">CPU-temp-monitor.sh</a>: Better way to extract CPU temperature in ºC to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/CPU-usage-monitor.sh">CPU-usage-monitor.sh</a>: Better way to extract CPU usage in % to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-freq-monitor.sh">GPU-freq-monitor.sh</a>: Better way to extract GPU frequency in MHz to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-temp-monitor.sh">GPU-temp-monitor.sh</a>: Better way to extract GPU temperature in ºC to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/GPU-usage-monitor.sh">GPU-usage-monitor.sh</a>: Better way to extract GPU usage in % to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/PSU-temp-monitor.sh">PSU-temp-monitor.sh</a>: Script to extract PSU VRM temperature in ªC to statusBar.</li>
+                        <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/StatusBar-Scripts/RAM-usage-monitor.sh">RAM-usage-monitor.sh</a>: Better way to extract RAM usage in % to statusBar.</li>
+                    </ul>
+            </details>
+                <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/startUpApps-TheseusMachine.sh"> startUpApps-TheseusMachine.sh</a>: Script to autostart apps on TheseusMachine. </li>
+                <li><a href="https://github.com/jKy0n/ShellScript/blob/main/TheseusMachine/tmux-quickstart.sh"> tmux-quickstart.sh</a>: Script to start tmux with panels pre-config . </li>
+        </ul>
+</details>
