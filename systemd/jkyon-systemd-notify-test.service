@@ -1,6 +1,0 @@
-[Unit]
-Description=Serviço de Notificação de Teste
-
-[Service]
-ExecStart=/bin/bash /home/jkyon/ShellScript/systemd-notify-test.sh
-Type=oneshot

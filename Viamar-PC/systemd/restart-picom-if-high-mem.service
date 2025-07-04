@@ -1,0 +1,12 @@
+[Unit]
+Description=Reinicia o picom se uso de RAM for alto
+Wants=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+ExecStart=/home/jkyon/ShellScript/Viamar-PC/Scripts/picom-restartRoutine.sh
+StandardOutput=journal
+StandardError=journal

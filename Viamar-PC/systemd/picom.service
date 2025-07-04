@@ -1,0 +1,14 @@
+[Unit]
+Description=Picom compositor
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/picom --config=/home/jkyon/.config/picom/picom.conf
+Restart=always
+RestartSec=3
+ExecStop=/usr/bin/pkill picom
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+
+[Install]
+WantedBy=graphical-session.target
+

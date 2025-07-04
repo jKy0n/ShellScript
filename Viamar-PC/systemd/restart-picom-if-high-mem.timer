@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer para reiniciar o picom caso RAM esteja alta
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=3min
+Persistent=true
+
+[Install]
+  WantedBy=default.target
