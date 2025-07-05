@@ -4,4 +4,4 @@ if [ -z "$FREQ" ]; then
     # Alternativamente, pode usar rocm-smi
     FREQ=$(rocm-smi --showclocks | grep 'DCEFCLK' | awk '{print $2}')  # Editar depois pra aparecer MHz separado
 fi
-echo "${FREQ:-0}"
+printf "%4d MHz\n" "${FREQ:-0}"

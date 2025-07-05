@@ -5,4 +5,4 @@ if [ -z "$BUSY" ]; then
     # Fallback para rocm-smi
     BUSY=$(rocm-smi --showuse | awk '/GPU use/ {print $NF}' | tr -d '%')
 fi
-echo "${BUSY:-0}%"
+printf "%3d%%\n" "${BUSY:-0}"
