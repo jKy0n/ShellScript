@@ -2,7 +2,7 @@
 
 for hw in /sys/class/hwmon/hwmon*; do
   name="$(cat "$hw/name" 2>/dev/null)"
-  if [ "$name" = "k10temp" ]; then
+  if [ "$name" = "Package" ]; then
     temp=$(awk '{printf "%.0f\n", $1/1000}' "$hw/temp1_input")
     echo "${temp}°C"
     exit
