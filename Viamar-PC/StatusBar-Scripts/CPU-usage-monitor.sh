@@ -11,4 +11,4 @@ DIFF_TOTAL=$((TOTAL - PREV_TOTAL))
 USAGE=$(( (100 * (DIFF_TOTAL - DIFF_IDLE)) / DIFF_TOTAL ))
 
 # largura mínima 2, preenchida com espaços — sem zeros
-printf "%02d%%\n" "$USAGE"
+printf "%3d%%\n" "$USAGE"
