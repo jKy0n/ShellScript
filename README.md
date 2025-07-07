@@ -18,6 +18,14 @@ Thats is my scripts collection. (Description below 👇)
         </ul>
 </details>
 <details>
+    <summary>awesome-WM-widgets</summary>
+        <ul>
+            <li><a href=""></li>
+            <li><a href=""></li>
+            <li><a href=""></li>
+        </ul>
+</details>
+<details>
     <summary>BtrFS-Script</summary>
         <ul>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/btrfs-scripts/btrfs-slow-balance-home.sh">btrfs-slow-balance-home.sh</a>: (do NOT use) Worst way to balance a volume.</li>
