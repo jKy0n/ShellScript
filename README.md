@@ -20,9 +20,10 @@ Thats is my scripts collection. (Description below 👇)
 <details>
     <summary>awesome-WM-widgets</summary>
         <ul>
-            <li><a href=""></li>
-            <li><a href=""></li>
-            <li><a href=""></li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/awesome-WM-widgets/DoNotDisturb_widget.lua">DoNotDisturb_widget.lua</a>: widget to stop/disable notifications (naughty awesome module).</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/awesome-WM-widgets/internet_widget.lua">internet_widget.lua</a>: widget to check internet status and show on the wibar if down.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/awesome-WM-widgets/paru_update_checker.lua">paru_update_checker.lua</a>: widget uses "paru -Qu" every hour to check for new updates.</li>
+            <li><a href="https://github.com/jKy0n/ShellScript/blob/main/awesome-WM-widgets/portage_update_checker.lua">portage_update_checker.lua</a>: widget uses "emerge -pvuND @world" every hour to check for new updates. </li>
         </ul>
 </details>
 <details>
