@@ -1,0 +1,9 @@
+[Unit]
+Description=jKyon Smart Cleanup (Remove old cache/trash files)
+
+[Service]
+Type=oneshot
+ExecStart=/home/jkyon/ShellScript/Tools/jkyon-smart-cleanup.sh --delete
+# Ensure display and session bus are available for notify-send:
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus

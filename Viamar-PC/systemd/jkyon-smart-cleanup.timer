@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily 10AM cleanup of old cache/temp files
+
+[Timer]
+OnCalendar=*-*-* 10:00
+Persistent=true
+Unit=jkyon-smart-cleanup.service
+
+[Install]
+WantedBy=timers.target
