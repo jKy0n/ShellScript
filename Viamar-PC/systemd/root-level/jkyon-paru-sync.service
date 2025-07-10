@@ -1,0 +1,6 @@
+[Unit]
+Description=Paru database sync (pacman/paru)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/paru -Syy --needed

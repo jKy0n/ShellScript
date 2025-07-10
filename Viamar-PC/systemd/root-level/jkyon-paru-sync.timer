@@ -1,0 +1,10 @@
+[Unit]
+Description=Run paru-sync every 45 minutes
+
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=45min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
