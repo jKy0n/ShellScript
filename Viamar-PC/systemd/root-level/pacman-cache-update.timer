@@ -3,7 +3,7 @@ Description=Atualiza o banco de dados do pacman/paru periodicamente
 
 [Timer]
 OnBootSec=5m
-OnUnitActiveSec=15m
+OnUnitActiveSec=30m
 
 [Install]
 WantedBy=timers.target
