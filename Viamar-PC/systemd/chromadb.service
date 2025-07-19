@@ -1,0 +1,14 @@
+[Unit]
+Description=ChromaDB server
+After=awesomewm.target
+Wants=awesomewm.target
+
+[Service]
+Type=simple
+Environment=VIRTUAL_ENV=%h/.venvs/assis-chroma
+Environment=PATH=%h/.venvs/assis-chroma/bin:%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=%h/.venvs/assis-chroma/bin/chroma run --host 127.0.0.1 --port 8000 --path %h/.assis/chroma
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
