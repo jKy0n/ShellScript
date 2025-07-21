@@ -1,0 +1,9 @@
+[Unit]
+Description=Recoll Indexer Daemon
+
+[Service]
+ExecStart=/usr/bin/recollindex -m -D -x -w 30
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
