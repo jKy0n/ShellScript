@@ -7,7 +7,7 @@ start_app() {
         echo "Erro: $1 não encontrado" >&2
         return 1
     fi
-    nice -n "$2" "$1" &
+    "$1" &
 }
 
 # Apps de Sistema (prioridade normal)
