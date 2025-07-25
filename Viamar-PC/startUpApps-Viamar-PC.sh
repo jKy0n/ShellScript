@@ -11,18 +11,18 @@ start_app() {
 }
 
 # Apps de Sistema (prioridade normal)
-start_app "kdeconnect-app" 15
-start_app "pavucontrol" 10
+start_app "kdeconnect-app"
+start_app "pavucontrol"
 
 # Produtividade (prioridade média)
-start_app "obsidian" 5
-start_app "rambox" 5
+start_app "obsidian"
+start_app "rambox"
 
 # Entretenimento (prioridade alta para evitar lag)
-start_app "spotify" 0
+start_app "spotify"
 
 # Navegador (prioridade personalizada)
-start_app "firefox" 5
+start_app "firefox"
 
 # Espera apps críticos antes de continuar
 wait -n  # Espera pelo menos um processo terminar (ajuste conforme necessidade)
