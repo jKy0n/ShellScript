@@ -1,0 +1,7 @@
+[Unit]
+Description=TheseusMachine sync selected config and push to Git
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -lc '~/ShellScript/TheseusMachine/etc-dotfiles.sh'
