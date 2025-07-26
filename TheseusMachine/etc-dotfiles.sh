@@ -3,13 +3,13 @@
 # setup up phase
 SRC="/etc"
 DEST="$HOME/.theseusMachine-core/etc"
-FILTER="$HOME/.config/theseus/rsync-filter"
+FILTER="/etc/.rsync-filter"
 
 { # Sync phase
     mkdir -p "$DEST" &&
-    rsync -av --delete --filter="dir-merge,$FILTER" "$SRC/" "$DEST/" &&
-    cd "$HOME/.theseusMachine-core" &&
+    rsync -av --delete --filter="dir-merge $FILTER" "$SRC/" "$DEST/" &&
 # Git phase    
+    cd "$HOME/.theseusMachine-core" &&
     git add . &&
     git diff --cached --quiet || git commit -m "Sync configs $(date +'%Y-%m-%d %H:%M')" &&
     git push
