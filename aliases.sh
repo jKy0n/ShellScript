@@ -3,7 +3,7 @@
 #
 # A
 alias bashReset='source ~/.bashrc && sleep 1 && reset'
-alias btop='nice -n 19 btop'
+# alias btop='nice -n 19 btop'
 #
 # B
 #
@@ -39,7 +39,7 @@ alias grep='grep --colour=auto'
 #
 # H
 alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-quickstart.sh'
-alias htop='nice -n 19 htop'
+# alias htop='nice -n 19 htop'
 #
 # I
 #
