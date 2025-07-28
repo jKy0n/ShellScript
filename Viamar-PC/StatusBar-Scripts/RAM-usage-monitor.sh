@@ -13,4 +13,4 @@ used=$(( total - available ))
 pct=$(( used * 100 / total ))
 
 # Formata com duas casas, preenchendo com zero se necessário
-printf "%02d%%\n" "$pct"
+printf "%2d%%\n" "$pct"
