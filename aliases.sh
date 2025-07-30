@@ -70,7 +70,7 @@ alias pipewireRestart='sh ~/ShellScript/Tools/pipewire-restart.sh'
 # Q
 #
 # R
-alias radeontop='nice -n 19 radeontop --color --transparency'
+alias radeontop='radeontop --color --transparency'
 alias reboot='loginctl reboot'
 #alias rm='rm -vi'
 #
@@ -88,7 +88,7 @@ alias upgradePortage='sudo emerge -avuND @world'
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 #
 # V
-alias valiases='bat ~/ShellScript/aliases.sh'
+alias valias='bat ~/ShellScript/aliases.sh'
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'
 alias vawesomeWM='bat ~/.config/awesome/rc.lua'
 alias vbash='bat ~/.bashrc'
