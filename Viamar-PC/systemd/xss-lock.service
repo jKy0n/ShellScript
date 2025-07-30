@@ -1,10 +1,12 @@
 [Unit]
-Description=Idle detection with xss-lock -> dm-tool
+Description=Lock screen with xss-lock and dm-tool
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/xss-lock -s ${XDG_SESSION_ID} --transfer-sleep-lock -- /usr/bin/dm-tool lock
-Restart=on-failure
+Type=simple
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+ExecStart=/usr/bin/xss-lock -- /usr/bin/dm-tool lock
 
 [Install]
 WantedBy=graphical-session.target
