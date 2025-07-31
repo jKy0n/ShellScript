@@ -1,3 +1,0 @@
-# Baloo
-{ "name": "baloo_file", "nice": 10, "ioclass": "best-effort", "ionice": 7 }
-{ "name": "baloo_file_extractor", "nice": 10, "ioclass": "best-effort", "ionice": 7 }

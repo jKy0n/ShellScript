@@ -1,0 +1,2 @@
+# Rambox
+{ "name": "rambox", "nice": 5, "ioclass": "best-effort", "ionice": 7, "sched": "idle" }

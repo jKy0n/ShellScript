@@ -1,0 +1,3 @@
+# baloo
+{ "name": "baloo_file", "nice": 19, "ionice": 7, "ioclass": "idle","cpu_weight": 25, "io_weight": 25 }
+{ "name": "baloo_file_extractor", "nice": 19, "ionice": 7, "ioclass": "idle", "cpu_weight": 25, "io_weight": 25 }

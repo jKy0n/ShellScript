@@ -1,2 +1,0 @@
-# Recoll
-{ "name": "recollindex", "nice": 10, "ioclass": "best-effort", "ionice": 7 }

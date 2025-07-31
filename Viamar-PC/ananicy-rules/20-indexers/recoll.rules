@@ -1,0 +1,2 @@
+# Recoll
+{ "name": "recollindex", "nice": 19, "ionice": 7, "ioclass": "idle", "cpu_weight": 25, "io_weight": 25 }

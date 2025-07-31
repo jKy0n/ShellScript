@@ -1,0 +1,4 @@
+# Snapper
+{ "name": "snapperd",          "nice": 15, "ioclass": "idle", "ionice": 7 }
+{ "name": "snapper-timeline",  "nice": 15, "ioclass": "idle", "ionice": 7 }
+{ "name": "snapper-cleanup",   "nice": 15, "ioclass": "idle", "ionice": 7 }

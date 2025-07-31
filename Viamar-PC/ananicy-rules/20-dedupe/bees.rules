@@ -1,0 +1,2 @@
+# Priorização discreta p/ beesd (deduplicador Btrfs)
+{ "name": "beesd", "nice": 19, "ioclass": "idle", "ionice": 7, "cpu_weight": 20, "io_weight": 15 }
