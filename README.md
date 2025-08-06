@@ -1,13 +1,193 @@
 # 🐚 ShellScript 📜
 
-Thats is my scripts collection. (Description below 👇)
+Thats is my scripts collection. (Description below 👇 soon)
 
 ![Scripts preview](https://github.com/jKy0n/ShellScript/blob/main/.media/screenshot-2025-06-30.png)
 
 
 ## Scripts List
 
-<details>
+```
+tree ~/ShellScript/
+
+/home/jkyon/ShellScript/
+├── AI-Scripts
+│   ├── AI-Shell-SystemInformation.sh
+│   ├── deepShell.sh
+│   ├── ollama-pretty.sh
+│   ├── ollama-read-meta.sh
+│   └── ollama-read.sh
+├── CrisNote
+│   ├── StatusBar-Scripts
+│   │   ├── CPU-freq-monitor.sh
+│   │   ├── CPU-temp-monitor.sh
+│   │   ├── CPU-usage-monitor.sh
+│   │   ├── RAM-usage-monitor.sh
+│   │   └── battery-widget.sh
+│   ├── StatusBar-Scripts.old
+│   │   ├── CrisNoteCPUtemp.sh
+│   │   ├── CrisNotoBatteryCapacity.sh
+│   │   ├── crisNoteBatteryLevel
+│   │   └── crisNoteCpuTemp
+│   └── startUpApps-CrisNote.sh
+├── Old-unused-Scripts
+│   ├── awesome-notify-test.sh
+│   ├── backInTime-gpgKeys-backup.sh
+│   ├── feh_custom
+│   ├── gentoo-addUSEpackage.sh
+│   ├── gentoo-update.sh
+│   ├── jkyon-scrub.sh
+│   ├── kdeConnect-refresh.sh
+│   ├── mycompsize.sh
+│   ├── myfetch.sh
+│   ├── notification-test.sh
+│   └── snapShotsPreview.sh
+├── PortageRsyncDotfiles.sh
+├── README.md
+├── StatusBar-Scripts.old
+│   ├── awesomeWidget-CPU-freq-monitor.sh
+│   ├── awesomeWidget-PSU-monitor.sh
+│   ├── awesomeWidget-PSU-temp-monitor.sh
+│   ├── awesomeWidget-gpu0freq.sh
+│   ├── awesomeWidget-gpu0temp.sh
+│   ├── awesomeWidget-gpu0usage-fast.sh
+│   ├── awesomeWidget-gpu0usage.sh
+│   ├── awesomeWidget-gpu1freq.sh
+│   ├── awesomeWidget-gpu1temp.sh
+│   ├── awesomeWidget-trackingAwesomeMemoryUse.sh
+│   ├── dwmBlocksCpuTemp
+│   ├── dwmBlocksCpuUsage
+│   ├── dwmBlocksMemUsage
+│   ├── dwmBlocksNice
+│   ├── dwmBlocksUpdates
+│   ├── dwmBlocksVolumeAudio
+│   └── memoryUsage-widget.sh
+├── TheseusMachine
+│   ├── PortageSync.old
+│   │   ├── PortageDailyAutomation.sh
+│   │   ├── PortageSync.sh
+│   │   └── PortageUpdateMirrors.sh
+│   ├── StatusBar-Scripts
+│   │   ├── CPU-freq-monitor.sh
+│   │   ├── CPU-temp-monitor.sh
+│   │   ├── CPU-usage-monitor.sh
+│   │   ├── GPU-freq-monitor.sh
+│   │   ├── GPU-temp-monitor.sh
+│   │   ├── GPU-usage-monitor.sh
+│   │   ├── PSU-temp-monitor.sh
+│   │   ├── PSU-usage-monitor.sh
+│   │   └── RAM-usage-monitor.sh
+│   ├── etc-dotfiles.sh
+│   ├── startUpApps-TheseusMachine-with-nice.sh
+│   ├── startUpApps-TheseusMachine.sh
+│   ├── systemd
+│   │   ├── PortageSync
+│   │   │   ├── systemd-mirrorselect-update.sh
+│   │   │   ├── systemd-notify-PortageSync-finish.sh
+│   │   │   └── systemd-notify-PortageSync-start.sh
+│   │   ├── etc-dotfiles.service
+│   │   └── etc-dotfiles.timer
+│   └── tmux-quickstart.sh
+├── Tools
+│   ├── OpenSeeFace.sh
+│   ├── ananicy-exclude.sh
+│   ├── avisoNoTerminal.sh
+│   ├── gentoo-unmaskPackage.sh
+│   ├── jkyon-smart-cleanup.sh
+│   ├── ls-font-char.sh
+│   ├── picom-restartRoutine.sh
+│   ├── pipewire-restart.sh
+│   ├── rofi-recoll.sh
+│   ├── watch19.sh
+│   └── xclip-output-to-clipboard.sh
+├── Viamar-PC
+│   ├── Scripts
+│   │   ├── fastfetch-align-box.py
+│   │   ├── jkyon-borg-backup_hourly.sh
+│   │   └── picom-restartRoutine.sh
+│   ├── StatusBar-Scripts
+│   │   ├── CPU-freq-monitor.sh
+│   │   ├── CPU-temp-monitor.sh
+│   │   ├── CPU-usage-monitor.sh
+│   │   └── RAM-usage-monitor.sh
+│   ├── ananicy-rules
+│   │   ├── 10-monitoring
+│   │   │   ├── btop.rules
+│   │   │   └── htop.rules
+│   │   ├── 20-backups
+│   │   │   ├── borg.rules
+│   │   │   └── snapper.rules
+│   │   ├── 20-dedupe
+│   │   │   └── bees.rules
+│   │   ├── 20-indexers
+│   │   │   ├── baloo.rules
+│   │   │   └── recoll.rules
+│   │   ├── 20-messengers
+│   │   │   └── rambox.rules
+│   │   └── ananicy.conf
+│   ├── startUpApps-Viamar-PC.sh
+│   └── systemd
+│       ├── chromadb.service
+│       ├── gpt4all.service
+│       ├── jkyon-borg-backup.service
+│       ├── jkyon-borg-backup.timer
+│       ├── jkyon-smart-cleanup.service
+│       ├── jkyon-smart-cleanup.timer
+│       ├── picom.service
+│       ├── restart-picom-if-high-mem.service
+│       ├── restart-picom-if-high-mem.timer
+│       ├── root-level
+│       │   ├── pacman-cache-update.service
+│       │   └── pacman-cache-update.timer
+│       └── xss-lock.service
+├── aliases.sh
+├── awesome-WM-widgets
+│   ├── DoNotDisturb_widget.lua
+│   ├── internet_widget.lua
+│   ├── paru_update_checker.lua
+│   └── portage_update_checker.lua
+├── awesome-startUp.lua
+├── borg_backup-hourlyRoutine.sh
+├── btrfs-scripts
+│   ├── btrfs-slow-balance-home.sh
+│   ├── btrfs-slow-balance-timeshift.sh
+│   ├── btrfs-slow-balance.sh
+│   └── filesystem-show-script.sh
+├── fastfetch-scripts
+│   ├── fastfetch-MoBo-info.sh
+│   ├── fastfetch-btrfs+bees-version.sh
+│   └── fastfetch-zsh+tmux-version.sh
+├── gentoo-sync.sh
+├── lockScreen.sh
+├── satisfactory-server-update.sh
+├── shellScript-header.sh
+├── startUpApps.sh
+├── systemd
+│   ├── backInTime-gpgKeys-Backup.service
+│   ├── backInTime-gpgKeys-Backup.timer
+│   ├── backintime-backup-job.service
+│   ├── backintime-backup-job.timer
+│   ├── borgBackup-jkyon.service
+│   ├── borgBackup-jkyon.timer
+│   ├── gpt4all.service
+│   ├── jkyon-picom-memoryUsageMonitor.service
+│   ├── jkyon-picom-memoryUsageMonitor.timer
+│   ├── jkyon-picom.service
+│   ├── jkyon-systemd-PortageRsyncDotfiles.service
+│   ├── jkyon-systemd-PortageRsyncDotfiles.timer
+│   ├── jkyon-systemd-notify-send-test.service
+│   ├── lockScreen.service
+│   ├── pipewire-reset.service
+│   ├── pipewire-reset.timer
+│   ├── pipewire-session-manager.service
+│   └── polkit-gnome-authentication-agent.service
+├── systemd-picom-memoryMonitor.sh
+└── theseusMachine-core-etc-sync.sh
+
+28 directories, 145 files
+```
+
+<!-- <details>
     <summary>AI-Scripts</summary>
         <ul>
             <li><a href="https://github.com/jKy0n/ShellScript/blob/main/AI-Scripts/AI-Shell-SystemInformation.sh">AI-Shell-SystemInformation.sh</a>: Script to make AI better response system info.</li>
@@ -218,4 +398,4 @@ Thats is my scripts collection. (Description below 👇)
 <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-notify-PortageSync-finish.sh">systemd-notify-PortageSync-finish.sh</a>: Script to libnotify when finish a sync automation.</li>
 <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-notify-PortageSync-start.sh">systemd-notify-PortageSync-start.sh</a>: Script to libnotify when start a sync automation.</li>
 <li><a href="https://github.com/jKy0n/ShellScript/blob/main/systemd-picom-memoryMonitor.sh">systemd-picom-memoryMonitor.sh</a>: Script to monitor RAM usage and restart picom when defined overflow.</li>
-<li><a href="https://github.com/jKy0n/ShellScript/blob/main/theseusMachine-core-etc-sync.sh">theseusMachine-core-etc-sync.sh</a> Script to rsync full /etc to ~/.TheseusMachine-core </li>
+<li><a href="https://github.com/jKy0n/ShellScript/blob/main/theseusMachine-core-etc-sync.sh">theseusMachine-core-etc-sync.sh</a> Script to rsync full /etc to ~/.TheseusMachine-core </li> -->
