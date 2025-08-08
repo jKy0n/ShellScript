@@ -68,7 +68,7 @@ alias radeontop='radeontop --color --transparency'
 alias reboot='loginctl reboot'
 #
 # S
-alias satisfactory-server='sh ~/ShellScript/satisfactory-server-update.sh'
+alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors='nice --adjustment=19 watch --color --interval 1 sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
 alias startUpApps='sh ~/ShellScript/startUpApps.sh'
