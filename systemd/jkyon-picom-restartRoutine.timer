@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for Restarting Picom Routine
+
+[Timer]
+OnBootSec=2h
+Persistent=true
+RandomizedDelaySec=2m
+OnUnitActiveSec=2h
+
+[Install]
+WantedBy=timers.target

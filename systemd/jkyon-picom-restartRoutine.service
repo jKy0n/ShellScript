@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart Picom Routine
+
+[Service]
+ExecStart=/home/jkyon/ShellScript/picom-restartRoutine.sh
+Type=simple
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=default.target
