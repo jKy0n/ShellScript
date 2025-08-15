@@ -1,0 +1,15 @@
+[Unit]
+Description=Auto-suspend após inatividade (X11)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/xautolock \
+  -time 3600 \
+  -locker 'systemctl suspend' \
+  -notify 30 \
+  -notifier "notify-send 'Locking screen in 30 seconds'"
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
