@@ -8,7 +8,7 @@ alias bashReset='source ~/.bashrc && sleep 1 && reset'
 #
 # C
 alias copy-to-clipboard='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
-alias cp='cp  -v'
+alias cp='cp -v'
 alias cupsStart='sudo systemctl start cups.service'
 alias cupsStop='sudo systemctl stop cups.service'
 #
@@ -66,6 +66,7 @@ alias pipewireRestart='sh ~/ShellScript/Tools/pipewire-restart.sh'
 # R
 alias radeontop='radeontop --color --transparency'
 alias reboot='loginctl reboot'
+alias rg='rg --color=auto'
 #
 # S
 alias ookla-work='speedtest --server-id=53390'
