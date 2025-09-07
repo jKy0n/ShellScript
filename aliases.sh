@@ -46,6 +46,7 @@ alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-q
 alias ls='lsd'
 alias lsblk-mine='lsblk -o NAME,SIZE,FSTYPE,LABEL,MOUNTPOINT'
 alias lsl='lsd -la'
+alias lsusb='echo "Use cyme instead: cyme --tree"'
 #
 # M
 alias meAvise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
