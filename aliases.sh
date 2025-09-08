@@ -13,6 +13,7 @@ alias cupsStart='sudo systemctl start cups.service'
 alias cupsStop='sudo systemctl stop cups.service'
 #
 # D
+alias deadProcessWatcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
 #
 # E
 alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
@@ -37,6 +38,7 @@ alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-q
 # alias htop='nice -n 19 htop'
 #
 # I
+alias iotop='sudo iotop -aoP'
 #
 # J
 #
@@ -49,6 +51,7 @@ alias lsl='lsd -la'
 alias lsusb='echo "Use cyme instead: cyme --tree"'
 #
 # M
+alias man='LANG=pt_BR.UTF-8 man'
 alias meAvise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
 alias mv='mv -v'
 #
