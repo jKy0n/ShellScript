@@ -28,7 +28,7 @@ alias eUnmskpkg='sudo -e /etc/portage/package.accept_keywords'
 alias ezsh='nvim ~/.zshrc'
 #
 # F
-alias ffetch='fastfetch'
+alias ffetch='sh ~/ShellScript/ffetch.sh'
 #
 # G
 alias grep='grep --colour=auto'
