@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+OUTDIR=~/Pictures/Screenshots
+mkdir -p "$OUTDIR"
+
+# pega o ID da janela ativa
+WIN_ID=$(xdotool getactivewindow)
+
+# obtém o título da janela ativa
+TITLE=$(xdotool getwindowname "$WIN_ID")
+
+# sanitiza o título
+SAFE_TITLE=$(echo "$TITLE" | tr ' /\\:*?"<>|' '_' | cut -c -40)
+
+# nome do arquivo temporário e final
+TMPFILE="$(mktemp --suffix=.png)"
+FINAL="$OUTDIR/$(date +%Y-%m-%d_%H-%M-%S)_${SAFE_TITLE}.png"
+
+# captura a janela
+maim --window "$WIN_ID" "$TMPFILE"
+
+# adiciona borda de 10px (cor #24273a por exemplo)
+convert "$TMPFILE" -bordercolor "#24273a" -border 10x10 "$FINAL"
+
+# remove temporário
+rm "$TMPFILE"
+
+echo "Screenshot salva em: $FINAL"

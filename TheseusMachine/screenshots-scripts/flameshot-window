@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Captura uma janela específica usando Flameshot
+
+# Diretório padrão de saída (pode alterar)
+OUTDIR="$HOME/Pictures/Screenshots/"
+mkdir -p "$OUTDIR"
+
+# Nome do arquivo com timestamp
+FILENAME="janela_$(date +'%Y-%m-%d_%H-%M-%S').png"
+OUTFILE="$OUTDIR/$FILENAME"
+
+# Seleciona a janela clicando nela
+win_id=$(xdotool selectwindow) || exit 1
+
+# Obtém posição e tamanho da janela
+read x y w h < <(
+  xwininfo -id "$win_id" |
+  awk '/Absolute upper-left X|Absolute upper-left Y|Width|Height/ {print $NF}' |
+  tr '\n' ' '
+)
+
+# Faz a captura
+flameshot gui -r --region "$x,$y,$w,$h" > "$OUTFILE"
+
+# Mostra caminho salvo
+notify-send "📸 Captura salva" "$OUTFILE" || echo "Captura salva em: $OUTFILE"
