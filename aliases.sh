@@ -84,8 +84,8 @@ alias startUpApps='sh ~/ShellScript/startUpApps.sh'
 # U
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias updateDistro='sh ~/ShellScript/updateDistro.sh'
-alias updatePortage='emerge -pvuND @world'
-alias upgradePortage='sudo emerge -avuND @world'
+# alias updatePortage='emerge -pvuND @world'
+# alias upgradePortage='sudo emerge -avuND @world'
 #
 # V
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'
