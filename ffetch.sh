@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
 
-#
-#   Use instructions:
-#
-#     mkdir -p ~/.local/bin                                     # Create a local repositorie
-#     ln -s ~/ShellScript/startUpApps.sh ~/.local/bin/startapps # Create SymLink
-#     export PATH="$HOME/.local/bin:$PATH"                      # Put path on zsh (or bash)
-#     source ~/.zshrc                                           # Uptade shell
-#     startapps                                                 # execute
-#
 
-HOSTNAME=$(uname -n)  # Use $(uname -n | hostname) - Detecta qual máquina estou usando.
+HOSTNAME=$(uname -n)
+
+# Verifica se foi passado --mini ou -m como argumento
+MINI=false
+for arg in "$@"; do
+    if [[ "$arg" == "--mini" || "$arg" == "-m" ]]; then
+        MINI=true
+        break
+    fi
+done
 
 case $HOSTNAME in
-    # Start apps on TheseusMachine
-    "TheseusMachine")
-        fastfetch --config ~/.config/fastfetch/ffetch-TheseusMachine.jsonc
-        ;;
-    # Start apps on CrisNote
+    # Call fastfetch for CrisNote
     "CrisNote")
-        fastfetch --config ~/.config/fastfetch/ffetch-CrisNote.jsonc
+        if $MINI; then
+            fastfetch --config ~/.config/fastfetch/ffetch-mini-CrisNote.jsonc
+        else
+            fastfetch --config ~/.config/fastfetch/ffetch-CrisNote.jsonc
+        fi
         ;;
-    # Start apps on Viamar-PC
+
+    # Call fastfetch for TheseusMachine
+    "TheseusMachine")
+        if $MINI; then
+            fastfetch --config ~/.config/fastfetch/ffetch-mini-TheseusMachine.jsonc
+        else
+            fastfetch --config ~/.config/fastfetch/ffetch-TheseusMachine.jsonc
+        fi
+        ;;
+
+    # Call fastfetch for Viamar-PC
     "Viamar-PC")
-        fastfetch --config ~/.config/fastfetch/ffetch-viamar-PC.jsonc
+        if $MINI; then
+            fastfetch --config ~/.config/fastfetch/ffetch-mini-viamar-PC.jsonc
+        else
+            fastfetch --config ~/.config/fastfetch/ffetch-viamar-PC.jsonc
+        fi
         ;;
     *)
         echo "Erro: Hostname '$HOSTNAME' não reconhecido" >&2
