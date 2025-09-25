@@ -21,7 +21,7 @@ check_arch() {
     fi
 
     # Saída formatada
-    echo "pacman $pacman_version paru $paru_version"
+    echo "pacman $pacman_version + paru $paru_version"
 }
 
 # Função para Gentoo (portage)
