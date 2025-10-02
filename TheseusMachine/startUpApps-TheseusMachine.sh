@@ -17,7 +17,7 @@ start_app "pavucontrol"              # Mixer de áudio
 # --- Produtividade ---
 start_app "code"                     # VS Code editor
 start_app "obsidian"                 # Obsidian para notas
-start_app "/home/jkyon/gitApps/appImages/Rambox-2.5.0-linux-x64.AppImage"  # Use caminho absoluto!
+start_app "/home/jkyon/gitApps/appImages/Rambox/Rambox.AppImage"  # Use caminho absoluto!
 
 # --- Comunicação ---
 start_app "discord"                  # Discord para comunicação
