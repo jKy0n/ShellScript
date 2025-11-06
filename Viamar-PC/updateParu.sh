@@ -8,4 +8,4 @@ if ! command -v paru &> /dev/null; then
 fi
 
 # Atualiza os repositórios e mostra atualizações disponíveis
-paru -Syy && paru -Qu
+paru -Syy && paru -Qu && echo && echo "Total packages available for update: $(paru -Qu | wc -l)"
