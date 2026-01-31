@@ -14,6 +14,9 @@ start_app() {
 start_app "kdeconnect-app"
 start_app "pavucontrol"
 
+# Desenvolvimento
+start_app "code"
+
 # Produtividade (prioridade média)
 start_app "obsidian"
 start_app "rambox"
