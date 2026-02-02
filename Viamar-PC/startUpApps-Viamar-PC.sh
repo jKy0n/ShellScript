@@ -22,7 +22,7 @@ start_app "obsidian"
 start_app "rambox"
 
 # Entretenimento (prioridade alta para evitar lag)
-start_app "spotify-launcher"
+start_app "spotify"
 
 # Navegador (prioridade personalizada)
 start_app "firefox"
