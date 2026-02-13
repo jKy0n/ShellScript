@@ -1,0 +1,19 @@
+[Unit]
+Description=Borg-UI Docker Container
+After=docker.service
+Requires=docker.service
+Documentation=https://github.com/karanhudia/borg-ui
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jkyon/Apps/borg-ui-docker
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker compose down
+Restart=unless-stopped
+RestartSec=10s
+User=jkyon
+Group=jkyon
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+
+[Install]
+WantedBy=multi-user.target
