@@ -7,7 +7,7 @@ LOG_FILE="$HOME/.logs/borgBackup/borg_backup.log"
 
 
 # Executando backup incremental com compressão e deduplicação
-borg create --verbose --stats --compression zlib,6 \
+borg create --verbose --stats --compression zstd,3 \
     "$BACKUP_REPO"::backup-$(date +%Y-%m-%d_%H:%M) \
     $BACKUP_TARGET >> $LOG_FILE 2>&1
 

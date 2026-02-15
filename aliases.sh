@@ -31,6 +31,7 @@ alias ezsh='nvim ~/.zshrc'
 alias ffetch='sh ~/ShellScript/ffetch.sh'
 #
 # G
+alias genlop-watch='nice --adjustment=19 watch --color --interval 1 genlop -ci'
 alias grep='grep --colour=auto'
 #
 # H
@@ -59,6 +60,7 @@ alias mv='mv -v'
 alias nano='nano --linenumbers'
 #
 # O
+alias ookla-work='speedtest --server-id=53390'
 #
 # P
 # alias pay-respects='_PR_LAST_COMMAND="$(history | tail -n 2 | head -n 1)" /home/jkyon/.local/bin/pay-respects'
@@ -73,9 +75,8 @@ alias reboot='loginctl reboot'
 alias rg='rg --color=auto'
 #
 # S
-alias ookla-work='speedtest --server-id=53390'
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
-alias sensors='nice --adjustment=19 watch --color --interval 1 sensors'
+alias sensors-watch='nice --adjustment=19 watch --color --interval 1 sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
 alias startUpApps='sh ~/ShellScript/startUpApps.sh'
 #
@@ -96,7 +97,6 @@ alias vmake='bat /etc/portage/make.conf'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
 #
 # W
-alias genlop='nice --adjustment=19 watch --color --interval 1 genlop -ci'
 alias wacomSetStylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
 alias watch19='sh ~/ShellScript/Tools/watch19.sh'
 #

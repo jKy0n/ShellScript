@@ -1,7 +1,7 @@
 #!/bin/sh
 # PSU Info: Potência (W), Uso (%) e Temperatura (°C)
 
-SENSOR_NAME="corsairpsu-hid-[0-9]+-[0-9]+"
+SENSOR_NAME="corsairpsu-hid-[0-9]+-[0-9a-z]+"
 
 # Potência (W) e Uso (%)
 read_psu_usage() {
