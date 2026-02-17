@@ -1,6 +1,12 @@
 #!/bin/bash
 
 export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
 
-# Notificar o systemd que o serviço terminou
-notify-send -u normal -i /usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg "Portage" "Sincronização finalizada"
+sleep 1
+
+timeout 5 notify-send \
+    -u normal \
+    -i /usr/share/icons/Papirus/48x48/apps/distributor-logo-gentoo.svg \
+    "Portage" \
+    "Sincronização finalizada" || true
