@@ -1,0 +1,42 @@
+[Unit]
+Description=Systemd Failed Services Monitor
+Documentation=man:systemctl(1)
+After=dbus.service
+PartOf=systemd-monitor.timer
+
+[Service]
+Type=oneshot
+ExecStart=%h/ShellScript/TheseusMachine/systemd-monitor/systemd-monitor.sh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=systemd-monitor
+
+# Variáveis de ambiente necessárias para notify-send
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+Environment="DISPLAY=:0"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus"
+
+# Permissões
+PrivateTmp=yes
+NoNewPrivileges=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+PrivateDevices=yes
+ProtectHostname=yes
+ProtectClock=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/.logs/systemd-monitor %h/.cache/systemd-monitor
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,18 @@
+[Unit]
+Description=Systemd Failed Services Monitor Timer
+Documentation=man:systemd.timer(5)
+Requires=systemd-monitor.service
+
+[Timer]
+# Executar a cada 30 segundos
+OnBootSec=10s
+OnUnitActiveSec=30s
+
+# Executar imediatamente se o timer foi perdido
+Persistent=true
+
+# Precisão: permitir até 5 segundos de variação
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target
