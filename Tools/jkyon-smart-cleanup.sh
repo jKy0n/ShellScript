@@ -59,10 +59,10 @@ cleanup_category() {
 }
 
 # Perform cleanup for each category with specified age threshold.
-cleanup_category "$HOME/.cache"            30 ".cache"
+cleanup_category "$HOME/.cache"                   30 ".cache"
 cleanup_category "$HOME/.local/share/Trash/files" 60 "Trash/files"
-cleanup_category "$HOME/.thumbnails"       7  ".thumbnails"
-cleanup_category "$HOME/.local/state"      30 ".local/state"
+cleanup_category "$HOME/.thumbnails"               7 ".thumbnails"
+cleanup_category "$HOME/.local/state"             30 ".local/state"
 
 if $DO_DELETE; then
   echo "[$(date)] Cleanup run complete." | tee -a "$LOGPATH"
