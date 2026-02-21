@@ -1,0 +1,29 @@
+[Unit]
+Description=rclone mount for Google Photos (jkls.1989@gmail.com) - READ-ONLY BACKUP
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+User=jkyon
+Group=jkyon
+
+ExecStart=/usr/bin/rclone mount \
+    GooglePhotos-jkls.1989:/ \
+    /mnt/CloudDrives/GooglePhotos-jkls.1989 \
+    --allow-other \
+    --read-only \
+    --cache-dir=/tmp/rclone-cache \
+    --vfs-cache-mode=full \
+    --verbose
+
+ExecStop=/bin/fusermount -u /mnt/CloudDrives/GooglePhotos-jkls.1989
+
+Restart=on-failure
+RestartSec=10
+
+LimitNOFILE=infinity
+LimitNPROC=infinity
+
+[Install]
+WantedBy=multi-user.target

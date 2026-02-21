@@ -1,0 +1,33 @@
+[Unit]
+Description=Notify Failed Service %i
+Documentation=man:systemd.service(5)
+After=dbus.service
+PartOf=%i.service
+
+[Service]
+Type=oneshot
+User=jkyon
+ExecStart=/usr/bin/notify-send \
+    --urgency=critical \
+    --expire-time=15000 \
+    --app-name="systemd-alert" \
+    --icon="dialog-error" \
+    "Serviço Falhado: %i" \
+    "O serviço %i falhou. Verifique com: systemctl status %i"
+
+# Variáveis de ambiente necessárias
+Environment="DISPLAY=:0"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus"
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+
+# Segurança
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+
+# Timeout curto - não queremos que o alerta demore
+TimeoutStartSec=10s
+
+[Install]
+WantedBy=multi-user.target

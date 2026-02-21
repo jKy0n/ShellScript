@@ -1,0 +1,28 @@
+[Unit]
+Description=rclone mount for Google Drive (jkls.1989@gmail.com)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+User=jkyon
+Group=jkyon
+
+ExecStart=/usr/bin/rclone mount \
+    jkls.1989@gmail.com:/ \
+    /mnt/CloudDrives/jkls.1989@gmail.com \
+    --allow-other \
+    --cache-dir=/tmp/rclone-cache \
+    --vfs-cache-mode=writes \
+    --verbose
+
+ExecStop=/bin/fusermount -u /mnt/CloudDrives/jkls.1989@gmail.com
+
+Restart=on-failure
+RestartSec=10
+
+LimitNOFILE=infinity
+LimitNPROC=infinity
+
+[Install]
+WantedBy=multi-user.target
