@@ -2,12 +2,12 @@
 
 ################################################################################
 # systemd-monitor.sh
-# 
+#
 # Script para monitorar serviços systemd falhados e enviar notificações
 # via notify-send quando um serviço entra em estado "failed"
 #
 # Uso: ./systemd-monitor.sh
-# 
+#
 # Dependências:
 #   - systemctl (systemd)
 #   - notify-send (libnotify)
@@ -57,7 +57,7 @@ send_notification() {
     local title="$1"
     local message="$2"
     local urgency="${3:-$NOTIFICATION_URGENCY}"
-    
+
     notify-send \
         --urgency="${urgency}" \
         --expire-time="${NOTIFICATION_TIMEOUT}" \
@@ -65,7 +65,7 @@ send_notification() {
         --icon="dialog-warning" \
         "${title}" \
         "${message}"
-    
+
     log "Notificação enviada: ${title} - ${message}"
 }
 
@@ -88,15 +88,15 @@ get_service_status() {
 check_new_failures() {
     local current_failed="$1"
     local previous_failed=""
-    
+
     # Ler serviços falhados anteriores do cache
     if [[ -f "${FAILED_SERVICES_CACHE}" ]]; then
         previous_failed=$(cat "${FAILED_SERVICES_CACHE}")
     fi
-    
+
     # Salvar estado atual
     echo "${current_failed}" > "${FAILED_SERVICES_CACHE}"
-    
+
     # Encontrar novos serviços falhados
     if [[ -z "${previous_failed}" ]]; then
         # Primeira execução
@@ -110,18 +110,18 @@ check_new_failures() {
 # Obter informações detalhadas de um serviço
 get_service_info() {
     local service="$1"
-    
+
     # Tentar obter informações com systemctl
     local status_output
     status_output=$(systemctl status "${service}" --no-pager 2>&1 | head -20)
-    
+
     # Extrair informações relevantes
     local active_status
     active_status=$(echo "${status_output}" | grep -oP 'Active: \K.*' | head -1 || echo "Unknown")
-    
+
     local last_error
     last_error=$(journalctl -u "${service}" -n 1 --no-pager 2>&1 | tail -1 || echo "No logs available")
-    
+
     echo "Status: ${active_status}"
     echo "Último erro: ${last_error}"
 }
@@ -132,47 +132,47 @@ get_service_info() {
 
 main() {
     log "=== Iniciando verificação de serviços falhados ==="
-    
+
     # Obter lista de serviços falhados
     failed_services=$(get_failed_services)
-    
+
     if [[ -z "${failed_services}" ]]; then
         log "✓ Nenhum serviço falhado detectado"
         exit 0
     fi
-    
+
     # Verificar novos serviços falhados
     new_failures=$(check_new_failures "${failed_services}")
-    
+
     if [[ -z "${new_failures}" ]]; then
         log "ℹ Serviços falhados já conhecidos, sem novas falhas"
         exit 0
     fi
-    
+
     # Processar cada novo serviço falhado
     while IFS= read -r service; do
         if [[ -z "${service}" ]]; then
             continue
         fi
-        
+
         log "⚠ Novo serviço falhado detectado: ${service}"
-        
+
         # Obter informações do serviço
         service_info=$(get_service_info "${service}")
-        
+
         # Preparar mensagem de notificação
         local title="Serviço Falhado: ${service}"
         local message="${service_info}"
-        
+
         # Enviar notificação
         send_notification "${title}" "${message}" "critical"
-        
+
         # Log detalhado
         log "Detalhes do serviço ${service}:"
         log "${service_info}"
-        
+
     done <<< "${new_failures}"
-    
+
     log "=== Verificação concluída ==="
 }
 

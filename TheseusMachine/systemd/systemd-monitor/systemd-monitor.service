@@ -6,7 +6,7 @@ PartOf=systemd-monitor.timer
 
 [Service]
 Type=oneshot
-ExecStart=%h/ShellScript/TheseusMachine/systemd-monitor/systemd-monitor.sh
+ExecStart=%h/ShellScript/TheseusMachine/systemd/systemd-monitor/systemd-monitor.sh
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=systemd-monitor
