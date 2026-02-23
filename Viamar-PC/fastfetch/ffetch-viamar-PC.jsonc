@@ -1,0 +1,240 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "multithreading": true,
+
+    "logo": {
+        "type": "chafa",
+        "source": "/home/jkyon/Viamar/Logos-Viamar/LogoNovoViamar.png",
+        "width":  40,
+        "height": 15,
+        "padding": {
+            "top": 2,
+            "left": 2,
+            "right": 2
+        }
+    },
+
+    "display": {
+        "separator": "    ",
+        "color": "white"
+    },
+
+    "modules": [
+        {
+            "type": "custom",
+            "format": "     ──────────── \u001b[1m Software \u001b[0m ────────────",
+            "key": " "
+        },
+        {
+            "type": "os",
+            "key": "  ",
+            "format": "{2} "
+        },
+        {
+            "type": "kernel",
+            "key": "  ",
+            "format": "{1} {2} "
+        },
+        {
+            "type": "command",  // Package Manager version (pacman + paru)
+            "key": "  ",
+            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-packageManager-version.sh",
+            "format": "{1} "
+        },
+        {
+            "type": "command",  // Shell + Tmux version
+            "key": "  ",
+            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-zsh+tmux-version.sh",
+            "format": "{1} "
+        },
+        {
+            "type": "editor",
+            "key": "  ",
+            "format": "AstroNvim ({2} {5}) "
+        },
+        {
+            "type": "command",  // Awesome version
+            "key": "  ",
+            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-awesome-version.sh",
+            "format": "{1} "
+        },
+        {
+            "type": "command",  // Pipewire version
+            "key": "  󰓃",
+            "text": " pipewire --version | awk 'NR==1 {printf \"%s \", $1} NR==2 {print $4}' ",
+            "format": "{1} "
+        },
+        {
+            "type": "command",  // Btrfs + Bees version
+            "key": "  ",
+            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-btrfs+bees-version.sh",
+            "format": "{1} "
+        },
+        {
+            "type": "initsystem",
+            "key": "  ",
+            "format": "{1} {3} "
+        },
+        {
+            "type": "command",  // Sudo version
+            "key": "  󱕵",
+            "text": " sudo --version | awk 'NR==1 {print $1, $3 }' ",
+            "format": "{1} "
+        },
+        {
+            "type": "command",  // Borg version
+            "key": "  ",
+            "text": "sh -c 'pacman -Q borg | awk \"{print \\$2}\"' ",
+            "format": "borg backup {1} "
+        },
+        {
+            "type": "command",  // Grub version
+            "key": "  󱫠",
+            "text": " sh -c 'grub-install --version | awk \"{print \\$2, \\$3}\" | awk \"{gsub(/\\(|\\)/,\\\"\\\"); print \\$1, \\$2}\"' ",
+            "format": "{1} "
+        },
+        {
+            "type": "custom",
+            "format": "     ──────────── \u001b[1m Theme \u001b[0m ────────────",
+            "key": " "
+        },
+        {
+            "type": "theme",
+            "key": "  ",
+            "format": "{2} "
+        },
+        {
+            "type": "icons",
+            "key": "  󰉋",
+            "format": "{2} "
+        },
+        {
+            "type": "font",
+            "key": "  ",
+            "format": "{5}"
+        },
+        {
+            "type": "cursor",
+            "key": "  󰇀",
+            "format": "{1} ({2}) "
+        },
+        {
+            "type": "custom",
+            "format": "     ──────────── \u001b[1m Hardware \u001b[0m ────────────",
+            "key": " "
+        },
+        {
+            "type": "cpu",
+            "key": "  ",
+            "showPeCoreCount": true,
+            "temp": true,
+            "format": "{1} ({5}) - {7} - {8} "
+        },
+        {
+            "type": "memory",
+            "key": "  ",
+            "format": "Corsair Vengeance - {1} / {2} ({3})"
+        },
+        {
+            "type": "gpu",
+            "detectionMethod": "pci",
+            "key": "  󰢮",
+            "format": "{1} {2}"
+        },
+        {
+            "type": "command",  // Motherboard model
+            "key": "  󰚗",
+            "text": "sh /home/jkyon/ShellScript/Viamar-PC/fastfetch/fastfetch-MoBo-info.sh",
+            "format": "{1} "
+        },
+        {
+            "type": "disk",
+            "key": "  ",
+            "percent": {},
+            "format": "{10} - {1} / {2} - ({3}) - {9} "
+        },
+        {
+            "type": "custom",
+            "format": "     ──────────── \u001b[1m Peripherals \u001b[0m ────────────",
+            "key": " "
+        },
+        {
+            "type": "custom",   // Keyboard model
+            "key": "  ",
+            "format": "HyperX Alloy Origins Core (tkl)\n                                                        keycaps: Propitious Omen Purple "
+        },
+        {
+            "type": "custom",   // Number pad model
+            "key": "  󰃬",
+            "format": "Exbom BK-N30 "
+        },
+        {
+            "type": "custom",   // Mouse model
+            "key": "  󰍽",
+            "format": "Logitech G403 "
+        },
+        {
+            "type": "custom",   // Headphone model
+            "key": "  ",
+            "format": "JBL T290 (in-Ear) "
+        },
+        {
+            "type": "display",
+            "key": "  󱄄",
+            "format": "{6} - {1}x{2} @ {3} Hz ",
+            "preciseRefreshRate": false
+        },
+        {
+            "type": "custom",
+            "format": "     ──────────── \u001b[1m Uptime \u001b[0m ────────────",
+            "key": " "
+        },
+        {
+            "type": "command",  // Whoami
+            "key": "  ",
+            "text": "whoami",
+            "format": "{1} "
+        },
+        {
+            "type": "command",  // Hostname
+            "key": "  󰪫",
+            "text": "uname -n",
+            "format": "{1} "
+        },
+        {
+            "type": "packages",
+            "key": "  ",
+            "format": "{1} packages"
+        },
+        {
+            "type": "command",  // Days since installation
+            "key": "  ",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+            "format": "{1} "
+        },
+        {
+            "type": "uptime",
+            "key": "  "
+        },
+        {
+            "type": "localip",
+            "key": "  󰌗",
+            "format": "{1} "
+        },
+/*         {
+            "type": "custom",
+            "format": "╰───────────────────────────────────────────────────────────────────────╯",
+            "key": " "
+        }, */
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[1m\n             _    ___                                   ___   _____  \n            | |  / (_)___  _____ __  ____  _____      / __ \\/ ____/  \n            | | / / / __ `/ __ `__ \\/ __ `/ ___/_____/ /_/ / /       \n            | |/ / / /_/ / / / / / / /_/ / /  /_____/ ____/ /___     \n            |___/_/\\__,_/_/ /_/ /_/\\__,_/_/        /_/    \\____/    \n\u001b[0m",
+            "key": " "
+        }
+    ]
+}
