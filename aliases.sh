@@ -7,7 +7,7 @@ alias bashReset='source ~/.bashrc && sleep 1 && reset'
 # B
 #
 # C
-alias copy-to-clipboard='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
+# alias copy-to-clipboard='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
 alias cp='cp -v'
 alias cupsStart='sudo systemctl start cups.service'
 alias cupsStop='sudo systemctl stop cups.service'
