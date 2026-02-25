@@ -9,7 +9,7 @@ start_app() {
 }
 
 # Sistema
-start_app kdeconnectd
+# start_app kdeconnectd
 start_app pavucontrol
 
 # Desenvolvimento
