@@ -5,6 +5,7 @@
 alias bashReset='source ~/.bashrc && sleep 1 && reset'
 #
 # B
+alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
 #
 # C
 # alias copy-to-clipboard='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
