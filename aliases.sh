@@ -8,10 +8,10 @@ alias bashReset='source ~/.bashrc && sleep 1 && reset'
 alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
 #
 # C
-# alias copy-to-clipboard='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
+alias copy-to-clipboard-alias='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
 alias cp='cp -v'
-alias cupsStart='sudo systemctl start cups.service'
-alias cupsStop='sudo systemctl stop cups.service'
+# alias cupsStart='sudo systemctl start cups.service'
+# alias cupsStop='sudo systemctl stop cups.service'
 #
 # D
 alias deadProcessWatcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
@@ -49,7 +49,8 @@ alias iotop='sudo iotop -aoP'
 # L
 alias ls='lsd'
 alias lsblk-mine='lsblk -o NAME,SIZE,FSTYPE,LABEL,MOUNTPOINT'
-alias lsl='lsd -la'
+alias lsl='lsd -l'
+alias lsla='lsd -la'
 alias lsusb='echo "Use cyme instead: cyme --tree"'
 #
 # M
