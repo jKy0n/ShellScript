@@ -60,13 +60,13 @@ alias mv='mv -v'
 # N
 #
 # O
-alias ookla-work='speedtest --server-id=53390'
 alias ookla-home='ookla-speedtest --server-id=53390'
+alias ookla-work='speedtest --server-id=53390'
 #
 # P
-# alias pay-respects='_PR_LAST_COMMAND="$(history | tail -n 2 | head -n 1)" /home/jkyon/.local/bin/pay-respects'
 alias picom-restart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
 alias pipewire-restart='sh ~/ShellScript/Tools/pipewire-restart.sh'
+alias portage-unused-ranker='sh /home/jkyon/ShellScript/TheseusMachine/portage-tools/portage-unused-ranker/portage-unused-ranker.sh'
 #
 # Q
 #
