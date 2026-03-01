@@ -10,8 +10,8 @@ start_app() {
 }
 
 # --- Sistemas ---
-start_app "kdeconnectd"              # Daemon de comunicação KDE Connect
-start_app "kdeconnect-app"           # Interface após o daemon
+# start_app "kdeconnectd"              # Daemon de comunicação KDE Connect
+# start_app "kdeconnect-app"           # Interface após o daemon
 start_app "pavucontrol"              # Mixer de áudio
 
 # --- Produtividade ---

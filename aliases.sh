@@ -2,7 +2,7 @@
 #
 #
 # A
-alias bashReset='source ~/.bashrc && sleep 1 && reset'
+alias bash-reset='source ~/.bashrc && sleep 1 && reset'
 #
 # B
 alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
@@ -10,15 +10,14 @@ alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
 # C
 alias copy-to-clipboard-alias='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
 alias cp='cp -v'
-# alias cupsStart='sudo systemctl start cups.service'
-# alias cupsStop='sudo systemctl stop cups.service'
 #
 # D
-alias deadProcessWatcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
+alias dead-process-watcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
+alias distcc-portage-watch='sudo nice -n 19 env DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text 1'
 #
 # E
 alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
-alias ealias='nvim ~/ShellScript/aliases.sh && zshReset'
+alias ealias='nvim ~/ShellScript/aliases.sh && zsh-reset'
 alias eawesomeWM='nvim ~/.config/awesome/rc.lua'
 alias ebash='nvim ~/.bashrc'
 alias efstab='sudo -e /etc/fstab'
@@ -55,19 +54,19 @@ alias lsusb='echo "Use cyme instead: cyme --tree"'
 #
 # M
 alias man='LANG=pt_BR.UTF-8 man'
-alias meAvise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
+alias me-avise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
 alias mv='mv -v'
 #
 # N
-alias nano='nano --linenumbers'
 #
 # O
 alias ookla-work='speedtest --server-id=53390'
+alias ookla-home='ookla-speedtest --server-id=53390'
 #
 # P
 # alias pay-respects='_PR_LAST_COMMAND="$(history | tail -n 2 | head -n 1)" /home/jkyon/.local/bin/pay-respects'
-alias PicomRestart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
-alias pipewireRestart='sh ~/ShellScript/Tools/pipewire-restart.sh'
+alias picom-restart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
+alias pipewire-restart='sh ~/ShellScript/Tools/pipewire-restart.sh'
 #
 # Q
 #
@@ -80,14 +79,14 @@ alias rg='rg --color=auto'
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors-watch='nice --adjustment=19 watch --color --interval 1 sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
-alias startUpApps='sh ~/ShellScript/startUpApps.sh'
+alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # T
 #
 # U
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
-alias updateDistro='sh ~/ShellScript/updateDistro.sh'
-alias upgradeDistro='sh ~/ShellScript/upgradeDistro.sh'
+alias update-distro='sh ~/ShellScript/updateDistro.sh'
+alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 # alias updatePortage='emerge -pvuND @world'
 # alias upgradePortage='sudo emerge -avuND @world'
 #
@@ -100,7 +99,7 @@ alias vmake='bat /etc/portage/make.conf'
 alias vumskpkg='bat /etc/portage/package.accept_keywords'
 #
 # W
-alias wacomSetStylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
+alias wacom-set-stylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
 alias watch19='sh ~/ShellScript/Tools/watch19.sh'
 #
 # X
@@ -108,4 +107,4 @@ alias watch19='sh ~/ShellScript/Tools/watch19.sh'
 # Y
 #
 # Z
-alias zshReset='source ~/.zshrc && sleep 1 && reset'
+alias zsh-reset='source ~/.zshrc && sleep 1 && reset'
