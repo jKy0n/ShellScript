@@ -1,2 +1,0 @@
-# borg
-{ "name": "borg", "nice": 15, "ioclass": "idle", "ionice": 3 }
