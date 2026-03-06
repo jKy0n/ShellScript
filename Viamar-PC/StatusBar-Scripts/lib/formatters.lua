@@ -14,9 +14,9 @@ function M.format_cpu_for_wibar(stats, items_to_show)
 
     for _, item in ipairs(items_to_show) do
         if item == "usage" and stats.usage_percent then
-            table.insert(items, string.format("%2d%%", stats.usage_percent))
+            table.insert(items, string.format("%3d%%", stats.usage_percent))
         elseif item == "freq" and stats.frequency_ghz then
-            table.insert(items, string.format("%.1fGHz", stats.frequency_ghz))
+            table.insert(items, string.format("%.1f GHz", stats.frequency_ghz))
         elseif item == "temp" and stats.temperature_celsius then
             table.insert(items, string.format("%d°C", stats.temperature_celsius))
         end
@@ -35,11 +35,11 @@ function M.format_ram_for_wibar(stats, items_to_show)
 
     for _, item in ipairs(items_to_show) do
         if item == "usage" and stats.usage_percent then
-            table.insert(items, string.format("U: %2d%%", stats.usage_percent))
+            table.insert(items, string.format("%2d%%", stats.usage_percent))
         elseif item == "available" and stats.available_gb then
-            table.insert(items, string.format("A: %.1fGB", stats.available_gb))
+            table.insert(items, string.format("%.1f GB", stats.available_gb))
         elseif item == "swap_usage" and stats.swap_usage_percent then
-            table.insert(items, string.format("S: %2d%%", stats.swap_usage_percent))
+            table.insert(items, string.format("%2d%%", stats.swap_usage_percent))
         end
     end
 

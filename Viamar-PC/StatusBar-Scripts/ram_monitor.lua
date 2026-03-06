@@ -20,8 +20,10 @@ local formatters = require("lib.formatters")
 local function create_ram_widget(args)
     args = args or { "usage", "available" } -- Default: mostrar uso e memória disponível
 
-    local icon = '<span font="MesloLGS Nerd Font 11"> </span>'
+    local icon = '<span font="MesloLGS Nerd Font 11">   </span>'
     local widget = wibox.widget.textbox(icon .. "...")
+    widget.font = "MesloLGS Nerd Font Mono Bold 8.5"
+    widget.align = "center"
 
     local popup
     local last_stats = {}
