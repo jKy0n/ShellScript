@@ -9,26 +9,46 @@
 #
 #
 
+# #!/bin/bash
+
+# echo "🧹 Iniciando limpeza do Rambox na TheseusMachine..."
+
+# # 1. Fecha o Rambox
+# killall -9 rambox 2>/dev/null
+# sleep 2
+
+# # 2. Faz backup
+# tar -cf - ~/.config/rambox/ 2>/dev/null | pzstd -24 -o ~/Rambox_backup_$(date +%Y%m%d_%H%M%S).tar.zst
+
+# # 3. Limpa cache (ATENÇÃO: usar 'rambox' minúsculo)
+# rm -rf ~/.cache/rambox/
+# rm -rf ~/.config/rambox/Cache/
+# rm -rf ~/.config/rambox/Code\ Cache/
+# rm -rf ~/.config/rambox/Session\ Storage/
+# rm -rf ~/.config/rambox/logs/
+
+# # 4. Limpa banco de dados
+# rm -f ~/.config/rambox/*.db
+# rm -f ~/.config/rambox/*.db-journal
+
+# echo "✅ Limpeza concluída!"
+
+
+
 #!/bin/bash
 
-echo "🧹 Iniciando limpeza do Rambox na TheseusMachine..."
+echo "🧹 Limpando Rambox - Partitions antigos..."
 
-# 1. Fecha o Rambox
-killall -9 rambox 2>/dev/null
-sleep 2
+BEFORE=$(du -sh ~/.config/rambox/Partitions | cut -f1)
 
-# 2. Faz backup
-tar -cf - ~/.config/rambox/ 2>/dev/null | pzstd -24 -o ~/Rambox_backup_$(date +%Y%m%d_%H%M%S).tar.zst
+# Remove arquivos não acessados em 14 dias dentro de cada partição
+find ~/.config/rambox/Partitions -type f -atime +14 -delete
 
-# 3. Limpa cache (ATENÇÃO: usar 'rambox' minúsculo)
-rm -rf ~/.cache/rambox/
-rm -rf ~/.config/rambox/Cache/
-rm -rf ~/.config/rambox/Code\ Cache/
-rm -rf ~/.config/rambox/Session\ Storage/
-rm -rf ~/.config/rambox/logs/
+# Remove diretórios vazios
+find ~/.config/rambox/Partitions -type d -empty -delete
 
-# 4. Limpa banco de dados
-rm -f ~/.config/rambox/*.db
-rm -f ~/.config/rambox/*.db-journal
+AFTER=$(du -sh ~/.config/rambox/Partitions | cut -f1)
 
 echo "✅ Limpeza concluída!"
+echo "Antes: $BEFORE"
+echo "Depois: $AFTER"
