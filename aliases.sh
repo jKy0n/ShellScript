@@ -42,6 +42,15 @@ alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-q
 alias iotop='sudo iotop -aoP'
 #
 # J
+alias jkyonphone-ssh-mount='mkdir -p /mnt/jKyonPhone && sshfs \
+    jkyonphone:/data/data/com.termux/files/home \
+    /mnt/jKyonPhone \
+    -o reconnect \
+    -o follow_symlinks \
+    -o cache=yes \
+    -o kernel_cache'
+
+alias jkyonphone-ssh-umount='fusermount3 -u /mnt/jKyonPhone || fusermount -u /mnt/jKyonPhone'
 #
 # K
 #
