@@ -59,7 +59,7 @@
         },
         {
             "type": "command",      // Filesystem (Btrfs) and Bees version
-            "key": "  ,
+            "key": "  ",
             "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-btrfs+bees-version.sh"  // << trocar isso aqui depois
         },
         // {
