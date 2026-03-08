@@ -1,0 +1,106 @@
+//
+// Fastfetch config for Xiaomi Poco C65 (Termux)
+//
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "multithreading": true,
+
+    "logo": {
+        "type": "small",
+        "position": "top",
+        "padding": {
+            "top": 1
+        }
+    },
+
+    "display": {
+        "separator": " → ",
+        "color": "white"
+    },
+
+    "modules": [
+        {
+            "type": "custom",
+            "format": "───────── \u001b[1m Software \u001b[0m ─────────",
+            "key": " "
+        },
+        {
+            "type": "os",
+            "key": "   "
+        },
+        {
+            "type": "kernel",
+            "key": "   ",
+            "format": "{1} {2}"
+        },
+        {
+            "type": "shell",
+            "key": " "
+        },
+        {
+            "type": "terminal",
+            "key": "   "
+        },
+        {
+            "type": "custom",
+            "format": "───────── \u001b[1m Hardware \u001b[0m ─────────",
+            "key": " "
+        },
+        {
+            "type": "host",
+            "key": "  󰍹 "
+        },
+        {
+            "type": "cpu",
+            "key": "   "
+        },
+        {
+            "type": "memory",
+            "key": "   ",
+            "format": "{1} / {2} ({3})"
+        },
+        {
+            "type": "battery",
+            "key": "  󰁹 "
+        },
+        {
+            "type": "display",
+            "key": "  󰍺 ",
+            "format": "{1}x{2} @ {3}Hz"
+        },
+        {
+            "type": "disk",
+            "key": "   ",
+            "format": "{1} / {2} ({3})"
+        },
+        {
+            "type": "custom",
+            "format": "────────── \u001b[1m System \u001b[0m ──────────",
+            "key": " "
+        },
+        {
+            "type": "packages",
+            "key": "  󰏖 "
+        },
+        {
+            "type": "uptime",
+            "key": "   "
+        },
+        {
+            "type": "localip",
+            "key": "  󰌗 ",
+            "format": "{1}"
+        },
+        {
+            "type": "custom",
+            "format": "╰─────────────────────────────╯",
+            "key": " "
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
