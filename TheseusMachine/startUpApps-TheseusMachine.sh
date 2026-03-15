@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+#
+#
+#        Title:      startUpApps-TheseusMachine.sh
+#        Brief:      Script para iniciar aplicativos essenciais na inicialização do sistema
+#        Path:       /home/jkyon/ShellScript/TheseusMachine/startUpApps-TheseusMachine.sh
+#        Author:     John Kennedy a.k.a. jKyon
+#        Created:    2025-07-29
+#        Updated:    2026-03-14
+#       Notes:
+#
+
 
 # Função para iniciar com tratamento de erro
 start_app() {
@@ -10,8 +21,6 @@ start_app() {
 }
 
 # --- Sistemas ---
-# start_app "kdeconnectd"              # Daemon de comunicação KDE Connect
-# start_app "kdeconnect-app"           # Interface após o daemon
 start_app "pavucontrol"              # Mixer de áudio
 
 # --- Produtividade ---
