@@ -1,4 +1,15 @@
-# Aliases by jKyon =)
+# shellcheck shell=bash
+#
+#        Title:      aliases.sh
+#        Brief:      My custom aliases for the terminal
+#        Path:       /home/jkyon/ShellScript/aliases.sh
+#        Author:     John Kennedy a.k.a. jKyon
+#        Created:    2026-02-23
+#        Updated:    2026-03-15
+#        Notes:      All the aliases I use in the terminal, organized alphabetically by the command they alias.
+#                    Some of these aliases are just for fun, while others are meant to improve my workflow and productivity.
+#                    Feel free to use any of these aliases or modify them to suit your needs!
+#
 #
 #
 # A
@@ -97,8 +108,6 @@ alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
 alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
-# alias updatePortage='emerge -pvuND @world'
-# alias upgradePortage='sudo emerge -avuND @world'
 #
 # V
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'
