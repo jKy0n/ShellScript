@@ -19,7 +19,7 @@ alias bash-reset='source ~/.bashrc && sleep 1 && reset'
 alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
 #
 # C
-alias copy-to-clipboard-alias='sh ~/ShellScript/Tools/xclip-output-to-clipboard.sh'
+alias copy-to-clipboard-alias='sh ~/ShellScript/Tools/xclip-output-to-clipboard/xclip-output-to-clipboard.sh'
 alias cp='cp -v'
 #
 # D
@@ -46,8 +46,7 @@ alias genlop-watch='nice --adjustment=19 watch --color --interval 1 genlop -ci'
 alias grep='grep --colour=auto'
 #
 # H
-alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-quickstart.sh'
-# alias htop='nice -n 19 htop'
+# alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-quickstart.sh'
 #
 # I
 alias iotop='sudo iotop -aoP'
