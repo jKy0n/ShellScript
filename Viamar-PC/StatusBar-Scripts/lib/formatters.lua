@@ -60,6 +60,18 @@ function M.format_cpu_for_popup(stats)
     )
 end
 
+--- Formata apenas os valores de CPU para a coluna direita do popup.
+-- @param stats Tabela de estatísticas da CPU.
+-- @return String formatada para a coluna de valores.
+function M.format_cpu_values_for_popup(stats)
+    return string.format(
+        "%s%%\n%s GHz\n%s°C",
+        stats.usage_percent or "--",
+        stats.frequency_ghz and string.format("%.2f", stats.frequency_ghz) or "--",
+        stats.temperature_celsius or "--"
+    )
+end
+
 --- Formata todas as estatísticas de RAM para o popup.
 -- @param stats Tabela de estatísticas de RAM.
 -- @return String formatada para o popup.
@@ -69,6 +81,19 @@ function M.format_ram_for_popup(stats)
         "<b>Mem Used:</b>\t%.2f GB (%d%%)\n" ..
         "<b>Mem Available:</b>\t%.2f GB\n" ..
         "<b>Swap Used:</b>\t%.2f GB (%d%%)",
+        stats.total_gb or 0,
+        stats.used_gb or 0, stats.usage_percent or 0,
+        stats.available_gb or 0,
+        stats.swap_used_gb or 0, stats.swap_usage_percent or 0
+    )
+end
+
+--- Formata apenas os valores de RAM para a coluna direita do popup.
+-- @param stats Tabela de estatísticas de RAM.
+-- @return String formatada para a coluna de valores.
+function M.format_ram_values_for_popup(stats)
+    return string.format(
+        "%.2f GB\n%.2f GB  (%d%%)\n%.2f GB\n%.2f GB  (%d%%)",
         stats.total_gb or 0,
         stats.used_gb or 0, stats.usage_percent or 0,
         stats.available_gb or 0,

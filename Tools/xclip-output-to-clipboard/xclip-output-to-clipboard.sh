@@ -53,7 +53,7 @@ FEATURES:
     ✓ File export for emergencies
     ✓ Metadata in IA-format (status, method, size, timestamp)
 
-For more info: https://github.com/yourusername/dotfiles
+For more info: https://github.com/
 EOF
         exit 0
         ;;
@@ -103,6 +103,14 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# ========== SAVE COMMAND STRING ==========
+
+if [[ -n "$*" ]]; then
+    command_str="$*"
+else
+    command_str="(stdin/pipe)"
+fi
+
 # ========== DERIVE FORMATS ==========
 # Default: terminal=1 (humanized), clipboard=0 (IA-format)
 # --human flag: both become 1 (humanized)
@@ -151,6 +159,7 @@ if [[ $clipboard_format -eq 0 ]]; then
 [COPY_METHOD] xclip
 [CONTENT_SIZE] $content_size bytes
 [TIMESTAMP] $timestamp
+[COMMAND] $command_str
 ---
 $input
 ---"
@@ -187,6 +196,7 @@ if [[ $silent -eq 0 ]]; then
         fi
 
         echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "📋 Comando: $command_str"
         echo "📋 Conteúdo ($content_size bytes):"
         echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         echo "$input"

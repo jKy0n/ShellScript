@@ -26,31 +26,46 @@ local function create_cpu_widget(args)
     widget.align = "center"
 
     local popup
+    local popup_valuebox  -- referência direta ao widget de valores
     local last_stats = {}
 
     -- Função para criar/mostrar o popup
     local function show_popup()
         if not popup then
+            popup_valuebox = wibox.widget {
+                markup = formatters.format_cpu_values_for_popup(last_stats),
+                align = "left",
+                valign = "top",
+                widget = wibox.widget.textbox,
+            }
+
             popup = awful.popup {
                 widget = wibox.widget {
-                    widget = wibox.widget.textbox,
-                    id = "valuebox",
-                    markup = formatters.format_cpu_for_popup(last_stats)
+                    {
+                        {
+                            markup = "<b>Usage:</b>\n<b>Frequency:</b>\n<b>Temperature:</b>",
+                            align = "right",
+                            valign = "top",
+                            widget = wibox.widget.textbox,
+                        },
+                        popup_valuebox,
+                        spacing = 10,
+                        layout = wibox.layout.fixed.horizontal,
+                    },
+                    margins = 10,
+                    widget = wibox.container.margin,
                 },
-                border_width = 1,
                 border_color = beautiful.border_focus,
+                border_width = 2,
                 ontop = true,
-                visible = false,
                 shape = gears.shape.rounded_rect,
-                margins = 10,
+                visible = false,
             }
         end
-        popup.widget.markup = formatters.format_cpu_for_popup(last_stats)
-
-        -- Posiciona o popup perto do widget (não do mouse)
-        local x, y = mouse.coords()
-        popup.x = x or 0           -- Se x for nil, usa 0
-        popup.y = (y or 0) + 20    -- Se y for nil, usa 0, depois soma 20
+        popup_valuebox.markup = formatters.format_cpu_values_for_popup(last_stats)
+        local mouse_coords = mouse.coords()
+        popup.x = mouse_coords.x + 10
+        popup.y = mouse_coords.y + 10
         popup.visible = true
     end
 
@@ -63,6 +78,9 @@ local function create_cpu_widget(args)
         last_stats = monitor.get_cpu_stats()
         local display_text = formatters.format_cpu_for_wibar(last_stats, args)
         widget.markup = icon .. display_text
+        if popup and popup.visible then
+            popup_valuebox.markup = formatters.format_cpu_values_for_popup(last_stats)
+        end
     end
 
     -- Timer para atualizações periódicas
