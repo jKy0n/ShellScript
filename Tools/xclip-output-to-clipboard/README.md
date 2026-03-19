@@ -1,6 +1,6 @@
 # Copy to clipboard using xclip
 
-Called by `copy-to-clipboard` or `xclip-output-to-clipboard.sh`
+Called by `copy-to-clipboard` (in aliases.sh) or `xclip-output-to-clipboard.sh` (for desciription purposes)
 
 ---
 
