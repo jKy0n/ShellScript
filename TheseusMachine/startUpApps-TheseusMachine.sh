@@ -7,7 +7,7 @@
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2025-07-29
 #        Updated:    2026-03-14
-#       Notes:
+#        Notes:
 #
 
 
@@ -20,22 +20,19 @@ start_app() {
     "$1" &
 }
 
-# --- Sistemas ---
+# --- Audio ---
 start_app "pavucontrol"              # Mixer de áudio
+start_app "spotify"                  # Player de música
 
 # --- Produtividade ---
-start_app "code"                     # VS Code editor
+start_app "code"                     # VS Code editor de texto e IDE
 start_app "obsidian"                 # Obsidian para notas
-start_app "/home/jkyon/gitApps/appImages/Rambox/Rambox.AppImage"  # Use caminho absoluto!
 
 # --- Comunicação ---
+start_app "/home/jkyon/gitApps/appImages/Rambox/Rambox.AppImage"  # Redes sociais e comunicação unificada
 start_app "discord"                  # Discord para comunicação
 start_app "thunderbird"              # Cliente de email
 
 # --- Entretenimento ---
-start_app "spotify"                  # Player de música
-start_app "google-chrome-stable"     # Navegador web Chrome
-start_app "firefox"                  # Navegador web Firefox
-
-# Espera apps críticos antes de continuar
-wait -n  # Espera pelo menos um processo terminar (ajuste conforme necessidade)
+start_app "google-chrome-stable"     # Navegador web Chrome (Para streaming)
+start_app "firefox"                  # Navegador web Firefox (Para uso geral)

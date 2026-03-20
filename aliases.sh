@@ -24,7 +24,7 @@ alias cp='cp -v'
 #
 # D
 alias dead-process-watcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
-alias distcc-portage-watch='sudo nice -n 19 env DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text 1'
+alias distcc-portage-watch='nice --adjustment=19 env DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text 1'
 #
 # E
 alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
@@ -96,7 +96,7 @@ alias rg='rg --color=auto'
 #
 # S
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
-alias sensors-watch='nice --adjustment=19 watch --color --interval 1 sensors'
+alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
 alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
