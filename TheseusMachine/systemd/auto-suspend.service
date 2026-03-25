@@ -5,7 +5,7 @@ After=awesomewm-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/xidlehook --not-when-fullscreen --timer 3600 "systemctl suspend" ""
+ExecStart=/usr/local/bin/xidlehook --not-when-fullscreen --timer 60 "systemctl suspend" ""
 Restart=on-failure
 RestartSec=2
 
