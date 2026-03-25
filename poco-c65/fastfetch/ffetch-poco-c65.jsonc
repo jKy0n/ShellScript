@@ -6,11 +6,16 @@
 
     "multithreading": true,
 
+
     "logo": {
         "type": "small",
+        "source": "android",
         "position": "top",
         "padding": {
-            "top": 1
+            "top": 0,
+            "right": 0,
+            "left": 5,
+            "bottom": 1
         }
     },
 
@@ -22,25 +27,29 @@
     "modules": [
         {
             "type": "custom",
-            "format": "───────── \u001b[1m Software \u001b[0m ─────────",
+            "format": "\n ───────── \u001b[1m Software \u001b[0m ─────────",
             "key": " "
         },
         {
             "type": "os",
-            "key": "   "
+            "key": "  "
         },
         {
             "type": "kernel",
-            "key": "   ",
+            "key": "  ",
             "format": "{1} {2}"
         },
         {
             "type": "shell",
-            "key": " "
+            "key": "  "
         },
         {
             "type": "terminal",
-            "key": "   "
+            "key": "   "
+        },
+        {
+            "type": "terminalFont",
+            "key": " 󰛖 "
         },
         {
             "type": "custom",
@@ -49,15 +58,15 @@
         },
         {
             "type": "host",
-            "key": "  󰍹 "
+            "key": "  "
         },
         {
             "type": "cpu",
-            "key": "   "
+            "key": "  "
         },
         {
             "type": "memory",
-            "key": "   ",
+            "key": "  ",
             "format": "{1} / {2} ({3})"
         },
         {
@@ -71,7 +80,7 @@
         },
         {
             "type": "disk",
-            "key": "   ",
+            "key": "  ",
             "format": "{1} / {2} ({3})"
         },
         {
@@ -85,7 +94,7 @@
         },
         {
             "type": "uptime",
-            "key": "   "
+            "key": "   "
         },
         {
             "type": "localip",
@@ -99,7 +108,7 @@
         },
         {
             "type": "colors",
-            "paddingLeft": 2,
+            "paddingLeft": 8,
             "symbol": "circle"
         }
     ]
