@@ -1,15 +1,13 @@
 [Unit]
-Description=Auto-suspend após inatividade (X11)
-PartOf=graphical-session.target
-After=graphical-session.target
+Description=Auto-suspend após inatividade (X11) via xidlehook
+PartOf=awesomewm-session.target
+After=awesomewm-session.target
 
 [Service]
-ExecStart=/usr/bin/xautolock \
-  -time 3600 \
-  -locker 'systemctl suspend' \
-  -notify 30 \
-  -notifier "notify-send 'Locking screen in 30 seconds'"
-Restart=always
+Type=simple
+ExecStart=/usr/local/bin/xidlehook --not-when-fullscreen --timer 3600 "systemctl suspend" ""
+Restart=on-failure
+RestartSec=2
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=awesomewm-session.target
