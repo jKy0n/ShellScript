@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. Garante que o banco de dados atual está populado com os módulos em uso
-modprobed-db store
+#modprobed-db store
 
 # 2. Setup de Diretórios
 ORIGEM=$PWD
@@ -27,4 +27,4 @@ echo "PKGBUILD tunado com sucesso!"
 makepkg -si
 
 # 6. Retorno
-cd "$ORIGEM"
+cd "$ORIGEM" || exit
