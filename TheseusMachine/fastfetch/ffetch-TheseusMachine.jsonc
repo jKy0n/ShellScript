@@ -26,7 +26,7 @@
     "modules": [
         {
             "type": "custom", // Software
-            "format": "────────────────────────── \u001b[1m Software \u001b[0m ─────────────────────────", // `\u001b` is `\033`, or `\e`
+            "format": "──────────────────────────────── \u001b[1m Software \u001b[0m ──────────────────────────────", // `\u001b` is `\033`, or `\e`
             "key": " "
         },
         {
@@ -62,11 +62,6 @@
             "key": "  ",
             "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-btrfs+bees-version.sh"  // << trocar isso aqui depois
         },
-        // {
-        //     "type": "command",
-        //     "key": "  ",
-        //     "text": "openrc --version | awk '{gsub(/[()]/, \"\", $2); print $2, $3}'"
-        // },
         {
             "type": "initsystem",
             "key": "  "
@@ -74,7 +69,7 @@
         {
             "type": "command",
             "key": "  󱕵",
-            "text": " sudo --version | awk 'NR==1 {print $1, $3 }' "
+            "text": " sudo --version | awk 'NR==1 {print $1, $3 ;  }' "
         },
         {
             "type": "command",
@@ -83,7 +78,7 @@
         },
         {
             "type": "custom", // Theme
-            "format": "─────────────────────────── \u001b[1m Theme \u001b[0m ───────────────────────────",
+            "format": "───────────────────────────────── \u001b[1m Theme \u001b[0m ─────────────────────────────────",
             "key": " "
         },
         {
@@ -107,7 +102,7 @@
         },
         {
             "type": "custom", // Hardware
-            "format": "────────────────────────── \u001b[1m Hardware \u001b[0m ─────────────────────────",
+            "format": "──────────────────────────────── \u001b[1m Hardware \u001b[0m ───────────────────────────────",
             "key": " "
         },
         {
@@ -141,13 +136,13 @@
         },
         {
             "type": "custom", // Peripheral
-            "format": "───────────────────────── \u001b[1m Peripheral \u001b[0m ────────────────────────",
+            "format": "─────────────────────────────── \u001b[1m Peripheral \u001b[0m ──────────────────────────────",
             "key": " "
         },
         {
             "type": "custom",
             "key": "  ",
-            "format": "Redragon Kumara Lunar (ABNT2) + Akko Purple Jelly + Generic Purple keycaps"
+            "format": "Redragon Kumara Lunar (ABNT2) + Akko Purple Jelly + Purple keycaps"
         },
         {
             "type": "custom",
@@ -159,11 +154,11 @@
             "key": "  󰍽",
             "format": "Logitech G403 Hero + switch Kaihl GM 4.0"
         },
-        // {
-        //     "type": "custom",
-        //     "key": "  ",
-        //     "format": "Wacom Intuos (CTL4100)"
-        // },
+        {
+            "type": "custom",
+            "key": "  ",
+            "format": "Wacom Intuos (CTL4100)"
+        },
         {
             "type": "custom",
             "key": "  󰖠",
@@ -176,13 +171,13 @@
         },
         {
             "type": "custom",
-            "key": "  ",
-            "format": "Behringer B2 (@ Cardioide & Low Cut)"
+            "key": "  ",
+            "format": "Kuba Audio Uni (in ear)"
         },
         {
             "type": "custom",
-            "key": "  ",
-            "format": "Kuba Audio Uni (in ear)"
+            "key": "  ",
+            "format": "Behringer B2 (@ Cardioide & Low Cut)"
         },
         {
             "type": "display",
@@ -192,7 +187,7 @@
         },
         {
             "type": "custom", // Uptime
-            "format": "─────────────────────────── \u001b[1m Uptime \u001b[0m ──────────────────────────",
+            "format": "───────────────────────────────── \u001b[1m Uptime \u001b[0m ────────────────────────────────",
             "key": " "
         },
         {
@@ -205,10 +200,10 @@
             "key": "  󰪫",
             "text": "uname -n"
         },
-        {
-            "type": "host",
-            "key": "  "
-        },
+        // {
+        //     "type": "host",
+        //     "key": "  "
+        // },
         {
             "type": "packages",
             "key": "  "
@@ -221,7 +216,6 @@
         {
             "type": "uptime",
             "key": "  "
-            //"keyColo│r": "magenta"
         },
         {
             "type": "localip",
