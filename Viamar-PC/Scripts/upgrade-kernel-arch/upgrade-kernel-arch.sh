@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # 1. Garante que o banco de dados atual está populado com os módulos em uso
-#modprobed-db store
+# modprobed-db store
+cp -av ~/.config/modprobed-db/modprobed.db ~/.config/modprobed-db/modprobed.db.bak
+awk '{print $1}' /proc/modules | sort -u > ~/.config/modprobed-db/modprobed.db
 
 # 2. Setup de Diretórios
 ORIGEM=$PWD
 BASE_DIR="/home/jkyon/.config/kernel/Viamar-PC"
+
+mkdir -p "$BASE_DIR"
+
 rm -rf "$BASE_DIR/linux-cachyos"
 cd "$BASE_DIR" || exit
 
@@ -27,4 +32,4 @@ echo "PKGBUILD tunado com sucesso!"
 makepkg -si
 
 # 6. Retorno
-cd "$ORIGEM" || exit
+cd "$ORIGEM"
