@@ -29,9 +29,9 @@ case "$DISTRO" in
         sh ~/ShellScript/Viamar-PC/updateParu.sh
         ;;
     # Run apt update
-    # Debian)
-    #     sh ~/ShellScript/
-    #     ;;
+    Debian)
+        sh ~/ShellScript/Debian/tools/update-apt.sh
+        ;;
     *)
         echo "Erro: Distribuição '$DISTRO' não reconhecida" >&2
         exit 1
