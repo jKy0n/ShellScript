@@ -7,12 +7,12 @@
 ORIGEM=$PWD
 BASE_DIR="/home/jkyon/.config/kernel/CrisNote/"
 mkdir -p "$BASE_DIR"
-rm -rf "$BASE_DIR/linux-cachyos"
+rm -rf "$BASE_DIR/linux-cachyos-bore"
 cd "$BASE_DIR" || exit
 
 # 3. Download
-paru -G aur/linux-cachyos
-cd linux-cachyos || exit
+paru -G aur/linux-cachyos-bore
+cd linux-cachyos-bore || exit
 
 # 4. Ajustes de Compilação
 sed -i 's/^: "${_localmodcfg:=.*}"/: "${_localmodcfg:=yes}"/' PKGBUILD
