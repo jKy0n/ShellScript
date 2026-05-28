@@ -29,7 +29,7 @@ case "$DISTRO" in
         sh ~/ShellScript/Viamar-PC/upgradeParu.sh
         ;;
     # Run apt upgrade
-    Debian)
+    *debian*)
         sh ~/ShellScript/Debian/tools/upgrade-apt.sh
         ;;
     *)
