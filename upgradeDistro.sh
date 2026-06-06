@@ -22,7 +22,7 @@ fi
 case "$DISTRO" in
     # Run emerge -pvuND @world
     gentoo)
-        sh ~/ShellScript/TheseusMachine/upgradePortage.sh
+        sh ~/ShellScript/TheseusMachine/portage-tools/upgrade-portage.sh
         ;;
     # Run paru -Syy && paru -Qu
     arch)

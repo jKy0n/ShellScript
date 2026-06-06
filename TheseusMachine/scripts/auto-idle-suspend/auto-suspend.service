@@ -1,0 +1,14 @@
+[Unit]
+Description=Idle pipeline da TheseusMachine (lock -> monitor off -> suspend)
+PartOf=awesomewm-session.target
+After=awesomewm-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/home/jkyon/ShellScript/TheseusMachine/scripts/auto-idle-suspend/auto-idle-suspend.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=awesomewm-session.target
