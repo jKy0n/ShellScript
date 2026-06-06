@@ -74,7 +74,6 @@ alias lsusb='echo "Use cyme instead: cyme --tree"'
 # M
 alias man='LANG=pt_BR.UTF-8 man'
 alias me-avise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
-alias mirrorselect-update='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
 alias mv='mv -v'
 #
 # N
@@ -108,6 +107,7 @@ alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
 alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
+alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
 #
 # V
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'
