@@ -97,7 +97,7 @@ alias rg='rg --color=auto'
 # S
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
-alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
+alias smart-cleanup='sh ~/ShellScript/Tools/smart-cleanup/smart-cleanup.sh'
 alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # T
