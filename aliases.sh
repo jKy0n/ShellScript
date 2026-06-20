@@ -79,7 +79,7 @@ alias mv='mv -v'
 # N
 #
 # O
-alias ookla-home='ookla-speedtest --server-id=53390'
+alias ookla-home='speedtest --server-id=53390'
 alias ookla-work='speedtest --server-id=53390'
 #
 # P
