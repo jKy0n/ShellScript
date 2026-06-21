@@ -58,9 +58,9 @@ case $MACHINE_ID in
     # Call fastfetch for Viamar-PC
     "builder")
         if $MINI; then
-            fastfetch --config ~/.config/fastfetch/ffetch-mini-builedr-arch.jsonc
+            fastfetch --config ~/.config/fastfetch/ffetch-mini-builder-arch.jsonc
         else
-            fastfetch --config ~/.config/fastfetch/ffetch-builedr-arch.jsonc
+            fastfetch --config ~/.config/fastfetch/ffetch-builder-arch.jsonc
         fi
         ;;
 
