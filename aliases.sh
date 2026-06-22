@@ -104,6 +104,8 @@ alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # U
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
+alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/updateDistro.sh"'
+alias upgrade-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash /home/jkyon/ShellScript/Viamar-PC/upgradeParu.sh"'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
 alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
