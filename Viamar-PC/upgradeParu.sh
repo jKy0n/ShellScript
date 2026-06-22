@@ -8,4 +8,4 @@ if ! command -v paru &> /dev/null; then
 fi
 
 # Atualiza os repositórios e mostra atualizações disponíveis
-paru -Syyuuv --noconfirm
+paru -Syyuu --noconfirm
