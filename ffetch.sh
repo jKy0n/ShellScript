@@ -55,6 +55,15 @@ case $MACHINE_ID in
         fi
         ;;
 
+    # Call fastfetch for Viamar-PC
+    "builder")
+        if $MINI; then
+            fastfetch --config ~/.config/fastfetch/ffetch-mini-builder-arch.jsonc
+        else
+            fastfetch --config ~/.config/fastfetch/ffetch-builder-arch.jsonc
+        fi
+        ;;
+
     *)
         echo "Erro: máquina '$MACHINE_ID' não reconhecida" >&2
         exit 1

@@ -79,7 +79,7 @@ alias mv='mv -v'
 # N
 #
 # O
-alias ookla-home='ookla-speedtest --server-id=53390'
+alias ookla-home='speedtest --server-id=53390'
 alias ookla-work='speedtest --server-id=53390'
 #
 # P
@@ -97,7 +97,7 @@ alias rg='rg --color=auto'
 # S
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
-alias smart-cleanup='sh ~/ShellScript/Tools/jkyon-smart-cleanup.sh'
+alias smart-cleanup='sh ~/ShellScript/Tools/smart-cache-cleanup/smart-cache-cleanup.sh'
 alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # T
@@ -107,6 +107,7 @@ alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
 alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
+alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
 #
 # V
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'

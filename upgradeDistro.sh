@@ -22,16 +22,16 @@ fi
 case "$DISTRO" in
     # Run emerge -pvuND @world
     gentoo)
-        sh ~/ShellScript/TheseusMachine/upgradePortage.sh
+        sh ~/ShellScript/TheseusMachine/portage-tools/upgrade-portage.sh
         ;;
     # Run paru -Syy && paru -Qu
     arch)
         sh ~/ShellScript/Viamar-PC/upgradeParu.sh
         ;;
     # Run apt upgrade
-    # Debian)
-    #     sh ~/ShellScript/
-    #     ;;
+    *debian*)
+        sh ~/ShellScript/Debian/tools/upgrade-apt.sh
+        ;;
     *)
         echo "Erro: Distribuição '$DISTRO' não reconhecida" >&2
         exit 1
