@@ -1,0 +1,11 @@
+[Unit]
+Description=Executa ShellScripts-git-sync periodicamente
+
+[Timer]
+OnStartupSec=5min
+OnUnitActiveSec=5h
+RandomizedDelaySec=1h
+AccuracySec=15min
+
+[Install]
+WantedBy=timers.target
