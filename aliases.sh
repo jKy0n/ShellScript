@@ -81,6 +81,7 @@ alias mv='mv -v'
 # O
 alias ookla-home='speedtest --server-id=53390'
 alias ookla-work='speedtest --server-id=53390'
+alias ssh-test-connection='/home/jkyon/ShellScript/ssh-test-connection.sh'
 #
 # P
 alias picom-restart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
@@ -105,11 +106,11 @@ alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 # U
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/updateDistro.sh"'
-alias upgrade-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash /home/jkyon/ShellScript/Viamar-PC/upgradeParu.sh"'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
+alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
+alias upgrade-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash /home/jkyon/ShellScript/Viamar-PC/upgradeParu.sh"'
 alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
-alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
 #
 # V
 alias valacritty='bat ~/.config/alacritty/alacritty.toml'
