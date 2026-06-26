@@ -35,5 +35,4 @@ description soon ⏳
 
 ---
 ### Autory:
----
 Developed with 🖤 by John Kennedy a.k.a. **jKyon**
