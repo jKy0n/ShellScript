@@ -27,6 +27,13 @@ systemd-run --user --unit="ephedrine-lock" \
 ``` bash
 systemctl --user stop "ephedrine-lock"
 ```
+---
 
+## awesome (window manager)
+
+description soon ⏳
+
+---
 ### Autory:
+---
 Developed with 🖤 by John Kennedy a.k.a. **jKyon**
