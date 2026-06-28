@@ -17,7 +17,7 @@ VERSION="1.0"
 # Bus de sessão do usuário, necessário pro notify-send funcionar mesmo
 # quando o script é chamado via SSH não-interativo (sem env de sessão gráfica)
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-ICON="/home/jkyon/Pictures/icons/lucide-icons/tablets.svg"
+ICON="/home/jkyon/Pictures/icons/font-awesome/tablets-solid-full.svg"
 
 notify() {
     notify-send -u normal -i "$ICON" "$1" "$2"
