@@ -105,6 +105,7 @@ alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 # T
 #
 # U
+alias unlock-sudo='echo "Use root password" && su -c "faillock --user jkyon --reset"'
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
 alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/updateDistro.sh"'
 alias update-distro='sh ~/ShellScript/updateDistro.sh'
