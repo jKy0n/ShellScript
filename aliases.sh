@@ -81,7 +81,6 @@ alias mv='mv -v'
 # O
 alias ookla-home='speedtest --server-id=53390'
 alias ookla-work='speedtest --server-id=53390'
-alias ssh-test-connection='/home/jkyon/ShellScript/ssh-test-connection.sh'
 #
 # P
 alias picom-restart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
@@ -100,6 +99,7 @@ alias rg='rg --color=auto'
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/smart-cache-cleanup/smart-cache-cleanup.sh'
+alias ssh-test-connection='/home/jkyon/ShellScript/ssh-test-connection.sh'
 alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # T
