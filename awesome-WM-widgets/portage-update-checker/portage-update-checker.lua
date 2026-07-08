@@ -52,7 +52,7 @@ portage_checker:buttons(gears.table.join(
 
 -- Limite de linhas no tooltip. Mesmo sem USE flags (--quiet), um @world
 -- grande (ex: rebuild de slot) pode gerar 100+ linhas e voltar a estourar a tela.
-local MAX_TOOLTIP_LINES = 25
+local MAX_TOOLTIP_LINES = 50
 
 local function update_widget()
     -- --color=n: garante saída sem códigos ANSI mesmo se o emerge decidir
@@ -106,8 +106,8 @@ local timer = gears.timer {
     call_now = true,
     callback = update_widget,
     -- timeout = 3600,         -- Tempo em segundos (1 hora)
-    -- timeout = 7200,         -- Tempo em segundos (2 horas)
-    timeout = 14400,        -- Tempo em segundos (4 horas)
+    timeout = 7200,         -- Tempo em segundos (2 horas)
+    -- timeout = 14400,        -- Tempo em segundos (4 horas)
 }
 
 return portage_checker
