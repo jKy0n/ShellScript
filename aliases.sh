@@ -39,7 +39,7 @@ alias eUnmskpkg='sudo -e /etc/portage/package.accept_keywords'
 alias ezsh='nvim ~/.zshrc'
 #
 # F
-alias ffetch='sh ~/ShellScript/ffetch.sh'
+alias ffetch='sh ~/ShellScript/Tools/ffetch/ffetch.sh'
 #
 # G
 alias genlop-watch='nice --adjustment=19 watch --color --interval 1 genlop -ci'
@@ -99,7 +99,7 @@ alias rg='rg --color=auto'
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
 alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/smart-cache-cleanup/smart-cache-cleanup.sh'
-alias ssh-test-connection='/home/jkyon/ShellScript/ssh-test-connection.sh'
+alias ssh-test-connection='sh ~/ShellScript/Tools/ssh-test-connection/ssh-test-connection.sh'
 alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 #
 # T
@@ -107,11 +107,11 @@ alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
 # U
 alias unlock-sudo='echo "Use root password" && su -c "faillock --user jkyon --reset"'
 alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
-alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/updateDistro.sh"'
-alias update-distro='sh ~/ShellScript/updateDistro.sh'
+alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/Tools/update-distro/updateDistro.sh"'
+alias update-distro='sh ~/ShellScript/Tools/update-distro/updateDistro.sh'
 alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
 alias upgrade-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash /home/jkyon/ShellScript/Viamar-PC/upgradeParu.sh"'
-alias upgrade-distro='sh ~/ShellScript/upgradeDistro.sh'
+alias upgrade-distro='sh ~/ShellScript/Tools/upgrade-distro/upgradeDistro.sh'
 alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
 #
 # V
