@@ -93,6 +93,7 @@
             "text": " sh -c 'grub-install --version | awk \"{print \\$2, \\$3}\" | awk \"{gsub(/\\(|\\)/,\\\"\\\"); print \\$1, \\$2}\"' ",
             "format": "{1} "
         },
+        "break",
         {
             "type": "custom",
             "format": "     ──────────── \u001b[1m Theme \u001b[0m ────────────",
@@ -118,6 +119,7 @@
             "key": "  󰇀",
             "format": "{1} ({2}) "
         },
+        "break",
         {
             "type": "custom",
             "format": "     ──────────── \u001b[1m Hardware \u001b[0m ────────────",
@@ -153,6 +155,7 @@
             "percent": {},
             "format": "{10} - {1} / {2} - ({3}) - {9} "
         },
+        "break",
         {
             "type": "custom",
             "format": "     ──────────── \u001b[1m Peripherals \u001b[0m ────────────",
@@ -184,9 +187,10 @@
             "format": "{6} - {1}x{2} @ {3} Hz ",
             "preciseRefreshRate": false
         },
+        "break",
         {
             "type": "custom",
-            "format": "     ──────────── \u001b[1m Uptime \u001b[0m ────────────",
+            "format": "     ──────────── \u001b[1m System \u001b[0m ────────────",
             "key": " "
         },
         {
@@ -204,7 +208,7 @@
         {
             "type": "packages",
             "key": "  ",
-            "format": "{1} packages"
+            "format": "{31} Packages"
         },
         {
             "type": "command",  // Days since installation
@@ -219,13 +223,14 @@
         {
             "type": "localip",
             "key": "  󰌗",
-            "format": "{1} "
+            "format": "{1} {4}"
         },
 /*         {
             "type": "custom",
             "format": "╰───────────────────────────────────────────────────────────────────────╯",
             "key": " "
         }, */
+        "break",
         {
             "type": "colors",
             "paddingLeft": 2,
