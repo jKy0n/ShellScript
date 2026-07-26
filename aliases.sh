@@ -59,7 +59,7 @@ alias jkyonphone-ssh-mount='mkdir -p /mnt/jKyonPhone && sshfs \
     -o follow_symlinks \
     -o cache=yes \
     -o kernel_cache'
-
+#
 alias jkyonphone-ssh-umount='fusermount3 -u /mnt/jKyonPhone || fusermount -u /mnt/jKyonPhone'
 #
 # K
