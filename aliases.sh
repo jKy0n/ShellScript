@@ -97,6 +97,7 @@ alias rg='rg --color=auto'
 #
 # S
 alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
+alias scan-to-ai='~/ShellScript/Tools/scan-to-ai/scan-to-ai.sh'
 alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
 alias smart-cleanup='sh ~/ShellScript/Tools/smart-cache-cleanup/smart-cache-cleanup.sh'
 alias ssh-test-connection='sh ~/ShellScript/Tools/ssh-test-connection/ssh-test-connection.sh'
