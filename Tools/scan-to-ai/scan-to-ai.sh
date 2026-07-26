@@ -249,13 +249,16 @@ sec_gpu() {
     echo "## 6. GPU / PCI / Drivers"
     echo
     {
-        lspci -nnk
+        local lspci_out
+        lspci_out="$(lspci -nnk 2>&1)"
+
+        printf '%s\n' "$lspci_out"
         echo
         echo "--- VGA / 3D / Display ---"
-        lspci -nnk | grep -A3 -E 'VGA|3D|Display'
+        grep -A3 -E 'VGA|3D|Display' <<< "$lspci_out"
         echo
         echo "--- Hardware de rede ---"
-        lspci -nnk | grep -A3 -E 'Ethernet|Network'
+        grep -A3 -E 'Ethernet|Network' <<< "$lspci_out"
     } | code_block
     echo
 }
@@ -671,7 +674,7 @@ sec_boot_warnings() {
 
 generate_report() {
     local hostname_val
-    hostname_val="$(hostname)"
+    hostname_val="$(uname -n)"
 
     echo "# 📋 Diagnóstico do Sistema — $hostname_val"
     echo
