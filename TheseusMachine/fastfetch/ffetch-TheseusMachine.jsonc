@@ -1,15 +1,18 @@
 //
-//
+//        Title:      ffetch-TheseusMachine.jsonc
+//        Brief:
+//        Path:       /home/jkyon/ShellScript/TheseusMachine/fastfetch/ffetch-TheseusMachine.jsonc
+//        Author:     John Kennedy a.k.a. jKyon
+//        Created:    2026-03-08
+//        Updated:    2026-07-26
+//        Notes:
 //
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
-    "multithreading": true,         // Acelera o processo - acelerate process
-
     "logo": {
         "type": "chafa",
         "source": "/home/jkyon/Pictures/GentooMedias/Gentoo-logo-peach-plain.png",
-        // "dither": "ordered",
         "width":  40,
         "height": 20,
         "padding": {
@@ -76,6 +79,7 @@
             "key": "  󱫠",
             "text": " sh -c 'grub-install --version | awk \"{print \\$2, \\$3}\" | awk \"{gsub(/\\(|\\)/,\\\"\\\"); print \\$1, \\$2}\"' "
         },
+        "break",
         {
             "type": "custom", // Theme
             "format": "───────────────────────────────── \u001b[1m Theme \u001b[0m ─────────────────────────────────",
@@ -100,6 +104,7 @@
             "type": "cursor",
             "key": "  󰇀"
         },
+        "break",
         {
             "type": "custom", // Hardware
             "format": "──────────────────────────────── \u001b[1m Hardware \u001b[0m ───────────────────────────────",
@@ -134,6 +139,7 @@
             "percent": {},
             "format": "{10} - {1} / {2} - ({3}) - {9}"
         },
+        "break",
         {
             "type": "custom", // Peripheral
             "format": "─────────────────────────────── \u001b[1m Peripheral \u001b[0m ──────────────────────────────",
@@ -167,7 +173,7 @@
         {
             "type": "sound",
             "key": "  󰤽",
-            "format": "{2}"
+            "format": "{3}"
         },
         {
             "type": "custom",
@@ -185,9 +191,10 @@
             "format": "{6} - {1}x{2} @ {3}",
             "preciseRefreshRate": false
         },
+        "break",
         {
             "type": "custom", // Uptime
-            "format": "───────────────────────────────── \u001b[1m Uptime \u001b[0m ────────────────────────────────",
+            "format": "───────────────────────────────── \u001b[1m System \u001b[0m ────────────────────────────────",
             "key": " "
         },
         {
@@ -200,10 +207,6 @@
             "key": "  󰪫",
             "text": "uname -n"
         },
-        // {
-        //     "type": "host",
-        //     "key": "  "
-        // },
         {
             "type": "packages",
             "key": "  "
