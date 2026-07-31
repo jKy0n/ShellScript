@@ -2,13 +2,12 @@
 
 Thats is my scripts collection. (Description below 👇 soon)
 
-![Scripts preview](https://github.com/jKy0n/ShellScript/blob/main/.media/screenshot-2026-06-26.png)
-
+![Scripts preview](https://github.com/jKy0n/ShellScript/blob/main/.media/screenshot-2026-07-31.png)
 
 ## Scripts List
 
 ```
-tree ~/ShellScript
+❯ tree ~/ShellScript
 
 /home/jkyon/ShellScript
 ├── AI-Scripts
@@ -22,7 +21,9 @@ tree ~/ShellScript
 │   ├── DoNotDisturb_widget.lua
 │   ├── internet_widget.lua
 │   ├── paru_update_checker.lua
-│   └── portage_update_checker.lua
+│   └── portage-update-checker
+│       ├── portage-update-checker.lua
+│       └── README.md
 ├── builder-arch
 │   └── fastfetch
 │       └── ffetch-builder-arch.jsonc
@@ -60,7 +61,6 @@ tree ~/ShellScript
 │   ├── fastfetch-packageManager-version.sh
 │   ├── fastfetch-sudo+polkit-version.sh
 │   └── fastfetch-zsh+tmux-version.sh
-├── ffetch.sh
 ├── Games
 │   └── satisfactory-server-update.sh
 ├── Old-unused-Scripts
@@ -77,32 +77,31 @@ tree ~/ShellScript
 │   ├── mycompsize.sh
 │   ├── myfetch.sh
 │   ├── notification-test.sh
+│   ├── PortageRsyncDotfiles.sh
 │   ├── snapShotsPreview.sh
-│   └── StatusBar-Scripts.old
-│       ├── awesomeWidget-CPU-freq-monitor.sh
-│       ├── awesomeWidget-gpu0freq.sh
-│       ├── awesomeWidget-gpu0temp.sh
-│       ├── awesomeWidget-gpu0usage-fast.sh
-│       ├── awesomeWidget-gpu0usage.sh
-│       ├── awesomeWidget-gpu1freq.sh
-│       ├── awesomeWidget-gpu1temp.sh
-│       ├── awesomeWidget-PSU-monitor.sh
-│       ├── awesomeWidget-PSU-temp-monitor.sh
-│       ├── awesomeWidget-trackingAwesomeMemoryUse.sh
-│       ├── dwmBlocksCpuTemp
-│       ├── dwmBlocksCpuUsage
-│       ├── dwmBlocksMemUsage
-│       ├── dwmBlocksNice
-│       ├── dwmBlocksUpdates
-│       ├── dwmBlocksVolumeAudio
-│       └── memoryUsage-widget.sh
+│   ├── StatusBar-Scripts.old
+│   │   ├── awesomeWidget-CPU-freq-monitor.sh
+│   │   ├── awesomeWidget-gpu0freq.sh
+│   │   ├── awesomeWidget-gpu0temp.sh
+│   │   ├── awesomeWidget-gpu0usage-fast.sh
+│   │   ├── awesomeWidget-gpu0usage.sh
+│   │   ├── awesomeWidget-gpu1freq.sh
+│   │   ├── awesomeWidget-gpu1temp.sh
+│   │   ├── awesomeWidget-PSU-monitor.sh
+│   │   ├── awesomeWidget-PSU-temp-monitor.sh
+│   │   ├── awesomeWidget-trackingAwesomeMemoryUse.sh
+│   │   ├── dwmBlocksCpuTemp
+│   │   ├── dwmBlocksCpuUsage
+│   │   ├── dwmBlocksMemUsage
+│   │   ├── dwmBlocksNice
+│   │   ├── dwmBlocksUpdates
+│   │   ├── dwmBlocksVolumeAudio
+│   │   └── memoryUsage-widget.sh
+│   └── theseusMachine-core-etc-sync.sh
 ├── poco-c65
 │   └── fastfetch
 │       └── ffetch-poco-c65.jsonc
-├── PortageRsyncDotfiles.sh
 ├── README.md
-├── ssh-test-connection.sh
-├── startUpApps.sh
 ├── systemd
 │   ├── backintime-backup-job.service
 │   ├── backintime-backup-job.timer
@@ -128,7 +127,6 @@ tree ~/ShellScript
 │       ├── ShellScripts-git-sync.service
 │       ├── ShellScripts-git-sync.sh
 │       └── ShellScripts-git-sync.timer
-├── systemd-picom-memoryMonitor.sh
 ├── templates
 │   └── shellScript-template.sh
 ├── TheseusMachine
@@ -195,7 +193,6 @@ tree ~/ShellScript
 │       └── upgrade-kernel
 │           ├── README.md
 │           └── upgrade-kernel.sh
-├── theseusMachine-core-etc-sync.sh
 ├── Tools
 │   ├── avisoNoTerminal.sh
 │   ├── borg_backup-hourlyRoutine.sh
@@ -203,26 +200,38 @@ tree ~/ShellScript
 │   │   ├── bulk-ocr.sh
 │   │   └── README.md
 │   ├── ephedrine
+│   │   ├── ephedrine.lua
 │   │   ├── ephedrine.sh
 │   │   └── README.MD
+│   ├── ffetch
+│   │   └── ffetch.sh
 │   ├── gentoo-unmaskPackage.sh
 │   ├── ls-font-char.sh
 │   ├── OpenSeeFace.sh
+│   ├── picom-memoryMonitor.sh
 │   ├── picom-restartRoutine.sh
 │   ├── pipewire-restart.sh
 │   ├── rambox-cleanup
 │   │   └── rambox-cleanup.sh
 │   ├── rofi-recoll.sh
+│   ├── scan-to-ai
+│   │   ├── README.md
+│   │   └── scan-to-ai.sh
 │   ├── smart-cache-cleanup
 │   │   ├── README.md
 │   │   └── smart-cache-cleanup.sh
+│   ├── ssh-test-connection
+│   │   └── ssh-test-connection.sh
+│   ├── startUpApps.sh
+│   ├── update-distro
+│   │   └── updateDistro.sh
+│   ├── upgrade-distro
+│   │   └── upgradeDistro.sh
 │   ├── watch19.sh
 │   └── xclip-output-to-clipboard
 │       ├── README.md
 │       ├── xclip-output-to-clipboard.sh
 │       └── xclip-output-to-clipboard-v1.sh
-├── updateDistro.sh
-├── upgradeDistro.sh
 └── Viamar-PC
     ├── fastfetch
     │   ├── ffetch-mini-viamar-PC.jsonc
@@ -245,18 +254,19 @@ tree ~/ShellScript
     │   ├── borg-ui.service
     │   ├── chromadb.service
     │   ├── gpt4all.service
+    │   ├── jkyon-light-locker.service
     │   ├── jkyon-smart-cache-cleanup.service
     │   ├── jkyon-smart-cache-cleanup.timer
     │   ├── picom.service
     │   ├── rclone-mount-jkls.service
     │   ├── restart-picom-if-high-mem.service
     │   ├── restart-picom-if-high-mem.timer
-    │   ├── root-level
-    │   │   ├── pacman-cache-update.service
-    │   │   └── pacman-cache-update.timer
-    │   └── xss-lock.service
+    │   └── root-level
+    │       ├── pacman-cache-update.service
+    │       └── pacman-cache-update.timer
     ├── updateParu.sh
     └── upgradeParu.sh
 
-53 directories, 194 files
+59 directories, 198 files
+---
 ```
