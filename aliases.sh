@@ -10,8 +10,6 @@
 #                    Some of these aliases are just for fun, while others are meant to improve my workflow and productivity.
 #                    Feel free to use any of these aliases or modify them to suit your needs!
 #
-#
-#
 # A
 alias bash-reset='source ~/.bashrc && sleep 1 && reset'
 #
