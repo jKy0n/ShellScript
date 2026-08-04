@@ -1,7 +1,9 @@
 [Unit]
 Description=TheseusMachine sync selected config and push to Git
-After=default.target
+After=default.target niri-ssh-agent.service ssh-agent.service
+Wants=niri-ssh-agent.service
 
 [Service]
 Type=oneshot
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 ExecStart=/bin/bash -lc '~/ShellScript/TheseusMachine/etc-dotfiles.sh'
