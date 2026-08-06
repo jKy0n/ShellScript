@@ -126,6 +126,7 @@ alias vumskpkg='bat /etc/portage/package.accept_keywords'
 alias wacom-set-stylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
 alias watch19='sh ~/ShellScript/Tools/watch19.sh'
 alias watch-disks='nice -n 19 watch -n 1 --color --differences "echo && df -h /efi /boot / /home ~/Desktop"'
+alias wake-builder='ssh viamar-pc "bash /home/jkyon/ShellScript/Viamar-PC/Scripts/wake-builder/wake-builder.sh"'
 alias wake-theseusmachine='ssh crisnote "bash /home/jkyon/ShellScript/CrisNote/tools/wake-theseusmachine/wake-theseusmachine.sh"'
 #
 # X
