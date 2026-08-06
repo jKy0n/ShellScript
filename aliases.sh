@@ -75,6 +75,7 @@ alias me-avise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
 alias mv='mv -v'
 #
 # N
+alias niri-status-services="$HOME/ShellScript/niri/Tools/niri-status-services/niri-status-services.sh"
 #
 # O
 alias ookla-home='speedtest --server-id=53390'

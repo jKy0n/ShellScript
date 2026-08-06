@@ -1,0 +1,14 @@
+[Unit]
+PartOf=graphical-session.target
+Description=KDE Connect Indicator
+After=niri-kdeconnectd.service niri-snixembed.service graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kdeconnect-indicator
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenRGB
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -lc 'sleep 2; exec /usr/bin/openrgb --startminimized --profile Viamar-PC'
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,15 @@
+[Unit]
+PartOf=graphical-session.target
+After=niri-waybar.service
+Description=NetworkManager Applet
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nm-applet
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
