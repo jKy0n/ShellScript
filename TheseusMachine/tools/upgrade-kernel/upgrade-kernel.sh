@@ -75,7 +75,7 @@ sudo make olddefconfig
 # -----------------------------
 
 echo "[6/9] Compilando kernel, por favor aguarde..."
-sudo --preserve-env=DISTCC_HOSTS,PATH make CC=distcc -j"$THREADS"
+CCACHE_PREFIX=distcc sudo --preserve-env=DISTCC_HOSTS,PATH,CCACHE_DIR make -j"$THREADS"
 
 # -----------------------------
 # Instalação
