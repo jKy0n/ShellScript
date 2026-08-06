@@ -20,7 +20,7 @@ done
 
 echo "⏳ Aguardando Builder responder..."
 for i in {1..30}; do
-    if ping -c 1 -W 1 "$IP" > /dev/null 2>&1; then
+    if nc -z -w1 "$IP" 22 > /dev/null 2>&1; then
         echo "✅ Builder ativo"
         exit 0
     fi
