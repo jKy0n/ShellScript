@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-NOME="$(echo "" | rofi -dmenu -p "Nome do workspace:" -l 0)"
+NOME="$(echo "" | walker --dmenu --inputonly --placeholder "Nome do workspace:")"
 [ -n "$NOME" ] && niri msg action set-workspace-name "$NOME"
