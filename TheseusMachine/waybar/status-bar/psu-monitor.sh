@@ -42,7 +42,7 @@ done
 text=$(printf "%s\n" "${lines[@]}")
 text="${text%$'\n'}"
 
-tooltip=$(printf "PSU — Corsair HX1500i\nUso: %s%%\nPotência: %sW\nTemp. VRM: %s°C" \
+tooltip=$(printf "Corsair HX1500i\nUso: %s%%\nPotência: %sW\nTemp. VRM: %s°C" \
     "$usage_pct" "$power_w" "$vrm_temp_c")
 
 jq -nc --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'

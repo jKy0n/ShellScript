@@ -58,7 +58,7 @@ text=$(printf "%s\n" "${lines[@]}")
 text="${text%$'\n'}"   # tira a quebra de linha extra do fim
 
 # Tooltip sempre completo — independe do que foi escolhido pro pill.
-tooltip=$(printf "GPU — Radeon RX 7800 XT\nUso: %s%%\nVRAM: %sGB / %sGB\nClock: %sMHz\nTemp. edge: %s°C\nTemp. junction: %s°C" \
+tooltip=$(printf "Radeon RX 7800 XT\nUso: %s%%\nVRAM: %sGB / %sGB\nClock: %sMHz\nTemp. edge: %s°C\nTemp. junction: %s°C" \
     "$usage_pct" "$vram_used_gb" "$vram_total_gb" "$freq_mhz" "$temp_edge_c" "$temp_junction_c")
 
 jq -nc --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'
