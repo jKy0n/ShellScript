@@ -37,7 +37,7 @@
         },
         {
             "type": "command",  // Package Manager version (pacman + paru)
-            "key": "  ",
+            "key": " ",
             "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-packageManager-version.sh",
             "format": "{1}"
         },
