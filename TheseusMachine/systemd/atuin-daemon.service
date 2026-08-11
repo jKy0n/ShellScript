@@ -1,0 +1,10 @@
+[Unit]
+Description=Atuin daemon (background history DB + sync)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/atuin daemon
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
