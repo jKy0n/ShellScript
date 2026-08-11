@@ -52,18 +52,6 @@
             "key": " ",
             "format": "{2} {5}"
         },
-        // {
-        //     "type": "command",  // Awesome version
-        //     "key": " ",
-        //     "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-awesome-version.sh",
-        //     "format": "{1} "
-        // },
-        // {
-        //     "type": "command",
-        //     "key": " 󰓃",
-        //     "text": " pipewire --version | awk 'NR==1 {printf \"%s \", $1} NR==2 {print $4}' ",
-        //     "format": "{1} "
-        // },
         {
             "type": "command",  // Btrfs + Bees version
             "key": " ",
@@ -87,31 +75,6 @@
             "text": " sh -c 'grub-install --version | awk \"{print \\$2, \\$3}\" | awk \"{gsub(/\\(|\\)/,\\\"\\\"); print \\$1, \\$2}\"' ",
             "format": "{1} + GRUB BtrFS"
         },
-        // {
-        //     "type": "custom",
-        //     "format": "──────────────────────────────── \u001b[1m Theme \u001b[0m ────────────────────────────────",
-        //     "key": " "
-        // },
-        // {
-        //     "type": "theme",
-        //     "key": " ",
-        //     "format": "{2} "
-        // },
-        // {
-        //     "type": "icons",
-        //     "key": " 󰉋",
-        //     "format": "{2} "
-        // },
-        // {
-        //     "type": "font",
-        //     "key": " ",
-        //     "format": "{2} "
-        // },
-        // {
-        //     "type": "cursor",
-        //     "key": " 󰇀",
-        //     "format": "{1} ({2}) "
-        // },
         {
             "type": "custom",
             "format": "─────────────────────────────── \u001b[1m Hardware \u001b[0m ──────────────────────────────",
@@ -147,22 +110,6 @@
             "percent": {},
             "format": "{10} - {1} / {2} - ({3}) - {9}"
         },
-        // {
-        //     "type": "custom",
-        //     "format": "────────────────────────────── \u001b[1m Peripheral \u001b[0m ─────────────────────────────",
-        //     "key": " "
-        // },
-        // {
-        //     "type": "custom",
-        //     "key": " ",
-        //     "format": "JBL T290 (in-Ear) "
-        // },
-        // {
-        //     "type": "display",
-        //     "key": " 󱄄",
-        //     "format": "{6} - {1}x{2} @ {3} ",
-        //     "preciseRefreshRate": false
-        // },
         {
             "type": "custom",
             "format": "──────────────────────────────── \u001b[1m Uptime \u001b[0m ───────────────────────────────",
@@ -182,15 +129,9 @@
         },
         {
             "type": "packages",
-            "key": "  ",
+            "key": " ",
             "format": "{31} Packages"
         },
-        // {
-        //     "type": "command",
-        //     "key": " ",
-        //     "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-        //     "format": "{1} "
-        // },
         {
             "type": "uptime",
             "key": " "
@@ -201,19 +142,9 @@
             "format": "{1} "
         },
         {
-            "type": "custom",
-            "format": "───────────────────────────────────────────────────────────────────────",
-            "key": " "
-        },
-        {
             "type": "colors",
             "paddingLeft": 2,
             "symbol": "circle"
         },
-        // {
-        //     "type": "custom",
-        //     "format": "\u001b[1m\n             _    ___                                  ___   _____  \n            | |  / (_)___  _____ __  ____  _____      / __ \\/ ____/  \n            | | / / / __ `/ __ `__ \\/ __ `/ ___/_____/ /_/ / /       \n            | |/ / / /_/ / / / / / / /_/ / /  /_____/ ____/ /___     \n            |___/_/\\__,_/_/ /_/ /_/\\__,_/_/        /_/    \\____/    \n\u001b[0m",
-        //     "key": " "
-        // }
     ]
 }
