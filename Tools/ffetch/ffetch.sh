@@ -16,10 +16,22 @@ for arg in "$@"; do
     fi
 done
 
+# Verifica se foi passado --ssh ou -s como argumento
+SSH=false
+for arg in "$@"; do
+    if [[ "$arg" == "--ssh" || "$arg" == "-s" ]]; then
+        SSH=true
+        break
+    fi
+done
+
 case $MACHINE_ID in
     # Call fastfetch for CrisNote
     "CrisNote")
-        if $MINI; then
+        if $SSH; then
+            echo "Modo ssh para CrisNote ainda não configurado."
+            # fastfetch --config ~/.config/fastfetch/ffetch-ssh-CrisNote.jsonc
+        elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-CrisNote.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-CrisNote.jsonc
@@ -28,7 +40,9 @@ case $MACHINE_ID in
 
     # Call fastfetch for TheseusMachine
     "TheseusMachine")
-        if $MINI; then
+        if $SSH; then
+            fastfetch --config ~/.config/fastfetch/ffetch-ssh-TheseusMachine.jsonc
+        elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-TheseusMachine.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-TheseusMachine.jsonc
@@ -37,7 +51,10 @@ case $MACHINE_ID in
 
     # Call fastfetch for Viamar-PC
     "Viamar-PC")
-        if $MINI; then
+        if $SSH; then
+            echo "Modo ssh para Viamar-PC ainda não configurado."
+            # fastfetch --config ~/.config/fastfetch/ffetch-ssh-viamar-PC.jsonc
+        elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-viamar-PC.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-viamar-PC.jsonc
@@ -57,7 +74,10 @@ case $MACHINE_ID in
 
     # Call fastfetch for Viamar-PC
     "builder")
-        if $MINI; then
+        if $SSH; then
+            echo "Modo ssh para builder ainda não configurado."
+            # fastfetch --config ~/.config/fastfetch/ffetch-ssh-builder-arch.jsonc
+        elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-builder-arch.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-builder-arch.jsonc

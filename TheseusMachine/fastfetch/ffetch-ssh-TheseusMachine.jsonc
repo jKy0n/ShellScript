@@ -5,7 +5,7 @@
 
     "logo": {
         "type": "chafa",
-        "source": "/home/jkyon/Pictures/GentooMedias/Gentoo-logo-peach-plain.png",
+        "source": "/home/jkyon/Pictures/GentooMedias/theseusmachine-proto-logo.png",
         // "dither": "ordered",
         "width":  40,
         "height": 20,
@@ -35,39 +35,15 @@
             "key": "  ",
             "format": "{1} {2}"
         },
-        {
-            "type": "command",  // Shell and Tmux version
-            "key": "  ",
-            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-zsh+tmux-version.sh"
-        },
-        {
-            "type": "wm",
-            "key": "  "
-        },
-        {
-            "type": "custom", // Theme
-            "format": "─────────────────────────── \u001b[1m Theme \u001b[0m ───────────────────────────",
-            "key": " "
-        },
-        {
-            "type": "theme",
-            "key": "  ",
-            "format": "{2}"
-        },
-        {
-            "type": "icons",
-            "key": "  󰉋",
-            "format": "{2}"
-        },
-        {
-            "type": "font",
-            "key": "  ",
-            "format": "{2}"
-        },
-        {
-            "type": "cursor",
-            "key": "  󰇀"
-        },
+        // {
+        //     "type": "command",  // Shell and Tmux version
+        //     "key": "  ",
+        //     "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-zsh+tmux-version.sh"
+        // },
+        // {
+        //     "type": "wm",
+        //     "key": "  "
+        // },
         {
             "type": "custom", // Hardware
             "format": "────────────────────────── \u001b[1m Hardware \u001b[0m ─────────────────────────",
@@ -88,24 +64,10 @@
             "key": "  󰢮"
         },
         {
-            "type": "custom", // Peripheral
-            "format": "───────────────────────── \u001b[1m Peripheral \u001b[0m ────────────────────────",
-            "key": " "
-        },
-        {
-            "type": "custom",
-            "key": "  ",
-            "format": "T-Dagger Bora (ABNT2) + Akko Purple Jelly + Generic Purple keycaps"
-        },
-        {
-            "type": "custom",
-            "key": "  󰃬",
-            "format": "Exbom BK-N30"
-        },
-        {
-            "type": "custom",
-            "key": "  󰍽",
-            "format": "Logitech G403 Hero + switch Kaihl GM 4.0"
+            "type": "disk",
+            "key": "  ",
+            "percent": {},
+            "format": "{10} - {1} / {2} - ({3}) - {9}"
         },
         {
             "type": "custom", // Uptime
@@ -122,19 +84,19 @@
             "key": "  󰪫",
             "text": "uname -n"
         },
-        {
-            "type": "host",
-            "key": "  "
-        },
+        // {
+        //     "type": "host",
+        //     "key": "  "
+        // },
         {
             "type": "packages",
             "key": "  "
         },
-        {
-            "type": "command",
-            "key": "  ",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-        },
+        // {
+        //     "type": "command",
+        //     "key": "  ",
+        //     "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        // },
         {
             "type": "uptime",
             "key": "  "
