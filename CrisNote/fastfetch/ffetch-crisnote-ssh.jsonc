@@ -4,7 +4,7 @@
 
     "logo": {
         "type": "chafa",
-        "source": "/home/jkyon/Pictures/ArchLinux-medias/ArchLinux-logo.png",
+        "source": "/home/jkyon/Pictures/ArchLinux-medias/crisnote-proto-logo.png",
         "width":  40,
         "height": 20,
         "padding": {
@@ -28,18 +28,18 @@
         {
             "type": "os",
             "key": " ",
-            "format": "{2} "
+            "format": "{2}"
         },
         {
             "type": "kernel",
             "key": " ",
-            "format": "{1} {2} "
+            "format": "{1} {2}"
         },
         {
             "type": "command",  // Package Manager version (pacman + paru)
             "key": " ",
             "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-packageManager-version.sh",
-            "format": "{1} "
+            "format": "{1}"
         },
         {
             "type": "command",
@@ -50,20 +50,20 @@
         {
             "type": "editor",
             "key": " ",
-            "format": "AstroNvim ({2} {5}) "
+            "format": "{2} {5}"
         },
-        {
-            "type": "command",  // Awesome version
-            "key": " ",
-            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-awesome-version.sh",
-            "format": "{1} "
-        },
-        {
-            "type": "command",
-            "key": " 󰓃",
-            "text": " pipewire --version | awk 'NR==1 {printf \"%s \", $1} NR==2 {print $4}' ",
-            "format": "{1} "
-        },
+        // {
+        //     "type": "command",  // Awesome version
+        //     "key": " ",
+        //     "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-awesome-version.sh",
+        //     "format": "{1} "
+        // },
+        // {
+        //     "type": "command",
+        //     "key": " 󰓃",
+        //     "text": " pipewire --version | awk 'NR==1 {printf \"%s \", $1} NR==2 {print $4}' ",
+        //     "format": "{1} "
+        // },
         {
             "type": "command",  // Btrfs + Bees version
             "key": " ",
@@ -87,31 +87,31 @@
             "text": " sh -c 'grub-install --version | awk \"{print \\$2, \\$3}\" | awk \"{gsub(/\\(|\\)/,\\\"\\\"); print \\$1, \\$2}\"' ",
             "format": "{1} + GRUB BtrFS"
         },
-        {
-            "type": "custom",
-            "format": "──────────────────────────────── \u001b[1m Theme \u001b[0m ────────────────────────────────",
-            "key": " "
-        },
-        {
-            "type": "theme",
-            "key": " ",
-            "format": "{2} "
-        },
-        {
-            "type": "icons",
-            "key": " 󰉋",
-            "format": "{2} "
-        },
-        {
-            "type": "font",
-            "key": " ",
-            "format": "{2} "
-        },
-        {
-            "type": "cursor",
-            "key": " 󰇀",
-            "format": "{1} ({2}) "
-        },
+        // {
+        //     "type": "custom",
+        //     "format": "──────────────────────────────── \u001b[1m Theme \u001b[0m ────────────────────────────────",
+        //     "key": " "
+        // },
+        // {
+        //     "type": "theme",
+        //     "key": " ",
+        //     "format": "{2} "
+        // },
+        // {
+        //     "type": "icons",
+        //     "key": " 󰉋",
+        //     "format": "{2} "
+        // },
+        // {
+        //     "type": "font",
+        //     "key": " ",
+        //     "format": "{2} "
+        // },
+        // {
+        //     "type": "cursor",
+        //     "key": " 󰇀",
+        //     "format": "{1} ({2}) "
+        // },
         {
             "type": "custom",
             "format": "─────────────────────────────── \u001b[1m Hardware \u001b[0m ──────────────────────────────",
@@ -122,18 +122,18 @@
             "key": " ",
             "showPeCoreCount": true,
             "temp": true,
-            "format": "{1} ({5}) - {7} - {8} "
+            "format": "{1} ({5}) - {7} - {8}"
         },
         {
             "type": "memory",
             "key": " ",
-            "format": "{1} / {2} ({3}) "
+            "format": "{1} / {2} ({3})"
         },
         {
             "type": "gpu",
             "detectionMethod": "pci",
             "key": " 󰢮",
-            "format": "{1} {2}        "
+            "format": "{1} {2}"
         },
         {
             "type": "command",
@@ -145,24 +145,24 @@
             "type": "disk",
             "key": " ",
             "percent": {},
-            "format": "{10} - {1} / {2} - ({3}) - {9} "
+            "format": "{10} - {1} / {2} - ({3}) - {9}"
         },
-        {
-            "type": "custom",
-            "format": "────────────────────────────── \u001b[1m Peripheral \u001b[0m ─────────────────────────────",
-            "key": " "
-        },
-        {
-            "type": "custom",
-            "key": " ",
-            "format": "JBL T290 (in-Ear) "
-        },
-        {
-            "type": "display",
-            "key": " 󱄄",
-            "format": "{6} - {1}x{2} @ {3} ",
-            "preciseRefreshRate": false
-        },
+        // {
+        //     "type": "custom",
+        //     "format": "────────────────────────────── \u001b[1m Peripheral \u001b[0m ─────────────────────────────",
+        //     "key": " "
+        // },
+        // {
+        //     "type": "custom",
+        //     "key": " ",
+        //     "format": "JBL T290 (in-Ear) "
+        // },
+        // {
+        //     "type": "display",
+        //     "key": " 󱄄",
+        //     "format": "{6} - {1}x{2} @ {3} ",
+        //     "preciseRefreshRate": false
+        // },
         {
             "type": "custom",
             "format": "──────────────────────────────── \u001b[1m Uptime \u001b[0m ───────────────────────────────",
@@ -185,12 +185,12 @@
             "key": " ",
             "format": "{1} "
         },
-        {
-            "type": "command",
-            "key": " ",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-            "format": "{1} "
-        },
+        // {
+        //     "type": "command",
+        //     "key": " ",
+        //     "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+        //     "format": "{1} "
+        // },
         {
             "type": "uptime",
             "key": " "

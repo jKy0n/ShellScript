@@ -29,8 +29,7 @@ case $MACHINE_ID in
     # Call fastfetch for CrisNote
     "CrisNote")
         if $SSH; then
-            echo "Modo ssh para CrisNote ainda não configurado."
-            # fastfetch --config ~/.config/fastfetch/ffetch-ssh-CrisNote.jsonc
+            fastfetch --config ~/.config/fastfetch/ffetch-crisnote-ssh.jsonc
         elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-CrisNote.jsonc
         else
