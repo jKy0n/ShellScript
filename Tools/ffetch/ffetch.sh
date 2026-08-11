@@ -73,8 +73,7 @@ case $MACHINE_ID in
     # Call fastfetch for Viamar-PC
     "builder")
         if $SSH; then
-            echo "Modo ssh para builder ainda não configurado."
-            # fastfetch --config ~/.config/fastfetch/ffetch-ssh-builder-arch.jsonc
+            fastfetch --config ~/.config/fastfetch/ffetch-builder-ssh.jsonc
         elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-builder-arch.jsonc
         else
