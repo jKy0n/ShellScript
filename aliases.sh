@@ -1,137 +1,38 @@
-# shellcheck shell=bash
 #
-#        Title:      aliases.sh
-#        Brief:      My custom aliases for the terminal
-#        Path:       /home/jkyon/ShellScript/aliases.sh
-#        Author:     John Kennedy a.k.a. jKyon
-#        Created:    2026-02-23
-#        Updated:    2026-03-15
-#        Notes:      All the aliases I use in the terminal, organized alphabetically by the command they alias.
-#                    Some of these aliases are just for fun, while others are meant to improve my workflow and productivity.
-#                    Feel free to use any of these aliases or modify them to suit your needs!
+#        Title:      environment.zsh
+#        Brief:      Configurações de ambiente compartilhadas entre as 4 máquinas
 #
-# A
-alias bash-reset='source ~/.bashrc && sleep 1 && reset'
-#
-# B
-alias bulk-ocr='/home/jkyon/ShellScript/Tools/bulk-ocr/bulk-ocr.sh'
-#
-# C
-alias copy-to-clipboard-alias='sh ~/ShellScript/Tools/xclip-output-to-clipboard/xclip-output-to-clipboard.sh'
-alias cp='cp -v'
-#
-# D
-alias dead-process-watcher='watch19 '\''ps -eo ppid,pid,stat,comm | grep " D" && ps -eo ppid,pid,stat,comm | grep " Z"'\'
-alias distcc-portage-watch='nice --adjustment=19 env DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text 1'
-#
-# E
-alias ealacritty='nvim ~/.config/alacritty/alacritty.toml'
-alias ealias='nvim ~/ShellScript/aliases.sh && zsh-reset'
-alias eawesomeWM='nvim ~/.config/awesome/rc.lua'
-alias ebash='nvim ~/.bashrc'
-alias efstab='sudo -e /etc/fstab'
-alias emake='sudo -e /etc/portage/make.conf'
-alias eStartUp='nvim ~/ShellScript/startUpApps.sh'
-alias etmux='nvim ~/.dotfiles/.config/tmux/tmux.conf'
-alias eUnmskpkg='sudo -e /etc/portage/package.accept_keywords'
-alias ezsh='nvim ~/.zshrc'
-#
-# F
-alias ffetch='sh ~/ShellScript/Tools/ffetch/ffetch.sh'
-#
-# G
-alias genlop-watch='nice --adjustment=19 watch --color --interval 1 genlop -ci'
-alias grep='grep --colour=auto'
-#
-# H
-# alias helptty='sudo fbset -xres 3440 -yres 1440 && sh ~/ShellScript/Tools/tmux-quickstart.sh'
-#
-# I
-alias iotop='sudo iotop -aoP'
-#
-# J
-alias jkyonphone-ssh-mount='mkdir -p /mnt/jKyonPhone && sshfs \
-    jkyonphone:/data/data/com.termux/files/home \
-    /mnt/jKyonPhone \
-    -o reconnect \
-    -o follow_symlinks \
-    -o cache=yes \
-    -o kernel_cache'
-#
-alias jkyonphone-ssh-umount='fusermount3 -u /mnt/jKyonPhone || fusermount -u /mnt/jKyonPhone'
-#
-# K
-#
-# L
-alias ls='lsd'
-alias lsblk-mine='lsblk -o NAME,SIZE,FSTYPE,LABEL,MOUNTPOINT'
-alias lsl='lsd -l'
-alias lsla='lsd -la'
-alias lsusb='echo "Use cyme instead: cyme --tree"'
-#
-# M
-alias man='LANG=pt_BR.UTF-8 man'
-alias me-avise='sh ~/ShellScript/Tools/avisoNoTerminal.sh'
-alias mv='mv -v'
-#
-# N
-alias niri-status-services="$HOME/ShellScript/niri/Tools/niri-status-services/niri-status-services.sh"
-#
-# O
-alias ookla-home='speedtest --server-id=53390'
-alias ookla-work='speedtest --server-id=53390'
-#
-# P
-alias picom-restart='sh ~/ShellScript/Tools/picom-restartRoutine.sh'
-alias pipewire-restart='sh ~/ShellScript/Tools/pipewire-restart.sh'
-alias portage-unused-ranker='sh /home/jkyon/ShellScript/TheseusMachine/portage-tools/portage-unused-ranker/portage-unused-ranker.sh'
-alias portage-sync='update-mirrorselect && sudo emerge --verbose --sync && update-distro'
-#
-# Q
-#
-# R
-alias radeontop='radeontop --color --transparency'
-alias reboot='loginctl reboot'
-alias rg='rg --color=auto'
-#
-# S
-alias satisfactory-server='sh ~/ShellScript/Games/satisfactory-server-update.sh'
-alias scan-to-ai='~/ShellScript/Tools/scan-to-ai/scan-to-ai.sh'
-alias sensors-watch='nice --adjustment=19 watch --interval 3 --differences sensors'
-alias smart-cleanup='sh ~/ShellScript/Tools/smart-cache-cleanup/smart-cache-cleanup.sh'
-alias ssh-test-connection='sh ~/ShellScript/Tools/ssh-test-connection/ssh-test-connection.sh'
-alias start-up-apps='sh ~/ShellScript/startUpApps.sh'
-#
-# T
-#
-# U
-alias unlock-sudo='echo "Use root password" && su -c "faillock --user jkyon --reset"'
-alias unmskpkg='sh ~/ShellScript/Tools/gentoo-unmaskPackage.sh'
-alias update-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash ~/ShellScript/Tools/update-distro/updateDistro.sh"'
-alias update-distro='sh ~/ShellScript/Tools/update-distro/updateDistro.sh'
-alias update-mirrorselect='sh ~/ShellScript/TheseusMachine/systemd/PortageSync/systemd-mirrorselect-update.sh'
-alias upgrade-all-arch='pssh -H "viamar-pc crisnote builder" -l jkyon -i "bash /home/jkyon/ShellScript/Viamar-PC/upgradeParu.sh"'
-alias upgrade-distro='sh ~/ShellScript/Tools/upgrade-distro/upgradeDistro.sh'
-alias upgrade-kernel='sh ~/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh'
-#
-# V
-alias valacritty='bat ~/.config/alacritty/alacritty.toml'
-alias valias='bat ~/ShellScript/aliases.sh'
-alias vbash='bat ~/.bashrc'
-alias vfstab='bat /etc/fstab'
-alias vmake='bat /etc/portage/make.conf'
-alias vumskpkg='bat /etc/portage/package.accept_keywords'
-#
-# W
-alias wacom-set-stylus='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0'
-alias watch19='sh ~/ShellScript/Tools/watch19.sh'
-alias watch-disks='nice -n 19 watch -n 1 --color --differences "echo && df -h /efi /boot / /home ~/Desktop"'
-alias wake-builder='ssh viamar-pc "bash /home/jkyon/ShellScript/Viamar-PC/Scripts/wake-builder/wake-builder.sh"'
-alias wake-theseusmachine='ssh crisnote "bash /home/jkyon/ShellScript/CrisNote/tools/wake-theseusmachine/wake-theseusmachine.sh"'
-#
-# X
-#
-# Y
-#
-# Z
-alias zsh-reset='source ~/.zshrc && sleep 1 && reset'
+
+export EDITOR=nvim
+export SUDO_EDITOR=nvim
+export SYSTEMD_EDITOR=nvim
+
+# Terminal padrão — Kitty desde a migração. Alacritty fica no repo como
+# fallback, mas não é mais o default de nenhuma ferramenta que respeite
+# essa variável (rofi, xdg-terminal-exec, "abrir terminal aqui" etc.)
+export TERMINAL=kitty
+
+export CARGO_HOME="$HOME/.builds/cargo"
+export CARGO_TARGET_DIR="$HOME/.builds/cargo-target"
+
+export PIP_CACHE_DIR="$HOME/.builds/pip-cache"
+
+# DISTCC_HOSTS mora cifrado em zsh/secrets/ desde o passo 2
+[[ -r "$HOME/.config/zsh/secrets/distcc-hosts.zsh" ]] && source "$HOME/.config/zsh/secrets/distcc-hosts.zsh"
+
+export CCACHE_DIR="$HOME/.builds/ccache"
+export CCACHE_COMPRESS=1
+export CCACHE_MAXSIZE=10G
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PATH="$HOME/.local/bin:$PATH"
+
+export PATH="$PATH:$HOME/.spicetify"
+
+export PAY_RESPECTS_REQUIRE_CONFIRMATION="true"
+
+setopt EXTENDED_GLOB
+setopt GLOB_DOTS
+setopt INTERACTIVE_COMMENTS
+
+[[ -z "$TMUX" ]] && export SHELL=$(which zsh)
