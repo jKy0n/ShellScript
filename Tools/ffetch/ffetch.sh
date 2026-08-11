@@ -52,7 +52,6 @@ case $MACHINE_ID in
     # Call fastfetch for Viamar-PC
     "Viamar-PC")
         if $SSH; then
-            echo "Modo ssh para Viamar-PC ainda não configurado."
             fastfetch --config ~/.config/fastfetch/ffetch-ssh-viamar-PC.jsonc
         elif $MINI; then
             fastfetch --config ~/.config/fastfetch/ffetch-mini-viamar-PC.jsonc
