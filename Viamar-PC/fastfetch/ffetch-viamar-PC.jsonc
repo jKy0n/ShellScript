@@ -49,13 +49,12 @@
         {
             "type": "editor",
             "key": "  ",
-            "format": "AstroNvim ({2} {5}) "
+            "format": "{2} {5}"
         },
         {
-            "type": "command",  // Awesome version
+            "type": "wm",
             "key": "  ",
-            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-awesome-version.sh",
-            "format": "{1} "
+            "format": "{2} {5}"
         },
         {
             "type": "command",  // Pipewire version
@@ -77,7 +76,7 @@
         {
             "type": "command",  // Sudo version
             "key": "  󱕵",
-            "text": " sudo --version | awk 'NR==1 {print $1, $3 }' ",
+            "text": "sh /home/jkyon/ShellScript/fastfetch-scripts/fastfetch-sudo+polkit-version.sh",
             "format": "{1} "
         },
         {
@@ -163,22 +162,22 @@
         {
             "type": "custom",   // Keyboard model
             "key": "  ",
-            "format": "HyperX Alloy Origins Core (tkl)\n                                                        keycaps: Propitious Omen Purple "
+            "format": "HyperX Alloy Origins Core + keycaps: gradient blue"
         },
         {
             "type": "custom",   // Number pad model
             "key": "  󰃬",
-            "format": "Exbom BK-N30 "
+            "format": "Exbom BK-N30"
         },
         {
             "type": "custom",   // Mouse model
             "key": "  󰍽",
-            "format": "Logitech G403 "
+            "format": "Logitech G403"
         },
         {
             "type": "custom",   // Headphone model
             "key": "  ",
-            "format": "JBL T290 (in-Ear) "
+            "format": "PC Yes - Kheper (in-Ear)"
         },
         {
             "type": "display",
