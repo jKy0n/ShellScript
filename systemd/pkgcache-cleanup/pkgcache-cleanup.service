@@ -1,0 +1,10 @@
+# ~/ShellScript/systemd/pkgcache-cleanup/pkgcache-cleanup.service
+[Unit]
+Description=jKyon Universal Package Cache Cleanup (pacman/portage)
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/jkyon/ShellScript/Tools/pkgcache-cleanup/pkgcache-cleanup.sh
+Nice=19
+IOSchedulingClass=idle

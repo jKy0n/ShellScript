@@ -1,0 +1,11 @@
+# ~/ShellScript/systemd/pkgcache-cleanup/pkgcache-cleanup.timer
+[Unit]
+Description=Limpeza semanal de cache de pacotes
+
+[Timer]
+OnCalendar=Sun *-*-* 03:30:00
+Persistent=true
+Unit=pkgcache-cleanup.service
+
+[Install]
+WantedBy=timers.target

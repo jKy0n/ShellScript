@@ -1,0 +1,8 @@
+[Unit]
+Description=Notificação: falha na unidade %i
+
+[Service]
+Type=oneshot
+ExecStart=notify-send --urgency=critical \
+  "Falha na unidade %i" \
+  "Confira detalhes com 'systemctl --user status %i' e 'journalctl --user -xeu %i'"
