@@ -36,7 +36,7 @@ log_error() {
 
     {
         echo
-        echo "[$(timestamp)] ERRO em $(hostname -s)"
+        echo "[$(timestamp)] ERRO em $(uname -n)"
         echo "$1"
     } >> "$LOG_FILE"
 
