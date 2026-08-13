@@ -12,10 +12,11 @@
 
     "logo": {
         "type": "chafa",
-        "source": "/home/jkyon/Pictures/GentooMedias/Gentoo-logo-peach-plain.png",
-        "width":  40,
-        "height": 20,
+        "source": "/home/jkyon/Pictures/GentooMedias/theseusmachine-proto-logo.png",
+        "width":  60,
+        "height": 25,
         "padding": {
+            "top": 5,
             "left": 2,
             "right": 2
         }
@@ -49,7 +50,7 @@
         {
             "type": "editor",
             "key": "  ",
-            "format": "AstroNvim ({2} {5})"
+            "format": "{2} {5}"
         },
         {
             "type": "wm",
@@ -98,7 +99,7 @@
         {
             "type": "font",
             "key": "  ",
-            "format": "{2}"
+            "format": "{1}"
         },
         {
             "type": "cursor",
@@ -127,17 +128,19 @@
         {
             "type": "gpu",
             "detectionMethod": "pci",
-            "key": "  󰢮"
+            "key": "  󰢮",
+            "format": "{2}"
         },
         {
             "type": "board",
-            "key": "  󰚗"
+            "key": "  󰚗",
+            "format": "{2} - {1} - {3}"
         },
         {
             "type": "disk",
             "key": "  ",
             "percent": {},
-            "format": "{10} - {1} / {2} - ({3}) - {9}"
+            "format": "{20} - {10} - {1} / {2} - ({3}) - {9}"
         },
         "break",
         {
@@ -173,7 +176,7 @@
         {
             "type": "sound",
             "key": "  󰤽",
-            "format": "{3}"
+            "format": "{3} @ 48KHz 16-bit"
         },
         {
             "type": "custom",
