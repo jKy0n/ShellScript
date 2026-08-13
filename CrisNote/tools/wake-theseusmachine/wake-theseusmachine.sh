@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 #
 #        Title:      wake-theseusmachine.sh
-#        Brief:
+#        Brief:      Acorda a TheseusMachine via WOL (broadcast local).
 #        Path:       /home/jkyon/ShellScript/CrisNote/tools/wake-theseusmachine/wake-theseusmachine.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-03-26
-#        Updated:    2026-08-06
+#        Updated:    2026-08-13
 #        Notes:
+#          Broadcast de WOL não atravessa Tailscale, só funciona dentro da
+#          própria LAN do alvo (192.168.15.x). Por isso este script SEMPRE
+#          roda fisicamente na Crisnote — o alias `wake-theseusmachine`
+#          (definido em aliases.zsh) já faz `ssh crisnote "bash este-script"`
+#          antes de chegar aqui. O script em si não precisa saber de onde
+#          o usuário chamou o alias original.
 #
 
 set -eu
@@ -32,4 +38,3 @@ done
 
 echo "❌ TheseusMachine ainda suspensa - tente novamente"
 exit 1
-
