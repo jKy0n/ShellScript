@@ -10,7 +10,7 @@
 # ATENÇÃO — "hwmon10" não é garantido entre boots. Conferir com:
 #   for f in /sys/class/hwmon/hwmon*/name; do echo "$f: $(cat "$f")";
 #   done | grep corsair
-HWMON="/sys/class/hwmon/hwmon10"
+HWMON="/sys/class/hwmon/hwmon9"
 ICON="󰚥"
 
 power_uw=$(<"$HWMON/power1_input")
