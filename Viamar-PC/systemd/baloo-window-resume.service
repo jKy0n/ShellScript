@@ -1,0 +1,6 @@
+[Unit]
+Description=Resume baloo indexing (start of active window)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/balooctl6 resume
