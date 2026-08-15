@@ -1,0 +1,14 @@
+[Unit]
+Description=Anchor: ties mako.service lifecycle to the niri session
+Documentation=man:mako(1)
+PartOf=graphical-session.target
+After=graphical-session.target mako.service
+Wants=mako.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/true
+
+[Install]
+WantedBy=graphical-session.target
