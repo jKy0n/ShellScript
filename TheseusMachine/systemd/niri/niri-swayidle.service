@@ -1,0 +1,13 @@
+[Unit]
+Description=swayidle idle management daemon
+After=graphical-session.target
+Requisite=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swayidle -w timeout 3600 'systemctl suspend'
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

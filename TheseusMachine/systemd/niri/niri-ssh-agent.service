@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenSSH authentication agent
+Documentation=man:ssh-agent(1)
+After=graphical-session.target
+Requisite=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+ExecStart=/usr/bin/ssh-agent -D -a ${SSH_AUTH_SOCK}
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

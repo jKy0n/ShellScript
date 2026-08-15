@@ -1,0 +1,17 @@
+[Unit]
+Description=udiskie automounter (user)
+Documentation=man:udiskie(8)
+After=graphical-session.target
+Requisite=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+# Corrigido: checava $DISPLAY (X11), que nunca existe sob niri —
+# ficaria em loop eterno. Trocado pro sinal certo de sessão Wayland.
+ExecStartPre=/bin/sh -c 'while [ -z "$WAYLAND_DISPLAY" ]; do sleep 1; done'
+ExecStart=/usr/bin/udiskie --smart-tray --notify --no-automount
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
