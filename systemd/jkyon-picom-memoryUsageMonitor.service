@@ -1,6 +1,0 @@
-[Unit]
-Description=Monitoramento do uso de memória do picom
-
-[Service]
-Type=simple
-ExecStart=/home/jkyon/ShellScript/Viamar-PC/Scripts/picom-restartRoutine.sh

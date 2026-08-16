@@ -1,9 +1,0 @@
-[Unit]
-Description=Agendamento diário para o backup do /etc
-
-[Timer]
-OnCalendar=*-*-* 04:30:00
-Persistent=true
-
-[Install]
-WantedBy=timers.target

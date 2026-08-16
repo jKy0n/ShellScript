@@ -1,6 +1,0 @@
-[Unit]
-Description=Backup do Postgres do Atuin (Viamar-PC) para TheseusMachine
-
-[Service]
-Type=oneshot
-ExecStart=%h/ShellScript/TheseusMachine/atuin-backup-viamar.sh
