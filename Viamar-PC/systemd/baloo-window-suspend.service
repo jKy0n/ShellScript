@@ -1,6 +1,0 @@
-[Unit]
-Description=Suspend baloo indexing (end of active window)
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/balooctl6 suspend
