@@ -1,0 +1,31 @@
+[Unit]
+Description=Idle management (screen off aos 9min, lock aos 10min, suspend aos 60min)
+After=graphical-session.target
+Requisite=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+    timeout 540 'niri msg action power-off-monitors' \
+    timeout 600 'swaylock -f \
+        --screenshots \
+        --effect-blur 7x5 \
+        --clock \
+        --indicator \
+        --indicator-radius 120 \
+        --indicator-thickness 8 \
+        --ring-color 8caaeeff \
+        --ring-ver-color babbf1ff \
+        --ring-wrong-color e78284ff \
+        --key-hl-color a6d189ff \
+        --inside-color 303446aa \
+        --separator-color 00000000 \
+        --font "MesloLGS Nerd Font Mono" \
+        --font-size 24' \
+    timeout 3600 'systemctl suspend'
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
