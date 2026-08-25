@@ -2,74 +2,51 @@
 
 Thats is my scripts collection. (Description below 👇 soon)
 
-![Scripts preview](https://github.com/jKy0n/ShellScript/blob/main/.media/screenshot-2026-07-31.png)
+![Scripts preview](01-media/shellscript-overview.png)
 
 ## Scripts List
 
 ```
 ❯ tree ~/ShellScript
 
-/home/jkyon/ShellScript
-├── AI-Scripts
-│   ├── AI-Shell-SystemInformation.sh
-│   ├── deepShell.sh
-│   ├── ollama-pretty.sh
-│   ├── ollama-read-meta.sh
-│   └── ollama-read.sh
-├── aliases.sh
-├── awesome-WM-widgets
-│   ├── DoNotDisturb_widget.lua
-│   ├── internet_widget.lua
-│   ├── paru_update_checker.lua
-│   └── portage-update-checker
-│       ├── portage-update-checker.lua
-│       └── README.md
-├── builder-arch
-│   └── fastfetch
-│       └── ffetch-builder-arch.jsonc
-├── CrisNote
-│   ├── scripts
-│   │   └── upgrade-kernel-arch
-│   │       └── upgrade-kernel-arch.sh
-│   ├── startUpApps-CrisNote.sh
-│   ├── StatusBar-Scripts
-│   │   ├── battery-widget.sh
-│   │   ├── CPU-freq-monitor.sh
-│   │   ├── CPU-monitor.sh
-│   │   ├── CPU-temp-monitor.sh
-│   │   ├── CPU-usage-monitor.sh
-│   │   ├── RAM-monitor.sh
-│   │   └── RAM-usage-monitor.sh
-│   ├── StatusBar-Scripts.old
-│   │   ├── crisNoteBatteryLevel
-│   │   ├── crisNoteCpuTemp
-│   │   ├── CrisNoteCPUtemp.sh
-│   │   └── CrisNotoBatteryCapacity.sh
-│   └── tools
-│       └── wake-theseusmachine
-│           └── wake-theseusmachine.sh
-├── Debian
-│   └── tools
-│       ├── update-apt.sh
-│       └── upgrade-apt.sh
-├── fastfetch-scripts
-│   ├── fastfetch-awesome-version.sh
-│   ├── fastfetch-btrfs+bees-version-pacman.sh
-│   ├── fastfetch-btrfs+bees-version-portage.sh
-│   ├── fastfetch-btrfs+bees-version.sh
-│   ├── fastfetch-MoBo-info.sh
-│   ├── fastfetch-packageManager-version.sh
-│   ├── fastfetch-sudo+polkit-version.sh
-│   └── fastfetch-zsh+tmux-version.sh
-├── Games
-│   └── satisfactory-server-update.sh
-├── Old-unused-Scripts
+~/ShellScript
+├── 01-media
+│   └── shellscript-overview.png
+├── archive
 │   ├── ananicy-exclude.sh
 │   ├── awesome-notify-test.sh
+│   ├── awesome-statusbar-crisnote
+│   │   ├── StatusBar-Scripts
+│   │   │   ├── battery-widget.sh
+│   │   │   ├── CPU-freq-monitor.sh
+│   │   │   ├── CPU-monitor.sh
+│   │   │   ├── CPU-temp-monitor.sh
+│   │   │   ├── CPU-usage-monitor.sh
+│   │   │   ├── RAM-monitor.sh
+│   │   │   └── RAM-usage-monitor.sh
+│   │   └── StatusBar-Scripts.old
+│   │       ├── crisNoteBatteryLevel
+│   │       ├── crisNoteCpuTemp
+│   │       ├── CrisNoteCPUtemp.sh
+│   │       └── CrisNotoBatteryCapacity.sh
+│   ├── awesome-StatusBar-Scripts-viamar-pc
+│   │   ├── cpu_monitor.lua
+│   │   ├── lib
+│   │   │   ├── formatters.lua
+│   │   │   └── monitor.lua
+│   │   └── ram_monitor.lua
+│   ├── awesome-WM-widgets
+│   │   ├── DoNotDisturb_widget.lua
+│   │   ├── internet_widget.lua
+│   │   ├── paru_update_checker.lua
+│   │   └── portage-update-checker
+│   │       ├── portage-update-checker.lua
+│   │       └── README.md
 │   ├── backInTime-gpgKeys-backup.sh
 │   ├── feh_custom
 │   ├── gentoo-addUSEpackage.sh
 │   ├── gentoo-sync.sh
+│   ├── gentoo-unmaskPackage.sh
 │   ├── gentoo-update.sh
 │   ├── jkyon-scrub.sh
 │   ├── kdeConnect-refresh.sh
@@ -77,8 +54,19 @@ Thats is my scripts collection. (Description below 👇 soon)
 │   ├── mycompsize.sh
 │   ├── myfetch.sh
 │   ├── notification-test.sh
+│   ├── picom-memoryMonitor.sh
+│   ├── picom-restartRoutine1.sh
+│   ├── picom-restartRoutine.sh
+│   ├── pipewire-restart.sh
 │   ├── PortageRsyncDotfiles.sh
+│   ├── rofi-recoll.sh
+│   ├── screenshots-scripts
+│   │   ├── flameshot-window
+│   │   └── main-window-screenshot
 │   ├── snapShotsPreview.sh
+│   ├── startUpApps-CrisNote.sh
+│   ├── startUpApps.sh
+│   ├── startUpApps-Viamar-PC.sh
 │   ├── StatusBar-Scripts.old
 │   │   ├── awesomeWidget-CPU-freq-monitor.sh
 │   │   ├── awesomeWidget-gpu0freq.sh
@@ -97,102 +85,90 @@ Thats is my scripts collection. (Description below 👇 soon)
 │   │   ├── dwmBlocksUpdates
 │   │   ├── dwmBlocksVolumeAudio
 │   │   └── memoryUsage-widget.sh
+│   ├── templates
+│   │   └── shellScript-template.sh
+│   ├── theseusmachine
+│   │   ├── PortageSync.old
+│   │   │   ├── PortageDailyAutomation.sh
+│   │   │   ├── PortageSync.sh
+│   │   │   └── PortageUpdateMirrors.sh
+│   │   ├── startUpApps-TheseusMachine.sh
+│   │   ├── startUpApps-TheseusMachine-with-nice.sh
+│   │   ├── StatusBar-Scripts
+│   │   │   ├── CPU-freq-monitor.sh
+│   │   │   ├── CPU-monitor.sh
+│   │   │   ├── CPU-temp-monitor.sh
+│   │   │   ├── CPU-usage-monitor.sh
+│   │   │   ├── GPU-freq-monitor.sh
+│   │   │   ├── GPU-monitor.sh
+│   │   │   ├── GPU-temp-monitor.sh
+│   │   │   ├── GPU-usage-monitor.sh
+│   │   │   ├── PSU-monitor.sh
+│   │   │   ├── PSU-temp-monitor.sh
+│   │   │   ├── PSU-usage-monitor.sh
+│   │   │   ├── RAM-monitor.sh
+│   │   │   └── RAM-usage-monitor.sh
+│   │   └── tmux-quickstart.sh
 │   └── theseusMachine-core-etc-sync.sh
+├── CrisNote
+│   ├── fastfetch
+│   │   ├── ffetch-CrisNote.jsonc
+│   │   └── ffetch-crisnote-ssh.jsonc
+│   ├── scripts
+│   │   └── upgrade-kernel-arch
+│   │       └── upgrade-kernel-arch.sh
+│   └── tools
+│       └── wake-theseusmachine
+│           └── wake-theseusmachine.sh
+├── fastfetch-scripts
+│   ├── fastfetch-awesome-version.sh
+│   ├── fastfetch-btrfs+bees-version-pacman.sh
+│   ├── fastfetch-btrfs+bees-version-portage.sh
+│   ├── fastfetch-btrfs+bees-version.sh
+│   ├── fastfetch-MoBo-info.sh
+│   ├── fastfetch-packageManager-version.sh
+│   ├── fastfetch-sudo+polkit-version.sh
+│   └── fastfetch-zsh+tmux-version.sh
+├── Games
+│   └── satisfactory-server-update.sh
 ├── poco-c65
 │   └── fastfetch
 │       └── ffetch-poco-c65.jsonc
 ├── README.md
-├── systemd
-│   ├── backintime-backup-job.service
-│   ├── backintime-backup-job.timer
-│   ├── backInTime-gpgKeys-Backup.service
-│   ├── backInTime-gpgKeys-Backup.timer
-│   ├── borgBackup-jkyon.service
-│   ├── borgBackup-jkyon.timer
-│   ├── gpt4all.service
-│   ├── jkyon-picom-memoryUsageMonitor.service
-│   ├── jkyon-picom-memoryUsageMonitor.timer
-│   ├── jkyon-picom-restartRoutine.service
-│   ├── jkyon-picom-restartRoutine.timer
-│   ├── jkyon-picom.service
-│   ├── jkyon-systemd-notify-send-test.service
-│   ├── jkyon-systemd-PortageRsyncDotfiles.service
-│   ├── jkyon-systemd-PortageRsyncDotfiles.timer
-│   ├── lockScreen.service
-│   ├── pipewire-reset.service
-│   ├── pipewire-reset.timer
-│   ├── pipewire-session-manager.service
-│   ├── polkit-gnome-authentication-agent.service
-│   └── ShellScripts-git-sync
-│       ├── ShellScripts-git-sync.service
-│       ├── ShellScripts-git-sync.sh
-│       └── ShellScripts-git-sync.timer
-├── templates
-│   └── shellScript-template.sh
 ├── TheseusMachine
+│   ├── atuin-backup-viamar.sh
 │   ├── etc-dotfiles.sh
-│   ├── fastfetch
-│   │   ├── ffetch-mini-TheseusMachine.jsonc
-│   │   ├── ffetch-ssh-TheseusMachine.jsonc
-│   │   └── ffetch-TheseusMachine.jsonc
-│   ├── PortageSync.old
-│   │   ├── PortageDailyAutomation.sh
-│   │   ├── PortageSync.sh
-│   │   └── PortageUpdateMirrors.sh
 │   ├── portage-tools
+│   │   ├── gentoo-cleanup-guard
+│   │   │   └── gentoo-cleanup-guard.sh
 │   │   ├── portage-unused-ranker
 │   │   │   ├── portage-unused-ranker.sh
 │   │   │   └── README.md
 │   │   ├── update-portage.sh
 │   │   └── upgrade-portage.sh
 │   ├── post-backup-snapshot.sh
-│   ├── screenshots-scripts
-│   │   ├── flameshot-window
-│   │   └── main-window-screenshot
 │   ├── scripts
 │   │   └── auto-idle-suspend
 │   │       ├── auto-idle-suspend.sh
 │   │       ├── auto-suspend.service
 │   │       └── lock-screen.sh
-│   ├── startUpApps-TheseusMachine.sh
-│   ├── startUpApps-TheseusMachine-with-nice.sh
-│   ├── StatusBar-Scripts
-│   │   ├── CPU-freq-monitor.sh
-│   │   ├── CPU-monitor.sh
-│   │   ├── CPU-temp-monitor.sh
-│   │   ├── CPU-usage-monitor.sh
-│   │   ├── GPU-freq-monitor.sh
-│   │   ├── GPU-monitor.sh
-│   │   ├── GPU-temp-monitor.sh
-│   │   ├── GPU-usage-monitor.sh
-│   │   ├── PSU-monitor.sh
-│   │   ├── PSU-temp-monitor.sh
-│   │   ├── PSU-usage-monitor.sh
-│   │   ├── RAM-monitor.sh
-│   │   └── RAM-usage-monitor.sh
-│   ├── systemd
-│   │   ├── auto-suspend.service
-│   │   ├── etc-dotfiles.service
-│   │   ├── etc-dotfiles.timer
-│   │   ├── PortageSync
-│   │   │   ├── systemd-mirrorselect-update.sh
-│   │   │   ├── systemd-notify-PortageSync-finish.sh
-│   │   │   └── systemd-notify-PortageSync-start.sh
-│   │   ├── rclone-mount-googlephotos.service
-│   │   ├── rclone-mount-jkls.service
-│   │   └── systemd-monitor
-│   │       ├── notify-failed@.service
-│   │       ├── systemd-monitor.service
-│   │       ├── systemd-monitor.sh
-│   │       └── systemd-monitor.timer
-│   ├── tmux-quickstart.sh
-│   └── tools
-│       ├── rambox-cleanup
-│       │   └── rambox-cleanup.sh
-│       ├── rambox-cleanup.sh
-│       └── upgrade-kernel
-│           ├── README.md
-│           └── upgrade-kernel.sh
+│   ├── tools
+│   │   ├── rambox-cleanup
+│   │   │   └── rambox-cleanup.sh
+│   │   ├── rambox-cleanup.sh
+│   │   └── upgrade-kernel
+│   │       ├── README.md
+│   │       └── upgrade-kernel.sh
+│   └── waybar
+│       ├── scrips
+│       │   ├── ephedrine.sh
+│       │   ├── mako-dnd.sh
+│       │   ├── mediaplayer.py
+│       │   └── power_menu.xml
+│       └── status-bar
+│           ├── gpu-monitor.sh
+│           ├── network-monitor.sh
+│           └── psu-monitor.sh
 ├── Tools
 │   ├── avisoNoTerminal.sh
 │   ├── borg_backup-hourlyRoutine.sh
@@ -205,24 +181,22 @@ Thats is my scripts collection. (Description below 👇 soon)
 │   │   └── README.MD
 │   ├── ffetch
 │   │   └── ffetch.sh
-│   ├── gentoo-unmaskPackage.sh
+│   ├── imake
+│   │   ├── emake
+│   │   │   └── emake.sh
+│   │   ├── lib
+│   │   │   └── detect-distro.sh
+│   │   └── vmake
+│   │       └── vmake.sh
 │   ├── ls-font-char.sh
 │   ├── OpenSeeFace.sh
-│   ├── picom-memoryMonitor.sh
-│   ├── picom-restartRoutine.sh
-│   ├── pipewire-restart.sh
 │   ├── rambox-cleanup
 │   │   └── rambox-cleanup.sh
-│   ├── rofi-recoll.sh
 │   ├── scan-to-ai
 │   │   ├── README.md
 │   │   └── scan-to-ai.sh
-│   ├── smart-cache-cleanup
-│   │   ├── README.md
-│   │   └── smart-cache-cleanup.sh
 │   ├── ssh-test-connection
 │   │   └── ssh-test-connection.sh
-│   ├── startUpApps.sh
 │   ├── update-distro
 │   │   └── updateDistro.sh
 │   ├── upgrade-distro
@@ -233,40 +207,19 @@ Thats is my scripts collection. (Description below 👇 soon)
 │       ├── xclip-output-to-clipboard.sh
 │       └── xclip-output-to-clipboard-v1.sh
 └── Viamar-PC
-    ├── fastfetch
-    │   ├── ffetch-mini-viamar-PC.jsonc
-    │   └── ffetch-viamar-PC.jsonc
     ├── Scripts
     │   ├── lock-screen
     │   │   ├── lock-screen.sh
     │   │   └── prelock-screenoff.sh
-    │   ├── picom-restartRoutine.sh
-    │   └── upgrade-kernel-arch
-    │       └── upgrade-kernel-arch.sh
-    ├── startUpApps-Viamar-PC.sh
-    ├── StatusBar-Scripts
-    │   ├── cpu_monitor.lua
-    │   ├── lib
-    │   │   ├── formatters.lua
-    │   │   └── monitor.lua
-    │   └── ram_monitor.lua
-    ├── systemd
-    │   ├── borg-ui.service
-    │   ├── chromadb.service
-    │   ├── gpt4all.service
-    │   ├── jkyon-light-locker.service
-    │   ├── jkyon-smart-cache-cleanup.service
-    │   ├── jkyon-smart-cache-cleanup.timer
-    │   ├── picom.service
-    │   ├── rclone-mount-jkls.service
-    │   ├── restart-picom-if-high-mem.service
-    │   ├── restart-picom-if-high-mem.timer
-    │   └── root-level
-    │       ├── pacman-cache-update.service
-    │       └── pacman-cache-update.timer
+    │   ├── upgrade-kernel-arch
+    │   │   └── upgrade-kernel-arch.sh
+    │   ├── wake-builder
+    │   │   └── wake-builder.sh
+    │   └── wake-viamar
+    │       └── wake-viamar.sh
     ├── updateParu.sh
     └── upgradeParu.sh
 
-59 directories, 198 files
+58 directories, 152 files
 ---
 ```
