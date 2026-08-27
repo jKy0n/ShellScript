@@ -5,7 +5,7 @@
 #        Path:       /home/jkyon/ShellScript/Tools/ephedrine/ephedrine.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-06-26
-#        Updated:    2026-06-26
+#        Updated:    2026-08-27
 #        Notes:      ephedrine - toggle de bloqueio de suspensão (systemd-inhibit) via unit transiente
 #
 
@@ -17,7 +17,7 @@ VERSION="1.0"
 # Bus de sessão do usuário, necessário pro notify-send funcionar mesmo
 # quando o script é chamado via SSH não-interativo (sem env de sessão gráfica)
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-ICON="/home/jkyon/Pictures/icons/font-awesome/tablets-solid-full.svg"
+ICON="/home/jkyon/Pictures/icons/lucide-icons/tablets.svg"
 
 notify() {
     notify-send -u normal -i "$ICON" "$1" "$2"
