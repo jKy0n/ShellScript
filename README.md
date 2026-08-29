@@ -136,7 +136,6 @@ Thats is my scripts collection. (Description below 👇 soon)
 │       └── ffetch-poco-c65.jsonc
 ├── README.md
 ├── TheseusMachine
-│   ├── atuin-backup-viamar.sh
 │   ├── etc-dotfiles.sh
 │   ├── portage-tools
 │   │   ├── gentoo-cleanup-guard
