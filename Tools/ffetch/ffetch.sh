@@ -7,15 +7,6 @@ else
     MACHINE_ID="$(uname -n)"
 fi
 
-# Verifica se foi passado --mini ou -m como argumento
-MINI=false
-for arg in "$@"; do
-    if [[ "$arg" == "--mini" || "$arg" == "-m" ]]; then
-        MINI=true
-        break
-    fi
-done
-
 # Verifica se foi passado --ssh ou -s como argumento
 SSH=false
 for arg in "$@"; do
@@ -30,8 +21,6 @@ case $MACHINE_ID in
     "CrisNote")
         if $SSH; then
             fastfetch --config ~/.config/fastfetch/ffetch-crisnote-ssh.jsonc
-        elif $MINI; then
-            fastfetch --config ~/.config/fastfetch/ffetch-mini-CrisNote.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-CrisNote.jsonc
         fi
@@ -41,8 +30,6 @@ case $MACHINE_ID in
     "TheseusMachine")
         if $SSH; then
             fastfetch --config ~/.config/fastfetch/ffetch-ssh-TheseusMachine.jsonc
-        elif $MINI; then
-            fastfetch --config ~/.config/fastfetch/ffetch-mini-TheseusMachine.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-TheseusMachine.jsonc
         fi
@@ -52,30 +39,26 @@ case $MACHINE_ID in
     "Viamar-PC")
         if $SSH; then
             fastfetch --config ~/.config/fastfetch/ffetch-ssh-viamar-pc.jsonc
-        elif $MINI; then
-            fastfetch --config ~/.config/fastfetch/ffetch-mini-viamar-PC.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-viamar-PC.jsonc
         fi
         ;;
 
-    # Call fastfetch for Poco C65
-    "Poco C65"|"Xiaomi Poco C65"|"2310FPCA4I")
-        if $MINI; then
-            echo "Modo mini para Poco C65 ainda não configurado."
-            # fastfetch --config ~/.config/fastfetch/ffetch-mini-poco-c65.jsonc
-        else
-            # echo "Modo completo para Poco C65 ainda não configurado."
-            fastfetch --config ~/.config/fastfetch/ffetch-poco-c65.jsonc
-        fi
-        ;;
+    # # Call fastfetch for Poco C65
+    # "Poco C65"|"Xiaomi Poco C65"|"2310FPCA4I")
+    #     if $MINI; then
+    #         echo "Modo mini para Poco C65 ainda não configurado."
+    #         # fastfetch --config ~/.config/fastfetch/ffetch-mini-poco-c65.jsonc
+    #     else
+    #         # echo "Modo completo para Poco C65 ainda não configurado."
+    #         fastfetch --config ~/.config/fastfetch/ffetch-poco-c65.jsonc
+    #     fi
+    #     ;;
 
-    # Call fastfetch for Viamar-PC
+    # Call fastfetch for Builder
     "builder")
         if $SSH; then
             fastfetch --config ~/.config/fastfetch/ffetch-builder-ssh.jsonc
-        elif $MINI; then
-            fastfetch --config ~/.config/fastfetch/ffetch-mini-builder-arch.jsonc
         else
             fastfetch --config ~/.config/fastfetch/ffetch-builder-arch.jsonc
         fi
