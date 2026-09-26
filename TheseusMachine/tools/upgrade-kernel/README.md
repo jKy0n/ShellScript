@@ -15,7 +15,7 @@ This script automates a practical kernel upgrade workflow:
 3. Copies the running kernel config from `/proc/config.gz`
 4. Generates a reduced config with `localmodconfig`
 5. Refreshes defaults with `olddefconfig`
-6. Compiles the kernel with the number of threads you provide
+6. Compiles the kernel with the number of threads you provide (ccache in front of distcc: `CC="ccache gcc"`, compiler identified by real `gcc -v`)
 7. Installs modules
 8. Installs the kernel
 
@@ -30,7 +30,7 @@ Este script automatiza um fluxo prático de upgrade de kernel:
 3. Copia a configuração do kernel em uso a partir de `/proc/config.gz`
 4. Gera uma configuração reduzida com `localmodconfig`
 5. Atualiza os padrões com `olddefconfig`
-6. Compila o kernel com a quantidade de threads informada
+6. Compila o kernel com a quantidade de threads informada (ccache na frente do distcc: `CC="ccache gcc"`, compilador identificado pelo `gcc -v` real)
 7. Instala os módulos
 8. Instala o kernel
 

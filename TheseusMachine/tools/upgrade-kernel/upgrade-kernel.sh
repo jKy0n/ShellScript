@@ -6,7 +6,7 @@
 #        Path:       /home/jkyon/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-03-14
-#        Updated:    2026-03-14
+#        Updated:    2026-09-26
 #        Notes:      Acho que dá pra melhorar!
 #
 
@@ -64,28 +64,42 @@ sudo modprobed-db store
 echo "[3/9] Copiando configuração atual"
 zcat /proc/config.gz | sudo tee .config > /dev/null
 
+# ccache na frente do distcc: o "gcc" do PATH é o wrapper do distcc
+# (/usr/lib/distcc/bin), então o ccache só chama o distcc nos misses.
+# CCACHE_COMPILERCHECK='%compiler% -v' identifica o compilador pela versão
+# real do gcc — sem isso o ccache usaria o binário do distcc como "compilador"
+# e não invalidaria o cache num upgrade de GCC.
+# O mesmo CC em config e build evita que o kbuild detecte troca de compilador.
+KCC="ccache gcc"
+kmake() {
+    sudo --preserve-env=DISTCC_HOSTS,PATH,CCACHE_DIR \
+        env CCACHE_COMPILERCHECK='%compiler% -v' \
+        make CC="$KCC" "$@"
+}
+
 echo "[4/9] Aplicando módulos necessários"
-yes "" | sudo make LSMOD="${HOME}/.config/modprobed-db/modprobed.db" localmodconfig
+yes "" | kmake LSMOD="${HOME}/.config/modprobed-db/modprobed.db" localmodconfig
 
 echo "[5/9] Atualizando configuração"
-sudo make olddefconfig
+kmake olddefconfig
 
 # -----------------------------
 # Compilação
 # -----------------------------
 
-echo "[6/9] Compilando kernel, por favor aguarde..."
-CCACHE_PREFIX=distcc sudo --preserve-env=DISTCC_HOSTS,PATH,CCACHE_DIR make -j"$THREADS"
+echo "[6/9] Compilando kernel (ccache → distcc), por favor aguarde..."
+kmake -j"$THREADS"
+ccache -s | sed -n '1,6p'
 
 # -----------------------------
 # Instalação
 # -----------------------------
 
 echo "[7/9] Instalando módulos"
-sudo make modules_install
+kmake modules_install
 
 echo "[8/9] Instalando kernel"
-sudo make install
+kmake install
 
 echo "[9/9] Retornando para /home"
 cd ~/
