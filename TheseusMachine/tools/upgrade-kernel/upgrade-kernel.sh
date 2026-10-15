@@ -6,7 +6,7 @@
 #        Path:       /home/jkyon/ShellScript/TheseusMachine/tools/upgrade-kernel/upgrade-kernel.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-03-14
-#        Updated:    2026-09-26
+#        Updated:    2026-10-14
 #        Notes:      Acho que dá pra melhorar!
 #
 
@@ -79,6 +79,11 @@ kmake() {
 
 echo "[4/9] Aplicando módulos necessários"
 yes "" | kmake LSMOD="${HOME}/.config/modprobed-db/modprobed.db" localmodconfig
+
+# Hardware que nunca existiu no /proc/config.gz: o localmodconfig só desliga
+# símbolo, nunca liga — sem isto o driver não entra mesmo carregado.
+# PL2303 = USB-serial do nobreak SMS (NUT sms_ser), ligado em 2026-10-14.
+sudo scripts/config --file .config --module USB_SERIAL_PL2303
 
 echo "[5/9] Atualizando configuração"
 kmake olddefconfig

@@ -13,7 +13,7 @@ This script automates a practical kernel upgrade workflow:
 1. Enters `/usr/src/linux`
 2. Stores currently loaded modules with `modprobed-db`
 3. Copies the running kernel config from `/proc/config.gz`
-4. Generates a reduced config with `localmodconfig`
+4. Generates a reduced config with `localmodconfig`, then forces drivers that never existed in `/proc/config.gz` (`scripts/config --module`, today only `USB_SERIAL_PL2303` for the SMS UPS)
 5. Refreshes defaults with `olddefconfig`
 6. Compiles the kernel with the number of threads you provide (ccache in front of distcc: `CC="ccache gcc"`, compiler identified by real `gcc -v`)
 7. Installs modules
@@ -28,7 +28,7 @@ Este script automatiza um fluxo prático de upgrade de kernel:
 1. Entra em `/usr/src/linux`
 2. Salva os módulos atualmente carregados com `modprobed-db`
 3. Copia a configuração do kernel em uso a partir de `/proc/config.gz`
-4. Gera uma configuração reduzida com `localmodconfig`
+4. Gera uma configuração reduzida com `localmodconfig` e depois força drivers que nunca existiram no `/proc/config.gz` (`scripts/config --module`, hoje só `USB_SERIAL_PL2303` do nobreak SMS)
 5. Atualiza os padrões com `olddefconfig`
 6. Compila o kernel com a quantidade de threads informada (ccache na frente do distcc: `CC="ccache gcc"`, compilador identificado pelo `gcc -v` real)
 7. Instala os módulos
@@ -131,6 +131,7 @@ The script follows this internal order:
 	-> modprobed-db store
 	-> copy /proc/config.gz to .config
 	-> make localmodconfig
+	-> scripts/config --module USB_SERIAL_PL2303
 	-> make olddefconfig
 	-> make -jN
 	-> make modules_install
@@ -146,6 +147,7 @@ A ordem interna do script é esta:
 	-> modprobed-db store
 	-> copiar /proc/config.gz para .config
 	-> make localmodconfig
+	-> scripts/config --module USB_SERIAL_PL2303
 	-> make olddefconfig
 	-> make -jN
 	-> make modules_install
