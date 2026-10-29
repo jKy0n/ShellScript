@@ -2,12 +2,17 @@
 #
 #        Title:      rambox-update.sh
 #        Brief:      Atualiza o Rambox a partir de um AppImage novo (versão extraída, sem FUSE).
-#        Path:       /home/jkyon/ShellScript/Viamar-PC/Scripts/rambox-update/rambox-update.sh
+#        Path:       /home/jkyon/ShellScript/Tools/rambox-update/rambox-update.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-10-29
 #        Updated:    2026-10-29
 #        Notes:
 #          Uso: rambox-update.sh ~/Downloads/Rambox-X.Y.Z-linux-x64.AppImage
+#          (alias `rambox-update`; mesmo layout no Viamar-PC e na TheseusMachine)
+#
+#          Sem sessão gráfica (ex.: rodado por SSH), só extrai e troca o
+#          `current`: não fecha o Rambox em uso, que continua na versão antiga
+#          até ser reaberto pelo current/AppRun.
 #
 #          O Rambox roda EXTRAÍDO (não montado via FUSE): AppImage montado
 #          travava a suspensão (o kernel congela o processo do FUSE antes do
@@ -38,11 +43,13 @@ if [[ -z "$APPIMAGE" || ! -f "$APPIMAGE" ]]; then
 fi
 
 NAME="$(basename "$APPIMAGE")"
-VERSION="$(sed -nE 's/^Rambox-([0-9][0-9.]*)-linux-x64\.AppImage$/\1/p' <<<"$NAME")"
+VERSION="$(sed -nE 's/^Rambox-([0-9][0-9.]*)-linux-x64\.[Aa]pp[Ii]mage$/\1/p' <<<"$NAME")"
 if [[ -z "$VERSION" ]]; then
     echo "Nome inesperado: $NAME (esperado Rambox-X.Y.Z-linux-x64.AppImage)" >&2
     exit 1
 fi
+
+mkdir -p "$DIR"
 
 TARGET="$DIR/Rambox-$VERSION"
 if [[ -e "$TARGET" ]]; then
@@ -66,6 +73,13 @@ echo "Extraído: $TARGET"
 PREV="$(readlink "$DIR/current" 2>/dev/null || echo "nenhuma")"
 ln -sfn "Rambox-$VERSION" "$DIR/current"
 echo "current: $PREV -> Rambox-$VERSION"
+
+if [[ -z "${WAYLAND_DISPLAY:-}" && -z "${DISPLAY:-}" ]]; then
+    echo "Sem sessão gráfica: o Rambox em uso não foi fechado."
+    echo "Na sessão gráfica, feche o Rambox e abra: $DIR/current/AppRun --no-sandbox"
+    echo "(esse start regrava o atalho do launcher pra versão nova)"
+    exit 0
+fi
 
 # fecha o Rambox em uso (SIGTERM pra ele salvar o estado) e abre o novo
 if pgrep -x rambox.bin >/dev/null; then
