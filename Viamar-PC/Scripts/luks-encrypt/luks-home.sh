@@ -51,7 +51,7 @@ until ! graphical; do
 done
 
 DEV=$(blkid -U "$FSUUID") || { log "ABORTADO: btrfs $FSUUID não encontrado"; exit 1; }
-[[ $(findmnt -no SOURCE "$MNT") == "$DEV" ]] || { log "ABORTADO: $MNT não está montado de $DEV"; exit 1; }
+[[ $(findmnt -no SOURCE "$MNT" | head -1) == "$DEV" ]] || { log "ABORTADO: $MNT não está montado de $DEV"; exit 1; }
 log "sessão fechada; disco: $DEV ($(lsblk -dno MODEL,SIZE "$DEV"))"
 SUBS=$(btrfs subvolume list "$MNT" | wc -l); log "subvolumes antes: $SUBS"
 
