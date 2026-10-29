@@ -24,7 +24,7 @@ log() { echo "[$(date '+%F %T')] $*"; }
 religa() {
     log "religando serviços"
     systemctl start "$BEES" snapper-timeline.timer snapper-cleanup.timer
-    docker start borg-ui >/dev/null && log "borg-ui ok"
+    systemctl start borg-ui.service && log "borg-ui ok"
 }
 die() { log "ABORTADO: $*"; mountpoint -q "$MNT" && religa; exit 1; }
 
@@ -35,7 +35,14 @@ holders() {
     done
 }
 
-graphical() { loginctl list-sessions --no-legend | awk '$3=="jkyon" && $4=="seat0"' | grep -q .; }
+# sessão do jkyon no seat0 que não esteja "closing" (processo em background,
+# ex. o daemon do Claude, deixa a sessão listada como closing: 2ª tentativa)
+graphical() {
+    for s in $(loginctl list-sessions --no-legend | awk '$3=="jkyon" && $4=="seat0" {print $1}'); do
+        [[ $(loginctl show-session "$s" -p State --value) != closing ]] && return 0
+    done
+    return 1
+}
 
 log "início; esperando o jkyon sair da sessão gráfica (até $DEADLINE)"
 until ! graphical; do
@@ -49,7 +56,12 @@ log "sessão fechada; disco: $DEV ($(lsblk -dno MODEL,SIZE "$DEV"))"
 SUBS=$(btrfs subvolume list "$MNT" | wc -l); log "subvolumes antes: $SUBS"
 
 log "parando borg-ui, bees, snapper e o usuário jkyon"
-docker stop borg-ui >/dev/null
+# borg-ui.service (compose) reinicia sozinho e REMONTA o /home (1ª tentativa,
+# 2026-10-29 17:39): parar a unit, não o container, e mascarar o home.mount
+# em runtime pra nada remontar o /home durante a janela.
+systemctl stop borg-ui.service
+systemctl mask --runtime home.mount
+trap 'systemctl unmask --runtime home.mount' EXIT
 systemctl stop snapper-timeline.timer snapper-cleanup.timer snapper-timeline.service snapper-cleanup.service "$BEES"
 loginctl terminate-user jkyon
 systemctl stop user@1000.service
@@ -72,7 +84,8 @@ log "encolhendo o btrfs em 32M e desmontando"
 btrfs filesystem resize -32M "$MNT" || die "resize falhou; nada foi alterado"
 sync
 for i in $(seq 10); do
-    umount "$MNT" && break
+    mountpoint -q "$MNT" || break
+    umount "$MNT" && continue
     log "umount ocupado (tentativa $i):"; holders
     sleep 3
 done
