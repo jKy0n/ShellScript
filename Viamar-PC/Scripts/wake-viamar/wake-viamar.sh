@@ -6,13 +6,13 @@
 #        Author:     John Kennedy a.k.a. jKyon
 #        Notes:
 #          Broadcast de WOL não atravessa Tailscale, só funciona dentro da
-#          própria LAN do alvo (192.168.5.x). Por isso este script SEMPRE
+#          própria LAN do alvo (192.168.15.x desde o modem novo, 2026-10-28). Por isso este script SEMPRE
 #          roda fisicamente no Builder — mesmo padrão do wake-builder.sh.
 #
 
 MAC="3c:7c:3f:79:70:42"
-BROADCAST="192.168.5.255"
-IP="192.168.5.110"
+BROADCAST="192.168.15.255"
+IP="192.168.15.110"
 
 echo "🔌 Enviando magic packets..."
 for i in {1..5}; do
