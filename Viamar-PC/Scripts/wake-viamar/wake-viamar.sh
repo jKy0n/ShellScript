@@ -22,7 +22,8 @@ done
 
 echo "⏳ Aguardando Viamar-PC responder..."
 for i in {1..30}; do
-    if nc -z -w1 "$IP" 22 > /dev/null 2>&1; then
+    # /dev/tcp do bash em vez do nc (o Builder no Gentoo não tem nc)
+    if timeout 1 bash -c "</dev/tcp/$IP/22" 2>/dev/null; then
         echo "✅ Viamar-PC ativo"
         exit 0
     fi
