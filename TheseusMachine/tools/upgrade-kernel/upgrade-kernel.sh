@@ -106,11 +106,18 @@ kmake modules_install
 echo "[8/9] Instalando kernel"
 kmake install
 
+# Secure Boot (2026-11-01): com o SB ligado, a IMA_ARCH_POLICY do kernel exige
+# módulo assinado. O net-misc/r8125 (USE=modules-sign) assina no
+# @module-rebuild com a chave deste kernel, e o portage compila como usuário
+# portage: sem esta ACL ele não lê a chave.
+sudo setfacl -m u:portage:r certs/signing_key.pem
+
 echo "[9/9] Retornando para /home"
 cd ~/
 
 echo
 echo "✔ Kernel compilado e instalado."
-echo " Para usá-lo, reinicie o sistema quando for conveniente."
+echo " ANTES de reiniciar: sudo emerge @module-rebuild"
+echo " (o r8125 sai assinado pra este kernel; sem isso o boot fica sem rede)."
 echo "   =) "
 echo
