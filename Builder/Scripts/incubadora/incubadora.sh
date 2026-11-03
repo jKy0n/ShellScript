@@ -52,6 +52,11 @@ BINDS=()
 for repo in gentoo guru jkyon-overlay; do
     BINDS+=("--bind-ro=/var/db/repos/$repo")
 done
+# Mirrors do host (mirrorselect-update.timer); o chroot tem um mirrors.list
+# próprio só com comentário, pro make.conf carregar sem o bind (incubadora-eclean)
+if [[ -f /etc/portage/mirrors.list ]]; then
+    BINDS+=("--bind-ro=/etc/portage/mirrors.list")
+fi
 
 if [[ $# -eq 0 ]]; then
     set -- /bin/bash -l
