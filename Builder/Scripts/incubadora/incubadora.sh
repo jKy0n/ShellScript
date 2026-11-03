@@ -5,7 +5,7 @@
 #        Path:       /home/jkyon/ShellScript/Builder/Scripts/incubadora/incubadora.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-10-29
-#        Updated:    2026-10-29
+#        Updated:    2026-11-03
 #        Notes:
 #          Uso (como root):
 #            incubadora.sh viamar-pc                      -> shell na incubadora
