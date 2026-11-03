@@ -13,10 +13,13 @@ EXIT_CODE=$?
 # --pretend nunca passa por aqui (mora em outro script); interrupcao ou
 # erro real (exit != 0) preserva o cache antigo em vez de zerar a lista
 # como se tudo tivesse sido resolvido.
+# O refresh vem do pacote portage-auto-sync (jkyon-systemd); sem ele, só pula.
 if [ "$EXIT_CODE" -eq 0 ]; then
-    echo ""
-    echo "Merge concluido com sucesso - atualizando cache da waybar..."
-    sudo /usr/local/bin/refresh-portage-cache.sh
+    if [ -x /usr/local/bin/refresh-portage-cache.sh ]; then
+        echo ""
+        echo "Merge concluido com sucesso - atualizando cache da waybar..."
+        sudo /usr/local/bin/refresh-portage-cache.sh
+    fi
 else
     echo ""
     echo "Merge terminou com erro ou foi interrompido (exit ${EXIT_CODE}) - cache NAO atualizado."
