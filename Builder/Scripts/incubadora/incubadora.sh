@@ -7,6 +7,9 @@
 #        Created:    2026-10-29
 #        Updated:    2026-11-03
 #        Notes:
+#          Compilação quieta por padrão (--quiet-build=y no make.conf do chroot);
+#          "--verbose" por extenso no emerge traz a saída de volta.
+#
 #          Uso (como root):
 #            incubadora.sh viamar-pc                      -> shell na incubadora
 #            incubadora.sh viamar-pc emerge -uDN @world   -> roda o comando
@@ -60,6 +63,18 @@ fi
 
 if [[ $# -eq 0 ]]; then
     set -- /bin/bash -l
+fi
+
+# A compilação é quieta por padrão (--quiet-build=y no EMERGE_DEFAULT_OPTS do
+# chroot); "--verbose" escrito por extenso traz a saída de volta. O -v de -av/-pv
+# segue só detalhando a lista de pacotes.
+if [[ $1 == emerge ]]; then
+    for arg in "$@"; do
+        if [[ $arg == --verbose ]]; then
+            set -- "$@" --quiet-build=n
+            break
+        fi
+    done
 fi
 
 exec systemd-nspawn -q -D "$ROOT" "${BINDS[@]}" \
