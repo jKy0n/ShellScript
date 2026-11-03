@@ -77,5 +77,8 @@ if [[ $1 == emerge ]]; then
     done
 fi
 
-exec systemd-nspawn -q -D "$ROOT" "${BINDS[@]}" \
+# Famílias de socket sem restrição, explícito (o padrão de hoje): o systemd 261
+# avisa que o padrão futuro vai ser só AF_INET/AF_INET6/AF_UNIX, e build às vezes
+# usa outras (AF_NETLINK pra listar interfaces, por exemplo).
+exec systemd-nspawn -q -D "$ROOT" --restrict-address-families= "${BINDS[@]}" \
     /bin/sh -c 'mkdir -p /run/lock && exec "$@"' sh "$@"
