@@ -54,7 +54,7 @@ mexe em `/etc/sudoers.d`). Duração default **4h**, configurável por:
 
 1. Argumento: `sudo .../tmp-claude-nopasswd.sh on 2h` (sintaxe de time-span
    do systemd — `2h`, `90min` etc)
-2. Variável de ambiente: `TMP_CLAUDE_NOPASSWD_EXPIRE=1h sudo -E .../tmp-claude-nopasswd.sh on`
+2. Variável de ambiente: `TMP_CLAUDE_NOPASSWD_EXPIRE=1h sudo --preserve-env=TMP_CLAUDE_NOPASSWD_EXPIRE .../tmp-claude-nopasswd.sh on`
 3. Default: `4h`
 
 Rodar `off` manualmente cancela o timer pendente. Rodar `on` de novo (por
