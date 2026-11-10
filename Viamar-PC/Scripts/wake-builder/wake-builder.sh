@@ -5,13 +5,13 @@
 #        Path:       /home/jkyon/ShellScript/Viamar-PC/Scripts/wake-builder/wake-builder.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-08-06
-#        Updated:    2026-10-30
+#        Updated:    2026-11-10
 #        Notes:
 #          Broadcast de WOL não atravessa Tailscale, só funciona dentro da
 #          própria LAN do alvo (192.168.15.x desde o modem novo, 2026-10-28). Por isso este script SEMPRE
 #          roda fisicamente na Viamar-PC — o alias `wake-builder` (definido
-#          em aliases.zsh) já faz `ssh viamar-pc "bash este-script"` antes
-#          de chegar aqui. O script em si não precisa saber de onde o
+#          em aliases.zsh) roda direto se já estiver na Viamar-PC, ou faz
+#          `ssh viamar-pc "bash este-script"` antes de chegar aqui. O script em si não precisa saber de onde o
 #          usuário chamou o alias original.
 #
 

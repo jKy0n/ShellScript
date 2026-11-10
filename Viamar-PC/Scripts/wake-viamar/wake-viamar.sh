@@ -4,10 +4,15 @@
 #        Brief:      Acorda o Viamar-PC via WOL (broadcast local).
 #        Path:       /home/jkyon/ShellScript/Viamar-PC/Scripts/wake-viamar/wake-viamar.sh
 #        Author:     John Kennedy a.k.a. jKyon
+#        Created:    2026-08-19
+#        Updated:    2026-11-10
 #        Notes:
 #          Broadcast de WOL não atravessa Tailscale, só funciona dentro da
 #          própria LAN do alvo (192.168.15.x desde o modem novo, 2026-10-28). Por isso este script SEMPRE
-#          roda fisicamente no Builder — mesmo padrão do wake-builder.sh.
+#          roda fisicamente no Builder — mesmo padrão do wake-builder.sh. O
+#          alias `wake-viamar` (definido em aliases.zsh) roda direto se já
+#          estiver no Builder, ou faz `ssh builder "bash este-script"` antes
+#          de chegar aqui.
 #
 
 MAC="3c:7c:3f:79:70:42"
