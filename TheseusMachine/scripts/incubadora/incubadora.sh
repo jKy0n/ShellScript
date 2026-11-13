@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 #        Title:      incubadora.sh
-#        Brief:      Entra numa incubadora de binpkgs do Builder (systemd-nspawn) ou roda um comando nela.
-#        Path:       /home/jkyon/ShellScript/Builder/Scripts/incubadora/incubadora.sh
+#        Brief:      Entra numa incubadora de binpkgs da TheseusMachine (systemd-nspawn) ou roda um comando nela.
+#        Path:       /home/jkyon/ShellScript/TheseusMachine/scripts/incubadora/incubadora.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-10-29
 #        Updated:    2026-11-13
@@ -18,8 +18,17 @@
 #          Argumentos depois de update/upgrade vão pro emerge
 #          (ex.: upgrade --exclude=mail-client/thunderbird).
 #
-#          Cada máquina-alvo tem o seu chroot em /var/lib/incubator/<alvo>
-#          (ver machines/builder/builder.md, "Incubadora de binpkgs").
+#          Cada máquina-alvo tem o seu chroot em /mnt/incubadora/<alvo>, um
+#          subvolume do volume incubatorium (ver machines/theseusmachine/
+#          theseusmachine.md, "Incubatorium"). Até 2026-11-13 ficava no Builder.
+#          De outras máquinas, a função zsh "incubadora" chega aqui por SSH.
+#
+#          Fora do chroot, em bind:
+#            /mnt/incubadora/distfiles           -> /var/cache/distfiles
+#              (compartilhado entre os alvos)
+#            /var/tmp/portage-incubadora/<alvo>  -> /var/tmp/portage
+#              (no root, fora do incubatorium: o bees não perde tempo com
+#              temporário de build)
 #          Os repos gentoo, guru e jkyon-overlay vêm do host, só-leitura (o host
 #          sincroniza; o gentoo é o mirror do parque). Os overlays restritos
 #          (CachyOS-kernels, parona, xarblu) vivem só dentro do chroot.
@@ -33,17 +42,26 @@
 
 set -euo pipefail
 
-BASE="/var/lib/incubator"
+BASE="/mnt/incubadora"
+TMPBASE="/var/tmp/portage-incubadora"
 
 if [[ $EUID -ne 0 ]]; then
     echo "Precisa de root: sudo $(basename "$0") $*" >&2
     exit 1
 fi
 
+# Alvo = subvolume com /etc/portage (o distfiles compartilhado fica de fora).
+alvos() {
+    local d
+    for d in "$BASE"/*/; do
+        [[ -d "$d/etc/portage" ]] && printf '%s ' "$(basename "$d")"
+    done
+}
+
 TARGET="${1:-}"
 if [[ -z "$TARGET" ]]; then
     echo "Uso: $(basename "$0") <alvo> [comando...]" >&2
-    echo "Alvos: $(ls "$BASE" | tr '\n' ' ')" >&2
+    echo "Alvos: $(alvos)" >&2
     exit 1
 fi
 shift
@@ -51,11 +69,14 @@ shift
 ROOT="$BASE/$TARGET"
 if [[ ! -d "$ROOT/etc/portage" ]]; then
     echo "Incubadora não encontrada: $ROOT" >&2
-    echo "Alvos: $(ls "$BASE" | tr '\n' ' ')" >&2
+    echo "Alvos: $(alvos)" >&2
     exit 1
 fi
 
 BINDS=()
+install -d -o portage -g portage -m 0775 "$TMPBASE/$TARGET"
+BINDS+=("--bind=$BASE/distfiles:/var/cache/distfiles")
+BINDS+=("--bind=$TMPBASE/$TARGET:/var/tmp/portage")
 for repo in gentoo guru jkyon-overlay; do
     BINDS+=("--bind-ro=/var/db/repos/$repo")
 done
