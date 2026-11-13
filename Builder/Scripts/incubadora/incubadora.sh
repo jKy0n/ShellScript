@@ -5,7 +5,7 @@
 #        Path:       /home/jkyon/ShellScript/Builder/Scripts/incubadora/incubadora.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-10-29
-#        Updated:    2026-11-03
+#        Updated:    2026-11-13
 #        Notes:
 #          Compilação quieta por padrão (--quiet-build=y no make.conf do chroot);
 #          "--verbose" por extenso no emerge traz a saída de volta.
@@ -13,6 +13,10 @@
 #          Uso (como root):
 #            incubadora.sh viamar-pc                      -> shell na incubadora
 #            incubadora.sh viamar-pc emerge -uDN @world   -> roda o comando
+#            incubadora.sh viamar-pc update               -> emerge -pvuDN @world
+#            incubadora.sh viamar-pc upgrade              -> emerge -avuDN @world
+#          Argumentos depois de update/upgrade vão pro emerge
+#          (ex.: upgrade --exclude=mail-client/thunderbird).
 #
 #          Cada máquina-alvo tem o seu chroot em /var/lib/incubator/<alvo>
 #          (ver machines/builder/builder.md, "Incubadora de binpkgs").
@@ -60,6 +64,11 @@ done
 if [[ -f /etc/portage/mirrors.list ]]; then
     BINDS+=("--bind-ro=/etc/portage/mirrors.list")
 fi
+
+case "${1:-}" in
+    update)  shift; set -- emerge -pvuDN @world "$@" ;;
+    upgrade) shift; set -- emerge -avuDN @world "$@" ;;
+esac
 
 if [[ $# -eq 0 ]]; then
     set -- /bin/bash -l
