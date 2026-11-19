@@ -154,10 +154,7 @@ Thats is my scripts collection. (Description below 👇 soon)
 │   ├── tools
 │   │   ├── rambox-cleanup
 │   │   │   └── rambox-cleanup.sh
-│   │   ├── rambox-cleanup.sh
-│   │   └── upgrade-kernel
-│   │       ├── README.md
-│   │       └── upgrade-kernel.sh
+│   │   └── rambox-cleanup.sh
 │   └── waybar
 │       ├── scrips
 │       │   ├── ephedrine.sh
@@ -200,6 +197,9 @@ Thats is my scripts collection. (Description below 👇 soon)
 │   │   └── updateDistro.sh
 │   ├── upgrade-distro
 │   │   └── upgradeDistro.sh
+│   ├── upgrade-kernel
+│   │   ├── README.md
+│   │   └── upgrade-kernel.sh
 │   ├── watch19.sh
 │   └── xclip-output-to-clipboard
 │       ├── README.md
