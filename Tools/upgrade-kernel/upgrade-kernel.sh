@@ -9,19 +9,23 @@
 #        Updated:    2026-11-19
 #        Notes:      Compartilhado entre as máquinas com kernel CachyOS
 #                    (TheseusMachine, Viamar-PC) desde 2026-11-19; antes morava
-#                    em TheseusMachine/tools/. Build local + ccache (sem distcc).
+#                    em TheseusMachine/tools/. Padrão: build local + ccache.
+#                    --distcc (2026-11-23): ccache → distcc nos misses, com os
+#                    hosts do DISTCC_HOSTS que têm o mesmo GCC desta máquina.
 #
 
 
 set -eo pipefail
 
 THREADS=""
+DISTCC=0
 MODPROBED_DB="${HOME}/.config/modprobed-db/modprobed.db"
 
 usage() {
     echo
     echo "Usage:"
-    echo "  upgrade-kernel -j N"
+    echo "  upgrade-kernel -j N              (local + ccache)"
+    echo "  upgrade-kernel --distcc [-j N]   (ccache → distcc; sem -j, soma dos slots)"
     echo "  upgrade-kernel --threads N"
     echo
     exit 1
@@ -42,14 +46,23 @@ while [[ $# -gt 0 ]]; do
             THREADS="${2:-}"
             shift 2 || usage
             ;;
+        --distcc)
+            DISTCC=1
+            shift
+            ;;
         *)
             usage
             ;;
     esac
 done
 
-[[ -n "$THREADS" ]] || { echo "Erro: número de threads não especificado."; usage; }
-[[ "$THREADS" =~ ^[1-9][0-9]*$ ]] || die "threads precisa ser um número inteiro positivo (veio '$THREADS')."
+if [[ -z "$THREADS" && $DISTCC -eq 0 ]]; then
+    echo "Erro: número de threads não especificado."
+    usage
+fi
+if [[ -n "$THREADS" && ! "$THREADS" =~ ^[1-9][0-9]*$ ]]; then
+    die "threads precisa ser um número inteiro positivo (veio '$THREADS')."
+fi
 
 # -----------------------------
 # Pré-checagens
@@ -76,12 +89,72 @@ esac
 mapfile -t OOT_PKGS < <(grep -l linux-mod /var/db/pkg/*/*/INHERITED 2>/dev/null \
     | sed -E 's|^/var/db/pkg/||; s|/INHERITED$||' || true)
 
+# -----------------------------
+# distcc (opcional)
+# -----------------------------
+# Hosts vêm do DISTCC_HOSTS (zsh/secrets do jkyon-terminal, o mesmo em todas as
+# máquinas): sai a entrada desta máquina (IP do Tailscale) e todo host remoto
+# fora do ar ou com GCC diferente do daqui (regra do parque: GCC divergente =
+# fora do cluster). O kernel aqui é GENERIC_CPU (sem -march=native), então o
+# objeto não depende da CPU de quem compila.
+MODE="local + ccache"
+if [[ $DISTCC -eq 1 ]]; then
+    command -v distcc >/dev/null || die "distcc não instalado."
+    [[ -n "${DISTCC_HOSTS//[[:space:]]/}" ]] || die "DISTCC_HOSTS vazio (vem do zsh/secrets do jkyon-terminal)."
+
+    SELF_IP="$(tailscale ip -4 2>/dev/null | head -1 || true)"
+    LOCAL_GCC="$(gcc --version | head -1)"
+    KEEP=()
+    SLOTS=0
+    REMOTES=0
+
+    echo "distcc: conferindo os hosts (GCC local: $LOCAL_GCC)"
+    for h in $DISTCC_HOSTS; do
+        name="${h%%[/,:]*}"
+        n=""
+        if [[ "$h" == */* ]]; then
+            n="${h#*/}"
+            n="${n%%[,:]*}"
+        fi
+
+        if [[ -n "$SELF_IP" && "$name" == "$SELF_IP" ]]; then
+            echo "  - $name: esta máquina, fora"
+            continue
+        fi
+
+        if [[ "$name" == localhost ]]; then
+            n="${n:-2}"
+        else
+            remote_gcc="$(ssh -n -o BatchMode=yes -o ConnectTimeout=5 "$name" \
+                'gcc --version | head -1' 2>/dev/null || true)"
+            if [[ "$remote_gcc" != "$LOCAL_GCC" ]]; then
+                echo "  - $name: fora (GCC: '${remote_gcc:-sem resposta}')" >&2
+                continue
+            fi
+            n="${n:-4}"
+            REMOTES=$((REMOTES + 1))
+        fi
+
+        echo "  + $h"
+        KEEP+=("$h")
+        SLOTS=$((SLOTS + n))
+    done
+
+    [[ $REMOTES -gt 0 ]] || die "nenhum host remoto do distcc no ar com o mesmo GCC."
+
+    export DISTCC_HOSTS="${KEEP[*]}"
+    export CCACHE_PREFIX=distcc
+    THREADS="${THREADS:-$SLOTS}"
+    MODE="ccache → distcc ($REMOTES hosts remotos, $SLOTS slots)"
+fi
+
 # Pede a senha uma vez só, no começo, e não no meio do build.
 sudo -v
 
 echo
 echo "======================================"
 echo "  Kernel upgrade (threads = $THREADS)"
+echo "  Modo:    $MODE"
 echo "  Máquina: $HOST"
 echo "  Fonte:   $(readlink -f /usr/src/linux)"
 echo "======================================"
@@ -111,13 +184,16 @@ sudo scripts/config --file .config \
     --set-str LOCALVERSION "-gentoo" \
     --set-str MODULE_SIG_KEY "certs/signing_key.pem"
 
-# ccache local (sem distcc: o "gcc" do PATH é o /usr/bin/gcc).
+# ccache na frente: o "gcc" do PATH é o /usr/bin/gcc. Sem --distcc, os misses
+# compilam aqui; com --distcc, o CCACHE_PREFIX=distcc manda os misses pro
+# cluster. O sudo descarta variável que não esteja no --preserve-env (foi assim
+# que o CCACHE_PREFIX antigo, de antes de 2026-09-26, virou no-op).
 # CCACHE_COMPILERCHECK='%compiler% -v' identifica o compilador pela versão
 # real do gcc, e o cache é invalidado num upgrade de GCC.
 # O mesmo CC em config e build evita que o kbuild detecte troca de compilador.
 KCC="ccache gcc"
 kmake() {
-    sudo --preserve-env=PATH,CCACHE_DIR \
+    sudo --preserve-env=PATH,CCACHE_DIR,CCACHE_PREFIX,DISTCC_HOSTS \
         env CCACHE_COMPILERCHECK='%compiler% -v' \
         make CC="$KCC" "$@"
 }
@@ -138,8 +214,11 @@ kmake olddefconfig
 # Compilação
 # -----------------------------
 
-echo "[6/9] Compilando kernel (ccache local, -j$THREADS), por favor aguarde..."
+echo "[6/9] Compilando kernel ($MODE, -j$THREADS), por favor aguarde..."
+[[ $DISTCC -eq 1 ]] && echo "      monitor em outro terminal: sudo distccmon-text 1"
+SECONDS=0
 kmake -j"$THREADS"
+echo "      compilação: $((SECONDS / 60))min $((SECONDS % 60))s"
 ccache -s | sed -n '1,6p'
 
 # -----------------------------
