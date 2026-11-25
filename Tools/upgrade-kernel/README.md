@@ -19,7 +19,7 @@ Compartilhado entre as máquinas com kernel CachyOS (TheseusMachine, Viamar-PC) 
 5. Forces `LOCALVERSION="-gentoo"` and `MODULE_SIG_KEY="certs/signing_key.pem"`: on the first build after a `gentoo-kernel-bin`, the config carries `-gentoo-dist-bin` and a signing key path from Gentoo's own build that does not exist here
 6. Generates a reduced config with `localmodconfig`, then forces the per-machine drivers that never existed in `/proc/config.gz` (today only `USB_SERIAL_PL2303` on TheseusMachine, for the SMS UPS)
 7. Refreshes defaults with `olddefconfig`
-8. Compiles the kernel with ccache (`CC="ccache gcc"`, compiler identified by the real `gcc -v`). By default the misses compile locally (the `gcc` in `PATH` is `/usr/bin/gcc`). With `--distcc`, `CCACHE_PREFIX=distcc` sends the misses to the cluster: the hosts come from `DISTCC_HOSTS`, minus this machine (Tailscale IP) and minus any remote host that is offline or has a different `gcc --version` (checked over SSH before starting). Without `-j`, the job count is the sum of the remaining slots
+8. Compiles the kernel with ccache (`CC="ccache gcc"`, compiler identified by the real `gcc -v`). By default the misses compile locally (the script drops the distcc wrapper `/usr/lib/distcc/bin` from `PATH`, so `gcc` is `/usr/bin/gcc`). With `--distcc`, `CCACHE_PREFIX=distcc` sends the misses to the cluster: the hosts come from `DISTCC_HOSTS`, minus this machine (Tailscale IP) and minus any remote host that is offline or has a different `gcc -v` version line (checked over SSH before starting; `gcc --version` starts with the name the compiler was called by and gave false mismatches). Without `-j`, the job count is the sum of the remaining slots
 9. Installs modules and the kernel (`installkernel`: dracut initramfs, `grub.cfg` and, with Secure Boot via sbctl, the signature of `/boot/kernel-<version>`)
 10. Only when there are out-of-tree module packages (`linux-mod`): gives `portage` read access to the signing key and reminds you to run `emerge @module-rebuild`
 
@@ -32,7 +32,7 @@ Compartilhado entre as máquinas com kernel CachyOS (TheseusMachine, Viamar-PC) 
 5. Força `LOCALVERSION="-gentoo"` e `MODULE_SIG_KEY="certs/signing_key.pem"`: no 1º build depois de um `gentoo-kernel-bin`, a config vem com `-gentoo-dist-bin` e com o caminho da chave de assinatura do build do Gentoo, que não existe aqui
 6. Gera uma configuração reduzida com `localmodconfig` e força os drivers de cada máquina que nunca existiram no `/proc/config.gz` (hoje só o `USB_SERIAL_PL2303` na TheseusMachine, do nobreak SMS)
 7. Atualiza os padrões com `olddefconfig`
-8. Compila o kernel com ccache (`CC="ccache gcc"`, compilador identificado pelo `gcc -v` real). Por padrão os misses compilam aqui (o `gcc` do `PATH` é o `/usr/bin/gcc`). Com `--distcc`, o `CCACHE_PREFIX=distcc` manda os misses pro cluster: os hosts vêm do `DISTCC_HOSTS`, menos esta máquina (IP do Tailscale) e menos todo host remoto fora do ar ou com `gcc --version` diferente (conferido por SSH antes de começar). Sem `-j`, o número de jobs é a soma dos slots que sobraram
+8. Compila o kernel com ccache (`CC="ccache gcc"`, compilador identificado pelo `gcc -v` real). Por padrão os misses compilam aqui (o script tira o wrapper do distcc, `/usr/lib/distcc/bin`, do `PATH`, então o `gcc` é o `/usr/bin/gcc`). Com `--distcc`, o `CCACHE_PREFIX=distcc` manda os misses pro cluster: os hosts vêm do `DISTCC_HOSTS`, menos esta máquina (IP do Tailscale) e menos todo host remoto fora do ar ou com a linha de versão do `gcc -v` diferente (conferido por SSH antes de começar; o `gcc --version` começa com o nome pelo qual o compilador foi chamado e dava falso negativo). Sem `-j`, o número de jobs é a soma dos slots que sobraram
 9. Instala os módulos e o kernel (`installkernel`: initramfs do dracut, `grub.cfg` e, com Secure Boot via sbctl, a assinatura do `/boot/kernel-<versão>`)
 10. Só quando há pacote com módulo fora da árvore (`linux-mod`): libera a chave de assinatura pro usuário `portage` e lembra do `emerge @module-rebuild`
 
@@ -70,7 +70,7 @@ O roteiro completo (portage, incubadora, conferências antes do reboot, limpeza)
 ## 🧠 Script Flow / Fluxo Interno do Script
 
 ```text
-checks (+ --distcc: filter DISTCC_HOSTS, gcc --version over SSH) + sudo -v
+checks (+ --distcc: filter DISTCC_HOSTS, gcc -v over SSH) + sudo -v
 /usr/src/linux
 	-> modprobed-db store                       (user / usuário)
 	-> copy /proc/config.gz to .config

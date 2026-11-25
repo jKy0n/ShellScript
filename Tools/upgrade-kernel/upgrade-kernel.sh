@@ -6,12 +6,14 @@
 #        Path:       /home/jkyon/ShellScript/Tools/upgrade-kernel/upgrade-kernel.sh
 #        Author:     John Kennedy a.k.a. jKyon
 #        Created:    2026-03-14
-#        Updated:    2026-11-19
+#        Updated:    2026-11-24
 #        Notes:      Compartilhado entre as máquinas com kernel CachyOS
 #                    (TheseusMachine, Viamar-PC) desde 2026-11-19; antes morava
 #                    em TheseusMachine/tools/. Padrão: build local + ccache.
 #                    --distcc (2026-11-23): ccache → distcc nos misses, com os
 #                    hosts do DISTCC_HOSTS que têm o mesmo GCC desta máquina.
+#                    2026-11-24: GCC comparado pelo "gcc -v" e wrapper do
+#                    distcc tirado do PATH.
 #
 
 
@@ -73,6 +75,21 @@ fi
 [[ -r "$MODPROBED_DB" ]] || die "banco do modprobed-db não encontrado em $MODPROBED_DB."
 command -v modprobed-db >/dev/null || die "modprobed-db não instalado."
 
+# Wrapper do distcc fora do PATH (/usr/lib/distcc/bin é link pra /usr/lib/distcc):
+# o "gcc" do ccache tem de ser o /usr/bin/gcc, e o distcc só entra pelo
+# CCACHE_PREFIX do --distcc, depois da checagem de GCC dos hosts. Sem isto, um
+# /etc/profile.d que ponha o wrapper no PATH manda os misses pro distcc sem checar
+# nada (TheseusMachine até 2026-11-24).
+PATH="$(tr ':' '\n' <<<"$PATH" | grep -vxE '/usr/lib(64)?/distcc(/bin)?/?' | paste -sd:)"
+export PATH
+[[ "$(readlink -f "$(command -v gcc)")" != */distcc ]] \
+    || die "o gcc do PATH ainda é o wrapper do distcc ($(command -v gcc))."
+
+# Identidade do GCC: a linha final do "gcc -v" ("gcc version 16.2.1 20260926
+# (Gentoo …)"). O "gcc --version" começa com o nome pelo qual o gcc foi chamado
+# (x86_64-pc-linux-gnu-gcc pelo wrapper do distcc) e dava falso negativo.
+gcc_id() { gcc -v 2>&1 | tail -1 | sed 's/[[:space:]]*$//'; }
+
 # Drivers que nunca existiram no /proc/config.gz e precisam ser forçados como
 # módulo: o localmodconfig só desliga símbolo, nunca liga. Um por máquina.
 HOST="${HOSTNAME:-$(cat /etc/hostname)}"
@@ -103,7 +120,7 @@ if [[ $DISTCC -eq 1 ]]; then
     [[ -n "${DISTCC_HOSTS//[[:space:]]/}" ]] || die "DISTCC_HOSTS vazio (vem do zsh/secrets do jkyon-terminal)."
 
     SELF_IP="$(tailscale ip -4 2>/dev/null | head -1 || true)"
-    LOCAL_GCC="$(gcc --version | head -1)"
+    LOCAL_GCC="$(gcc_id)"
     KEEP=()
     SLOTS=0
     REMOTES=0
@@ -126,7 +143,7 @@ if [[ $DISTCC -eq 1 ]]; then
             n="${n:-2}"
         else
             remote_gcc="$(ssh -n -o BatchMode=yes -o ConnectTimeout=5 "$name" \
-                'gcc --version | head -1' 2>/dev/null || true)"
+                'gcc -v 2>&1 | tail -1' 2>/dev/null | sed 's/[[:space:]]*$//' || true)"
             if [[ "$remote_gcc" != "$LOCAL_GCC" ]]; then
                 echo "  - $name: fora (GCC: '${remote_gcc:-sem resposta}')" >&2
                 continue
